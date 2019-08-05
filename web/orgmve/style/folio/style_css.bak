@@ -1,0 +1,37 @@
+/* Folio CCSTheme */
+BODY, TABLE, TH, TR, TD, UL, OL, LI, P, FONT, A, BLOCKQUOTE, LABEL { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.FolioPageBODY { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.FolioFormHeaderFont { color: #000000; font-size: 16px; font-weight: bold; }
+.FolioFormTABLE { border: 1px solid #000000; }
+.FolioColumnTD { border-left: 1px solid #E5E37E; border-right: 1px solid #737100; border-top: 1px solid #E5E37E; border-bottom: 1px solid #737100; background-color: #B3B300; color: #000000; font-size: 13px; font-weight: bold; }
+.FolioFieldCaptionTD { border-left: 1px solid #E5E37E; border-right: 1px solid #737100; border-top: 1px solid #E5E37E; border-bottom: 1px solid #737100; background-color: #B3B300; color: #000000; font-size: 13px; }
+.FolioDataTD { border-left: 1px solid #FFFFFF; border-right: 1px solid #C5BEC5; border-top: 1px solid #FFFFFF; border-bottom: 1px solid #C5BEC5; background-color: #E9E9E9; color: #000000; font-size: 13px; }
+.FolioErrorDataTD { border-left: 1px solid #FFFFFF; border-right: 1px solid #C5BEC5; border-top: 1px solid #FFFFFF; border-bottom: 1px solid #C5BEC5; background-color: #E9E9E9; color: #FF0000; font-size: 13px; }
+.FolioSeparatorTD { height: 1px; background-color: #000000; }
+.FolioAltDataTD { border-left: 1px solid #FFFFFF; border-right: 1px solid #C5BEC5; border-top: 1px solid #FFFFFF; border-bottom: 1px solid #C5BEC5; background-color: #FFFFFF; color: #000000; font-size: 13px; }
+.FolioFooterTD { border-left: 1px solid #E5E37E; border-right: 1px solid #737100; border-top: 1px solid #E5E37E; border-bottom: 1px solid #737100; background-color: #B3B300; color: #000000; font-size: 13px; }
+a.FolioSorterLink:link,a.FolioSorterLink:visited{ color: #000000; font-weight: bold; text-decoration: underline; }
+a.FolioSorterLink:hover,a.FolioSorterLink:active{ color: #FFFFFF; font-weight: bold; text-decoration: none; }
+a.FolioDataLink:link,a.FolioDataLink:visited{ color: #0000FF; text-decoration: underline; }
+a.FolioDataLink:hover,a.FolioDataLink:active{ color: #FF0000; text-decoration: none; }
+a.FolioNavigatorLink:link,a.FolioNavigatorLink:visited{ color: #000000; font-weight: bold; text-decoration: underline; }
+a.FolioNavigatorLink:hover,a.FolioNavigatorLink:active{ color: #FFFFFF; font-weight: bold; text-decoration: none; }
+.FolioButton { border-left: 1px solid #FFFFFF; border-right: 1px solid #000000; border-top: 1px solid #FFFFFF; border-bottom: 1px solid #000000; background-color: #E5E37E; color: #000000; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; font-weight: bold; }
+.FolioInput { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.FolioTextarea { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.FolioSelect { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+/* Calendar */
+a.today:link,a.today:visited{ color: #FF0000; font-weight: bold; text-decoration: none; }
+a.today:hover,a.today:active{ color: #000000; font-weight: bold; text-decoration: none; }
+a.selectedDay:link,a.selectedDay:visited{ color: #000000; font-weight: bold; text-decoration: none; }
+a.selectedDay:hover,a.selectedDay:active{ color: #FF0000; font-weight: bold; text-decoration: none; }
+a.weekDay:link,a.weekDay:visited{ color: #000000; text-decoration: none; }
+a.weekDay:hover,a.weekDay:active{ color: #FF0000; text-decoration: none; }
+TD.selectedDay { margin: 1px; border-left: 1px solid #E5E37E; border-right: 1px solid #737100; border-top: 1px solid #E5E37E; border-bottom: 1px solid #737100; background-color: #B3B300; color: #000000; font-size: 13px; font-weight: bold; }
+TD.today { border-top: 1px solid #FF0000; border-left: 1px solid #FF0000; border-bottom: 1px solid #FF0000; border-right: 1px solid #FF0000; background-color: #FFFFFF; color: #000000; font-size: 13px; }
+TD.workday { border-left: 1px solid #FFFFFF; border-right: 1px solid #C5BEC5; border-top: 1px solid #FFFFFF; border-bottom: 1px solid #C5BEC5; background-color: #FFFFFF; color: #000000; font-size: 13px; }
+TD.weekend { border-left: 1px solid #FFFFFF; border-right: 1px solid #C5BEC5; border-top: 1px solid #FFFFFF; border-bottom: 1px solid #C5BEC5; background-color: #E4E4E4; color: #000000; font-size: 13px; }
+TH.calendar { margin: 1px; border-left: 1px solid #E5E37E; border-right: 1px solid #737100; border-top: 1px solid #E5E37E; border-bottom: 1px solid #737100; background-color: #B3B300; color: #000000; font-size: 13px; font-weight: bold; }
+.CalendarButtons { border-left: 1px solid #FFFFFF; border-right: 1px solid #000000; border-top: 1px solid #FFFFFF; border-bottom: 1px solid #000000; background-color: #E5E37E; color: #000000; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; font-weight: bold; }
+.CalendarControls { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.Table { border: 1px solid #000000; }

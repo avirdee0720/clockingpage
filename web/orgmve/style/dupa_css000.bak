@@ -1,0 +1,247 @@
+<STYLE TYPE="text/css">
+<!--
+
+BODY {
+        font-family: Helvetica,Arial;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 11px;
+        font-variant: normal;
+        font-stretch: normal;
+        line-height: 150%;
+        color: #0101B0;
+        cursor: auto;
+        text-align: left;
+        text-decoration: none;
+        text-transform: none;
+        white-space: normal;
+}
+
+TABLE {
+        font-family: Helvetica,Arial;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 12px;
+        font-variant: normal;
+        font-stretch: normal;
+        line-height: 150%;
+        color: #000000;
+        cursor: auto;
+        text-align: left;
+        text-decoration: none;
+        text-transform: none;
+        white-space: normal;
+}
+
+linieb {
+  border-top: 3px solid #FFFFFF;
+  border-bottom: 3px solid #FFFFFF;
+  }
+
+HR {
+  text-align: center;
+  width: 100%; 
+  font-size : 1px;
+  width : 100%;
+  border: 1px solid blue;
+    white-space: 0px;
+  padding: 0.8em 1ex 0.8em 5mm;
+}
+
+P {
+        font-family: Helvetica,Arial;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 12px;
+        font-variant: normal;
+        font-stretch: normal;
+        line-height: 150%;
+        color: #000000;
+        cursor: auto;
+        text-decoration: none;
+        text-transform: none;
+        white-space: normal;
+}
+
+PJ {
+        font-family: Helvetica,Arial;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 12px;
+        font-variant: normal;
+        font-stretch: normal;
+        line-height: 150%;
+        color: #0101B0;
+        cursor: auto;
+        text-align: justify;;
+        text-decoration: none;
+        text-transform: none;
+        white-space: normal;
+}
+
+A:LINK {
+        font-family: Helvetica,Arial;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 12px;
+        font-variant: normal;
+        font-stretch: normal;
+        line-height: 150%;
+        color: #0101B0;
+        cursor: auto;
+        text-align: left;
+        text-decoration: none;
+        text-transform: none;
+        white-space: normal;
+}
+
+.linkm {
+        font-family: Helvetica,Arial;
+        font-size: 10px;
+        color: #0101B0;
+}
+
+A:HOVER {
+        font-family: Helvetica,Arial;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 12px;
+        font-variant: normal;
+        font-stretch: normal;
+        line-height: 150%;
+        color: #FF7568;
+        cursor: auto;
+        text-align: left;
+        text-decoration: none;
+        text-transform: none;
+        white-space: normal;
+}
+
+A:VISITED {
+        font-family: Helvetica,Arial;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 12px;
+        font-variant: normal;
+        font-stretch: normal;
+        line-height: 150%;
+        color: #0099FF;
+        cursor: auto;
+        text-align: left;
+        text-decoration: none;
+        text-transform: none;
+        white-space: normal;
+}
+
+A:ACTIVE {
+        font-family: Helvetica,Arial;
+        font-weight: normal;
+        font-style: italic;
+        font-size: 12px;
+        font-variant: normal;
+        font-stretch: normal;
+        line-height: 150%;
+        color: #B7C2E8;
+        cursor: auto;
+        text-align: left;
+        text-decoration: none;
+        text-transform: none;
+        white-space: normal;
+}
+
+
+
+#menu {
+  width: 16em;
+  float: left;
+  clear: left;
+  border-right: 0px solid #c0c0c0;
+}
+
+.menulink
+{
+  font-family: Helvetica,Arial;
+  font-weight: bold;
+  font-size: 12px;
+  color: #FFFFFF;
+  cursor: auto;
+  text-align: center;
+}
+
+.menuTitle {
+  font-weight: bold;
+  margin: 0;
+  padding: 0.5em;
+  background-color : #c0c0c0;
+}
+
+menu ul {
+  list-style-type: none;
+  list-style-position: outside;
+  margin: 0;
+  padding: 0.1ex 0;
+}
+
+menu li {
+  font-family: Helvetica,Arial;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 0;
+  padding: 0.1ex 0;
+}
+
+menu a, .thisPage {
+  color: #0066CC;
+  background-color: transparent;
+  text-decoration: none;
+  margin: 0;
+  padding: 0.8em 1ex 0.8em 5mm;
+  display: inline;
+}
+
+.thisPage {
+  color: darkblue;
+  background-color: #FFB529;
+  padding-left: 4mm;
+  border-top: 1px solid #FFB529;
+  border-bottom: 1px solid #FFB529;
+}
+
+#menu a:hover {
+  font-family: Helvetica,Arial;
+  font-weight: bold;
+  font-size: 12px;
+  color: darkblue;
+  background-color: red;
+  text-decoration: none;
+}
+
+.menuText {
+  text-align : justify;
+  line-height: 1.5em;
+  margin: 0.7em 0 0.7em 0;
+  padding: 0 1.5ex 0 2.5mm;
+  display: inline;
+}
+
+#menu .menuText a {
+  color: #0066CC;
+  background-color: transparent;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+#menu .menuText a:hover {
+  color: #0066CC;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+
+.spacing {
+  font-size : 4px;
+}
+-->
+</STYLE>

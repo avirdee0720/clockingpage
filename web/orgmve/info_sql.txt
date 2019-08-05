@@ -1,0 +1,11 @@
+1030edt.php:    $sql1 =("UPDATE `totals` SET `a1030`='1' WHERE id='$msgid' ");
+940del.php:$sql1 =("UPDATE `inout` SET `ino`='940' WHERE `id`='$ID' ");
+deletemonth.php:$q = "UPDATE `holidays` SET `hourgiven` = '0' WHERE `date1` LIKE '$year-$month-%'";
+logout.php:$end=("UPDATE `hd_users_logins` SET `DATA_OUT`=NOW(),SES_ID=NULL WHERE `lp`='$id' and `SES_ID`='$PHPSESSID'");
+ss_b_browse.php:$DeleteInDay = "UPDATE `ssdepartments` SET `show`='n'";
+ss_day_cnf.php:$DeleteInDay = "UPDATE `ssdepartments` SET `show`='n'";
+ss_day_cnf.php.bak:$DeleteInDay = "UPDATE `ssdepartments` SET `show`='n'";
+totalh2e.php:			  $query1[$i] =("UPDATE `inout` SET `intime`='$_t1[$i]', `outtime`='$_t2[$i]', `checked`='c' WHERE `inout`.`id`=$_id[$i]");  
+totalh2e.php:			  $queryMsg[$i] =("UPDATE `inoutmsg` SET `checked`='c' WHERE `inoutmsg`.`idinout`=$_id[$i]");  
+zl_ukoop.php:$query =("UPDATE zl_tech SET g_zad='".number_format($_g_zad,2,'.','')."', g_przyg='".number_format($_g_przyg,2,'.','')."',g_mech='".number_format($_g_mech,2,'.','')."',g_kons='".number_format($_g_kons,2,'.','')."', obr_mech='".number_format($_obr_mech,2,'.','')."', powloki='".number_format($_powloki,2,'.','')."',
+zl_utech.php:$query =("UPDATE zl_tech SET g_zad='".number_format($_g_zad,2,'.','')."', g_przyg='".number_format($_g_przyg,2,'.','')."',g_mech='".number_format($_g_mech,2,'.','')."',g_kons='".number_format($_g_kons,2,'.','')."', obr_mech='".number_format($_obr_mech,2,'.','')."', powloki='".number_format($_powloki,2,'.','')."',

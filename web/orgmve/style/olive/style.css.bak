@@ -1,0 +1,37 @@
+/* Olive CCSTheme */
+BODY, TABLE, TH, TR, TD, UL, OL, LI, P, FONT, A, BLOCKQUOTE, LABEL { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.OlivePageBODY{ font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.OliveFormTABLE{ border: 1px solid #000000; background-color: #A2A296; }
+.OliveFormHeaderFont{ color: #000000; font-size: 16px; font-weight: bold; }
+.OliveFieldCaptionTD{ border-bottom: 1px solid #63655A; border-right: 1px solid #63655A; border-top: 1px solid #D6D3C6; border-left: 1px solid #D6D3C6; background-color: #88887C; color: #FFFFFF; font-size: 13px; }
+.OliveAltDataTD{ border-top: 1px solid #C6C7BD; border-left: 1px solid #C6C7BD; border-bottom: 1px solid #EFEBE7; border-right: 1px solid #EFEBE7; background-color: #DCDDD5; color: #000000; font-size: 13px; }
+.OliveColumnTD{ border-bottom: 1px solid #63655A; border-right: 1px solid #63655A; border-top: 1px solid #D6D3C6; border-left: 1px solid #D6D3C6; background-color: #88887C; color: #FFFFFF; font-size: 13px; }
+.OliveDataTD{ border-top: 1px solid #C6C7BD; border-left: 1px solid #C6C7BD; border-bottom: 1px solid #EFEBE7; border-right: 1px solid #EFEBE7; background-color: #C0C1B6; color: #000000; font-size: 13px; }
+.OliveErrorDataTD{ border-top: 1px solid #C6C7BD; border-left: 1px solid #C6C7BD; border-bottom: 1px solid #EFEBE7; border-right: 1px solid #EFEBE7; background-color: #C0C1B6; color: #FF0000; font-size: 13px; }
+.OliveSeparatorTD{ height: 1px; }
+.OliveFooterTD{ border-bottom: 1px solid #63655A; border-right: 1px solid #63655A; border-top: 1px solid #D6D3C6; border-left: 1px solid #D6D3C6; background-color: #88887C; color: #FFFFFF; font-size: 13px; }
+a.OliveSorterLink:link,a.OliveSorterLink:visited{ color: #FFFFFF; font-size: 13px; text-decoration: underline; }
+a.OliveSorterLink:hover,a.OliveSorterLink:active{ color: #FFFFFF; font-size: 13px; text-decoration: none; }
+a.OliveDataLink:link,a.OliveDataLink:visited{ color: #000000; font-size: 13px; text-decoration: underline; }
+a.OliveDataLink:hover,a.OliveDataLink:active{ color: #000000; font-size: 13px; text-decoration: none; }
+a.OliveNavigatorLink:link,a.OliveNavigatorLink:visited{ color: #FFFFFF; font-size: 13px; text-decoration: underline; }
+a.OliveNavigatorLink:hover,a.OliveNavigatorLink:active{ color: #FFFFFF; font-size: 13px; text-decoration: none; }
+.OliveButton { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; background-color: #DCDDD5; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; font-weight: bold; }
+.OliveInput { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+.OliveTextarea { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+.OliveSelect { font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+/* Calendar */
+a.today:link,a.today:visited{ color: #FF0000; font-weight: bold; text-decoration: none; }
+a.today:hover,a.today:active{ color: #000000; font-weight: bold; text-decoration: none; }
+a.selectedDay:link,a.selectedDay:visited{ color: #FFFFFF; font-weight: bold; text-decoration: none; }
+a.selectedDay:hover,a.selectedDay:active{ color: #FF0000; font-weight: bold; text-decoration: none; }
+a.weekDay:link,a.weekDay:visited{ color: #000000; text-decoration: none; }
+a.weekDay:hover,a.weekDay:active{ color: #FF0000; text-decoration: none; }
+TD.selectedDay { margin: 1px; border-bottom: 1px solid #63655A; border-right: 1px solid #63655A; border-top: 1px solid #D6D3C6; border-left: 1px solid #D6D3C6; background-color: #88887C; color: #FFFFFF; font-size: 13px; }
+TD.today { border-top: 1px solid #FF0000; border-left: 1px solid #FF0000; border-bottom: 1px solid #FF0000; border-right: 1px solid #FF0000; background-color: #DCDDD5; color: #000000; font-size: 13px; }
+TD.workday { border-top: 1px solid #C6C7BD; border-left: 1px solid #C6C7BD; border-bottom: 1px solid #EFEBE7; border-right: 1px solid #EFEBE7; background-color: #DCDDD5; color: #000000; font-size: 13px; }
+TD.weekend { border-top: 1px solid #C6C7BD; border-left: 1px solid #C6C7BD; border-bottom: 1px solid #EFEBE7; border-right: 1px solid #EFEBE7; background-color: #C0C1B6; color: #000000; font-size: 13px; }
+TH.calendar { margin: 1px; border-bottom: 1px solid #63655A; border-right: 1px solid #63655A; border-top: 1px solid #D6D3C6; border-left: 1px solid #D6D3C6; background-color: #88887C; color: #FFFFFF; font-size: 13px; }
+.CalendarButtons { margin: 1px; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; background-color: #DCDDD5; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; font-weight: bold; }
+.CalendarControls { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.Table { border: 1px solid #000000; background-color: #A2A296; }

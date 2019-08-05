@@ -1,0 +1,164 @@
+<STYLE TYPE="text/css">
+<!--
+.DataTD3 { background-color: #0033FF; color: #000000; font-size: 12px; }
+.DataTD2 { background-color:#FF00CC; color: #000000; font-size: 12px; }
+.DataTD4 { background-color: #FF0000; color: #000000; font-size: 12px; } 
+
+BODY {
+        font-family: Helvetica,Arial;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 11px;
+        font-variant: normal;
+        font-stretch: normal;
+        line-height: 150%;
+        color: #0101B0;
+        cursor: auto;
+        text-align: left;
+        text-decoration: none;
+        text-transform: none;
+        white-space: normal;
+}
+
+TABLE {
+        font-family: Helvetica,Arial;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 12px;
+        font-variant: normal;
+        font-stretch: normal;
+        line-height: 150%;
+        color: #000000;
+        cursor: auto;
+        text-align: left;
+        text-decoration: none;
+        text-transform: none;
+        white-space: normal;
+}
+
+linieb {
+  border-top: 3px solid #FFFFFF;
+  border-bottom: 3px solid #FFFFFF;
+  }
+
+HR {
+  text-align: center;
+  width: 100%; 
+  font-size : 1px;
+  width : 100%;
+  border: 1px solid blue;
+    white-space: 0px;
+  padding: 0.8em 1ex 0.8em 5mm;
+}
+
+P {
+        font-family: Helvetica,Arial;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 12px;
+        font-variant: normal;
+        font-stretch: normal;
+        line-height: 150%;
+        color: #000000;
+        cursor: auto;
+        text-decoration: none;
+        text-transform: none;
+        white-space: normal;
+}
+
+PJ {
+        font-family: Helvetica,Arial;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 12px;
+        font-variant: normal;
+        font-stretch: normal;
+        line-height: 150%;
+        color: #0101B0;
+        cursor: auto;
+        text-align: justify;;
+        text-decoration: none;
+        text-transform: none;
+        white-space: normal;
+}
+
+A:LINK {
+        font-family: Helvetica,Arial;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 12px;
+        font-variant: normal;
+        font-stretch: normal;
+        line-height: 150%;
+        color: #0101B0;
+        cursor: auto;
+        text-align: left;
+        text-decoration: none;
+        text-transform: none;
+        white-space: normal;
+}
+
+.linkm {
+        font-family: Helvetica,Arial;
+        font-size: 10px;
+        color: #0101B0;
+}
+
+A:HOVER {
+        font-family: Helvetica,Arial;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 12px;
+        font-variant: normal;
+        font-stretch: normal;
+        line-height: 150%;
+        color: #FF7568;
+        cursor: auto;
+        text-align: left;
+        text-decoration: none;
+        text-transform: none;
+        white-space: normal;
+}
+
+A:VISITED {
+        font-family: Helvetica,Arial;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 12px;
+        font-variant: normal;
+        font-stretch: normal;
+        line-height: 150%;
+        color: #0101B0;
+        cursor: auto;
+        text-align: left;
+        text-decoration: none;
+        text-transform: none;
+        white-space: normal;
+}
+
+A:ACTIVE {
+        font-family: Helvetica,Arial;
+        font-weight: normal;
+        font-style: italic;
+        font-size: 12px;
+        font-variant: normal;
+        font-stretch: normal;
+        line-height: 150%;
+        color: #FF7568;
+        cursor: auto;
+        text-align: left;
+        text-decoration: none;
+        text-transform: none;
+        white-space: normal;
+}
+
+
+
+
+
+
+.spacing {
+  font-size : 4px;
+}
+-->
+</STYLE>

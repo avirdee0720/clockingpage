@@ -1,0 +1,78 @@
+<?php
+include("./config.php");
+include_once("./header.php");
+$PHP_SELF = $_SERVER['PHP_SELF'];
+$db = new CMySQL;
+uprstr($PU,90);
+$dataakt=date("d/m/Y H:i:s");
+$msgdb = new CMySQL;
+
+if(!isset($state))
+{
+
+$rokmniej=date("Y")- 1;
+$startd="01/12/".$rokmniej;
+$endd="30/11/".date("Y");
+
+list($day, $month, $year) = explode("/",$startd);
+$dod = "$year-$month-$day";
+list($day1, $month1, $year1) = explode("/",$endd);
+$ddo= "$year1-$month1-$day1";
+
+//&cln=$nr&startd=$sd&endd=$ed
+echo "
+<font class='FormHeaderFont'>Leavers for a month</font>
+<BR>
+
+<form action='$PHP_SELF' method='post' name='addholliday'>
+<table WIDTH=500 bordercolorlight='black' border='border' style='border-collapse: collapse; background-color: white' >
+<tr>
+         <td class='FieldCaptionTD'><B>Year</B></td>
+         <td class='FieldCaptionTD'>  
+         <select class='Select' name='year'>
+                <option  value='2006'>2006</option>
+                <option selected value='2007'>2007</option>
+				<option  value='2008'>2008</option>
+				<option  value='2009'>2009</option>
+				<option  value='2010'>2010</option>
+                 </select></td>
+</tr>     
+<tr>
+         <td class='FieldCaptionTD'><B>Month</B></td>
+         <td class='FieldCaptionTD'>  
+         <select class='Select' name='month'>
+                <option selected value='01'>01 January</option>
+                <option value='02'>02 February</option>
+                <option value='03'>03 March</option>
+                <option value='04'>04 April</option>
+                <option value='05'>05 May</option>
+                <option value='06'>06 June</option>
+                <option value='07'>07 July</option>
+                <option value='08'>08 August</option>
+                <option value='09'>09 September</option>
+                <option value='10'>10 October</option>
+                <option value='11'>11 November</option>
+                <option value='12'>12 December</option>
+                 </select></td>
+</tr>
+";
+
+
+echo "
+</table>
+
+			<input name='state' type='hidden' value='1'>
+			<input class='Button' name='Update' type='submit' value='$SAVEBTN'>
+</center>
+</FORM>
+</td></tr>
+</table>";
+include_once("./footer.php");
+}
+elseif($state==1)
+{
+
+echo "<script language='javascript'>window.location=\"r_leavers2.php?month=$month&year=$year\"</script>";
+}
+
+?>

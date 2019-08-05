@@ -1,0 +1,849 @@
+<html xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1250">
+<title>AFFIX Z REPORT HERE</title>
+<LINK REL='stylesheet' HREF='../style/multipads/style.css' TYPE='text/css'>
+
+<style type="text/css">
+<!--
+.style1 {
+	font-family: Tahoma;
+	font-size: 8.0pt;
+}
+.style2 {
+	font-family: Tahoma;
+	font-size: 7.0pt;
+}
+-->
+</style></head>
+<body bgcolor="#FFFFFF">
+<div class=Section1>
+    <table width="865" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td rowspan="5" class='ColumnTD'><b><span style="font-size:24.0pt;font-family:Tahoma">FLOAT SHEET</span></b></td>
+        <td colspan="4" class='ColumnTD'><b><span style="font-size:9.0pt;font-family:Tahoma">##{$message}#</span></b></td>
+      </tr>
+      <tr>
+        <td class='ColumnTD'><b><span style="font-size:10.0pt;font-family:Tahoma">SHOP </span></b></td>
+        <td class='ColumnTD'><b><span style="font-size:10.0pt;font-family:Tahoma">
+         
+          ##{foreach from=$shop key=k item=i}# 
+          ##{if $shopid eq $i.shopid}# 
+		    ##{$i.shopname}#
+          ##{/if}# 
+          ##{/foreach}#
+      </span></b></td>
+        <td class='ColumnTD'><b><span style="font-size:10.0pt;font-family:Tahoma">DEPT</span></b></td>
+        <td class='ColumnTD'>
+          ##{foreach from=$department key=k item=i}# 
+          ##{if $departmentid eq  $i.depid}# 
+		 ##{$i.department}#
+          ##{/if}# 
+          ##{/foreach}#
+             </td>
+      </tr>
+      <tr>
+        <td class='ColumnTD'><b><span style="font-size:9.0pt;font-family:Tahoma">DAY </span></b></td>
+        <td class='ColumnTD'><b><span style="font-size:9.0pt;font-family:Tahoma">##{$fsdateofweektxt}#</span></b></td>
+        <td class='ColumnTD'><b><span style="font-size:9.0pt;font-family:Tahoma">DATE </span></b></td>
+        <td class='ColumnTD'>##{$fsdate}#</td>
+      </tr>
+      <tr>
+        <td colspan="2" class='ColumnTD'><b><span style="font-size:9.0pt;font-family:Tahoma">Float Sheet Completed by</span></b></td>
+        <td colspan="2" class='ColumnTD'>
+          ##{foreach from=$user key=k item=i}# 
+          ##{if $user_floatsheet eq $i.userid}# 
+          ##{$i.username}#
+          ##{/if}# 
+          ##{/foreach}#
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class='ColumnTD'><b><span style="font-size:9.0pt;font-family:Tahoma">State</span></b></td>
+        <td colspan="2" class='ColumnTD'>
+          ##{foreach from=$state key=k item=i}# 
+          ##{if $valid eq $i.valid}# 
+       ##{$i.statetxt}#
+          ##{/if}# 
+          ##{/foreach}#
+                
+           </td>
+      </tr>
+    </table>
+    <p>
+    </p>
+    <label></label>
+    <input name="floatsheedid" type="hidden" id="floatsheetid" value="##{$floatsheetid}#">
+    <input name="edit" type="hidden" id="edit" value="##{$edit}#">
+</div>
+  <div align="center">
+    <table width="865" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr><td class='DataTD' width="34%" valign="top">&nbsp;</td><td class='DataTD' width="2%" valign="top">&nbsp;</td><td class='DataTD' width="64%" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class='DataTD' valign="top"><table border=1 cellspacing=0 cellpadding=0 width=264>
+          <tr>
+            <td class='DataTD' colspan=3><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:18.0pt;font-family:Tahoma'>MORNING FLOAT</span></b></p></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=66>&nbsp;</td>
+            <td class='DataTD'><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>CASH MONEY</span></b></p></td>
+            <td class='DataTD'><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>MVE VOUCHERS</span></b></p></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>&pound;50</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.1}#
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+                ##{$floatsvalue.2}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>&pound;20</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.3}#
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.4}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>&pound;10</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.5}#
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.6}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>&pound;5</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.7}#
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.8}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>&pound;2 / &pound;1</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.9}#
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.10}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>50P</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.11}#
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.12}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>Small Change</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.13}#
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.14}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>Till Total</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.15}#
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.16}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>Buying Reserve</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.17}#
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.18}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>Change Reserve</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.19}#
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.20}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=66><p><b><span lang=EN-US style='font-size:11.0pt;
+  font-family:Tahoma'>TOTAL</span></b></p></td>
+            <td class='DataTD'><div align="right">
+               ##{$floatsvalue.21}#
+            </div></td>
+            <td class='DataTD'><div align="right">
+               ##{$floatsvalue.22}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' colspan=3 valign=top><p><b><span lang=EN-US style='font-size:7.0pt;
+  font-family:Tahoma'>COMPLETED BY </span></b></p>
+                <label>
+          ##{foreach from=$user key=k item=i}# 
+          ##{if $user_morning eq $i.userid}# 
+          ##{$i.username}#
+         ##{/if}# 
+          ##{/foreach}#                </label>            </td>
+          </tr>
+        </table></td>
+        <td class='DataTD' valign="top">&nbsp;</td>
+        <td class='DataTD' valign="top"><table border=1 cellspacing=0 cellpadding=0 width=267>
+          <tr>
+            <td class='DataTD' colspan=3><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:18.0pt;font-family:Tahoma'>EVENING FLOAT</span></b></p></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=69>&nbsp;</td>
+            <td class='DataTD'><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>Cash Money</span></b></p></td>
+            <td class='DataTD'><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>MVE Vouchers</span></b></p></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>&pound;50</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+          ##{$floatsvalue.23}#
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+          ##{$floatsvalue.24}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>&pound;20</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+          ##{$floatsvalue.25}#
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+              ##{$floatsvalue.26}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>&pound;10</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+		##{$floatsvalue.27}#
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.28}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>&pound;5</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.29}#
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.30}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>&pound;2 / &pound;1</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.31}#
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.32}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>50P</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.33}#
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.34}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt; font-family:Tahoma'>Small Change</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.35}#
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.36}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>Till  Total</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.37}#
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.38}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>Buying Reserve</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.39}#
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.40}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt; font-family:Tahoma'>Change Reserve</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.41}#
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.42}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD'><b><span style="font-size:9.0pt;
+  font-family:Tahoma">Total</span></b></td>
+            <td class='DataTD'><div align="right">
+               ##{$floatsvalue.43}#
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.44}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD'><b><span style="font-size:9.0pt; font-family:Tahoma">Voucher Slips</span></b></td>
+            <td class='DataTD'><div align="right">
+               ##{$floatsvalue.45}#
+            </div></td>
+            <td class='DataTD'><div align="right">
+               ##{$floatsvalue.46}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD'><b><span style="font-size:9.0pt; font-family:Tahoma">Credit Cards</span></b></td>
+            <td class='DataTD'><div align="right">
+               ##{$floatsvalue.47}#
+            </div></td>
+            <td class='DataTD'><div align="right">
+               ##{$floatsvalue.48}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD'><b><span style="font-size:9.0pt; font-family:Tahoma">Cheques</span></b></td>
+            <td class='DataTD'><div align="right">
+               ##{$floatsvalue.49}#
+            </div></td>
+            <td class='DataTD'><div align="right">
+               ##{$floatsvalue.50}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=69><p><b><span lang=EN-US style='font-size:11.0pt;
+  font-family:Tahoma'>Grand Total</span></b></p></td>
+            <td class='DataTD'><div align="right">
+               ##{$floatsvalue.51}#
+            </div></td>
+            <td class='DataTD'><div align="right">
+               ##{$floatsvalue.52}#
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' colspan=3 valign=top><p><b><span lang=EN-US style='font-size:7.0pt;
+  font-family:Tahoma'>COMPLETED BY</span></b></p>
+                <p>
+          ##{foreach from=$user key=k item=i}# 
+          ##{if $user_evening eq $i.userid}# 
+                ##{$i.username}#
+          ##{/if}# 
+          ##{/foreach}#              </p></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr><td class='DataTD' valign="top">&nbsp;</td><td class='DataTD' valign="top">&nbsp;</td><td class='DataTD' valign="top">&nbsp;</td>
+      </tr>
+      
+      <tr><td class='DataTD' valign="top"><table border=1 cellspacing=0 cellpadding=0 width=389>
+          <tr><td class='DataTD' colspan="4"><p style='text-align:justify'><b><span style="font-size:18.0pt;font-family:Tahoma">BANKING &amp; FLOAT</span></b></p></td>
+          </tr>
+          <tr><td class='DataTD' width=98>&nbsp;</td><td class='DataTD' width=95><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>Cash Money</span></b></p></td><td class='DataTD' width=91><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:8.0pt;
+  font-family:Tahoma'>MEV Vouchers</span></b></p></td><td class='DataTD' width=95><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:8.0pt;
+  font-family:Tahoma'>TOTAL</span></b></p></td>
+          </tr>
+          <tr><td class='DataTD' width=98><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>Evening count</span></b></p></td><td class='DataTD' width=95><div align="right">
+               ##{$floatsvalue.53}#
+              </div>
+                <div align="right"></div></td><td class='DataTD' width=91><div align="right">
+               ##{$floatsvalue.54}#
+            </div></td><td class='DataTD' width=95><div align="right">
+              ##{$floatsvalue.55}#
+            </div></td>
+          </tr>
+          <tr><td class='DataTD' width=98><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>Banking</span></b></p></td><td class='DataTD' width=95><div align="right">
+              ##{$floatsvalue.56}#
+            </div></td><td class='DataTD' width=91><div align="right">
+              ##{$floatsvalue.57}#
+            </div></td><td class='DataTD' width=95><div align="right">
+              ##{$floatsvalue.58}#
+            </div></td>
+          </tr>
+          <tr><td class='DataTD' width=98 rowspan=2><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:7.0pt;
+  font-family:Tahoma'>Credit Card/voucher Slips</span></b></p></td><td class='DataTD' width=95><p><b><span lang=EN-US style='font-size:5.0pt;font-family:Tahoma'>Credit
+              cards</span></b></p></td><td class='DataTD' width=91><p><b><span lang=EN-US style='font-size:5.0pt;font-family:Tahoma'>Voucher
+              slips</span></b></p></td><td class='DataTD' width=95 rowspan=2><div align="right">
+              ##{$floatsvalue.59}#
+            </div></td>
+          </tr>
+          <tr><td class='DataTD' width=95><div align="right">
+              ##{$floatsvalue.60}#
+            </div></td><td class='DataTD' width=91><div align="right">
+              ##{$floatsvalue.61}#
+            </div></td>
+          </tr>
+          <tr><td class='DataTD' width=98><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>TOMORROW’S FLOAT</span></b></p></td><td class='DataTD' width=95><div align="right">
+              ##{$floatsvalue.62}#
+            </div></td><td class='DataTD' width=91><div align="right">
+              ##{$floatsvalue.63}#
+            </div></td><td class='DataTD' width=95><div align="right">
+              ##{$floatsvalue.64}#
+            </div></td>
+          </tr>
+        </table></td><td class='DataTD' valign="top">&nbsp;</td><td class='DataTD' valign="top">
+        <table border=1 cellspacing=0 cellpadding=0 width=368>
+          <tr><td class='DataTD' colspan=3><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:14.0pt;
+  font-family:Tahoma'>OVERRINGs RECORD</span></b></p></td>
+          </tr>
+          <tr><td class='DataTD' colspan=3><p style='text-align:justify;'><span
+  lang=EN-US style='font-size:7.0pt;font-family:Tahoma'>Enter your over-rings
+              here during the day.  Enter the dept no
+              in the dept column and C or V on the C/V column to show what type of
+              transaction it was and whether it was for cash or vouchers.  </span></p></td>
+          </tr>
+          <tr><td class='DataTD' width=86><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:10.0pt;
+  font-family:Tahoma'>Dept</span></b></p></td><td class='DataTD' width=83><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:10.0pt;
+  font-family:Tahoma'>C/V</span></b></p></td><td class='DataTD'><p align=center style='text-align:center;'><b><span lang=EN-US style='font-family:Tahoma'>Amount</span></b></p></td>
+          </tr>
+          ##{foreach from=$overring key=k item=i}#
+          <tr>
+          <td class='DataTD' width=95><div align="right">
+          ##{foreach from=$department key=k item=j}# 
+          ##{if $i.departmentid eq  $j.depid}# 
+		  ##{$j.department}#
+          ##{/if}# 
+          ##{/foreach}#
+            </div></td><td class='DataTD' width=83><div align="right">##{$i.cv}#</div></td>
+            <td class='DataTD' width=95><div align="right">
+                ##{$i.amount}#
+            </div></td>
+          </tr> 
+          ##{/foreach}#
+        </table></td>
+      </tr>
+      
+      
+      <tr>
+        <td class='DataTD' valign="top">&nbsp;</td>
+        <td class='DataTD' valign="top">&nbsp;</td>
+        <td class='DataTD' valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top" class='DataTD'><table border=1 cellspacing=0 cellpadding=0 width=388>
+          <tr><td class='DataTD' colspan="4"><p style='text-align:justify'><b><span style="font-size:18.0pt;font-family:Tahoma">DEPARTMENT REPORT</span></b></p></td>
+            </tr>
+          <tr><td class='DataTD' width=141 valign=top><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-family:Tahoma'>SHOP RESULTS</span></b></p></td><td class='DataTD' width=95><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:7.0pt;font-family:Tahoma'>GROSS Total</span></b></p></td><td class='DataTD' width=95><p align=center style='text-align:center;
+  '><strong><span class="style2">Overrings</span></strong></p></td><td class='DataTD' width=47><p align=center style='text-align:center;
+  '><b><span style="font-size:7.0pt;font-family:Tahoma">Net Total</span></b></p></td>
+            </tr>
+          <tr><td class='DataTD'><div align="center"><b><span style="font-size:8.0pt; font-family:Tahoma">01SALE</span></b></div></td><td class='DataTD' width=95><div align="right">
+        ##{$floatsvalue.80}#
+            </div></td><td class='DataTD' width=95><div align="right">
+        ##{$floatsvalue.81}#
+              </div></td><td class='DataTD'>
+                <div align="right">
+             ##{$floatsvalue.82}#                </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <b><span lang=EN-US style='font-size:8.0pt; font-family:Tahoma'>02SALE</span></b></p></td><td class='DataTD' width=95><div align="right">
+             ##{$floatsvalue.83}#
+              </div></td><td class='DataTD' width=95><div align="right">
+             ##{$floatsvalue.84}#
+                </div></td><td class='DataTD' width=47>
+                  <div align="right">
+              ##{$floatsvalue.85}#                  </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;'>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <b><span lang=EN-US style='font-size:8.0pt; font-family:Tahoma'>03SALE</span></b></p></td><td class='DataTD' width=95><div align="right">
+              ##{$floatsvalue.86}#
+              </div></td><td class='DataTD' width=95><div align="right">
+              ##{$floatsvalue.87}#
+                </div></td><td class='DataTD' width=47>
+                  <div align="right">
+              ##{$floatsvalue.88}#                  </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '><strong><span class="style1">07STFF</span></strong></p></td><td class='DataTD' width=95><div align="right">
+            ##{$floatsvalue.89}#
+            </div></td><td class='DataTD' width=95><div align="right">
+            ##{$floatsvalue.90}#
+              </div></td><td class='DataTD' width=47>
+                <div align="right">
+            ##{$floatsvalue.91}#                </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:8.0pt;font-family:Tahoma'>08DEP</span></b></p></td><td class='DataTD' width=95><div align="right">
+            ##{$floatsvalue.92}#
+            </div></td><td class='DataTD' width=95><div align="right">
+            ##{$floatsvalue.93}#
+              </div></td><td class='DataTD' width=47>
+                <div align="right">
+            ##{$floatsvalue.94}#                </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '><strong><span class="style1">Payouts</span></strong></p></td><td class='DataTD' width=95><div align="center"><b><span style="font-size:7.0pt;font-family:Tahoma">GROSS Total</span></b></div></td><td class='DataTD' width=95><div align="center"><strong><span class="style2">Overrings</span></strong></div></td><td class='DataTD' width=47><div align="center"><b><span style="font-size:7.0pt;font-family:Tahoma">Net Total</span></b></div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <b><span lang=EN-US style='font-size:8.0pt; font-family:Tahoma'>04PAY (Cash)</span></b></p></td><td class='DataTD' width=95><div align="right">
+            ##{$floatsvalue.95}#
+              </div></td><td class='DataTD' width=95><div align="right">
+            ##{$floatsvalue.96}#
+                </div></td><td class='DataTD' width=47>
+                  <div align="right">
+            ##{$floatsvalue.97}#                  </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <b><span lang=EN-US style='font-size:8.0pt; font-family:Tahoma'>05PAY</span></b><b><span style="font-size:8.0pt; font-family:Tahoma"> (Cash)</span></b></p></td><td class='DataTD' width=95><div align="right">
+            ##{$floatsvalue.98}#
+              </div></td><td class='DataTD' width=95><div align="right">
+            ##{$floatsvalue.99}#
+                </div></td><td class='DataTD' width=47>
+                  <div align="right">
+             ##{$floatsvalue.100}#                  </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <b><span lang=EN-US style='font-size:8.0pt; font-family:Tahoma'>06PAY</span></b><b><span style="font-size:8.0pt; font-family:Tahoma"> (Cash)</span></b></p></td><td class='DataTD' width=95><div align="right">
+             ##{$floatsvalue.101}#
+              </div></td><td class='DataTD' width=95><div align="right">
+            ##{$floatsvalue.102}#
+                </div></td><td class='DataTD' width=47>
+                  <div align="right">
+            ##{$floatsvalue.103}#                  </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:8.0pt;font-family:Tahoma'>14PAY</span><span style="font-size:8.0pt; font-family:Tahoma"> (Voucher)</span></b></p></td><td class='DataTD' width=95><div align="right">
+            ##{$floatsvalue.104}#
+            </div></td><td class='DataTD' width=95><div align="right">
+            ##{$floatsvalue.105}#
+              </div></td><td class='DataTD' width=47>
+                <div align="right">
+            ##{$floatsvalue.106}#                </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:8.0pt;font-family:Tahoma'>15PAY</span><span style="font-size:8.0pt; font-family:Tahoma"> (Voucher)</span></b></p></td><td class='DataTD' width=95><div align="right">
+            ##{$floatsvalue.107}#
+            </div></td><td class='DataTD' width=95><div align="right">
+            ##{$floatsvalue.108}#
+              </div></td><td class='DataTD' width=47>
+                <div align="right">
+            ##{$floatsvalue.109}#                </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:8.0pt;font-family:Tahoma'>16PAY</span><span style="font-size:8.0pt; font-family:Tahoma"> (Voucher)</span></b></p></td><td class='DataTD' width=95><div align="right">
+            ##{$floatsvalue.110}#
+            </div></td><td class='DataTD' width=95><div align="right">
+            ##{$floatsvalue.111}#
+              </div></td><td class='DataTD' width=47>
+                <div align="right">
+            ##{$floatsvalue.112}#                </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:8.0pt;font-family:Tahoma'>Total Payputs</span></b></p></td><td class='DataTD' width=95><div align="right">
+            ##{$floatsvalue.113}#
+            </div></td><td class='DataTD' width=95><div align="right">
+            ##{$floatsvalue.114}#
+              </div></td><td class='DataTD' width=47>
+                <div align="right">
+            ##{$floatsvalue.115}#                </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:8.0pt;font-family:Tahoma'>Refunds</span></b></p></td><td class='DataTD' width=95><div align="center"><b><span style="font-size:7.0pt;font-family:Tahoma">RETN Total</span></b></div></td><td class='DataTD' width=95><div align="center"><strong><span class="style2">Overring</span></strong></div></td><td class='DataTD' width=47><div align="right"><b><span style="font-size:7.0pt;font-family:Tahoma">Net Total</span></b></div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <b><span lang=EN-US style='font-size:8.0pt; font-family:Tahoma'>01SALE</span></b></p></td><td class='DataTD' width=95><div align="right">
+            ##{$floatsvalue.116}#
+              </div></td><td class='DataTD' width=95><div align="right">
+            ##{$floatsvalue.117}#
+                </div></td><td class='DataTD'>
+                  <div align="right">
+            ##{$floatsvalue.118#                  </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <b><span lang=EN-US style='font-size:8.0pt; font-family:Tahoma'>02SALE</span></b></p></td><td class='DataTD' width=95><div align="right">
+            ##{$floatsvalue.119}#
+              </div></td><td class='DataTD' width=95><div align="right">
+            ##{$floatsvalue.120}#
+                </div></td><td class='DataTD'>
+                  <div align="right">
+           ##{$floatsvalue.121}#                  </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <b><span lang=EN-US style='font-size:8.0pt; font-family:Tahoma'>03SALE</span></b></p></td><td class='DataTD' width=95><div align="right">
+            ##{$floatsvalue.122}#
+              </div></td><td class='DataTD' width=95><div align="right">
+              ##{$floatsvalue.123}#
+                </div></td><td class='DataTD'>
+                  <div align="right">
+                   ##{$floatsvalue.124}#                  </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '><strong><span class="style1">07STFF</span></strong></p></td><td class='DataTD' width=95><div align="right">
+           ##{$floatsvalue.125}#
+            </div></td><td class='DataTD' width=95><div align="right">
+             ##{$floatsvalue.126}#
+              </div></td><td class='DataTD'>
+                <div align="right">
+                ##{$floatsvalue.127}#                </div></td>
+            </tr>
+          <tr><td class='DataTD'><div align="center"><b><span style="font-size:8.0pt;font-family:Tahoma">08DEP</span></b></div></td><td class='DataTD' width=95><div align="right">
+            ##{$floatsvalue.128}#
+            </div></td><td class='DataTD' width=95><div align="right">
+             ##{$floatsvalue.129}#
+              </div></td><td class='DataTD'>
+                <div align="right">
+               ##{$floatsvalue.130}#                </div></td>
+            </tr>
+          <tr><td class='DataTD'>&nbsp;</td><td class='DataTD'><div align="center"><b><span style="font-size:7.0pt;font-family:Tahoma">Total</span></b></div></td><td class='DataTD'><div align="center"><strong><span class="style2">Overring</span></strong></div></td><td class='DataTD'><div align="center"><b><span style="font-size:7.0pt;font-family:Tahoma">Net Tota</span></b>l</div></td>
+            </tr>
+          <tr><td class='DataTD' width=141 height="24"><div align="center"><strong><span class="style1">Expenses Paid Out</span></strong></div></td><td class='DataTD' width=95><div align="right">
+            ##{$floatsvalue.131}#
+            </div></td><td class='DataTD' width=95><div align="right">
+            ##{$floatsvalue.132}#
+              </div></td><td class='DataTD' width=47>
+                <div align="right">
+          ##{$floatsvalue.133}#                </div></td>
+            </tr>
+        </table></td>
+        <td rowspan="2" valign="top" class='DataTD'>&nbsp;</td>
+        <td height="225" valign="top" class='DataTD'><table border=1 cellspacing=0 cellpadding=0 width=358>
+          <tr>
+            <td class='DataTD' colspan="3"><b><span style="font-size:14.0pt;font-family:Tahoma">PAYOUTS</span></b></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=46><span style="text-align:center;
+  "><b><span style="font-size:10.0pt;font-family:Tahoma">CASH</span></b></span></td>
+            <td class='DataTD'><p align=center style='text-align:center;
+  '>
+                <st1:address w:st="on">
+                <st1:Street w:st="on">
+                <b><span style="font-size:10.0pt;font-family:Tahoma">VOUCHERS</span></b></p></td>
+            <td class='DataTD'><p align=center style='text-align:center;
+  '>
+                <st1:address w:st="on">
+                <st1:Street w:st="on">
+                <span
+  lang=EN-US style='font-size:14.0pt;font-family:Tahoma'><b>TOTALS</b></span></p></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f134" type="text" id="eveingcount_voucher11" value="##{$floatsvalue.134}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f135" type="text" id="eveingcount_voucher11" value="##{$floatsvalue.135}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD' width=74><div align="right">
+                <input name="f136" type="text" id="eveingcount_voucher2" value="##{$floatsvalue.136}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td class='DataTD' valign="top"><table border=1 cellspacing=0 cellpadding=0 width=358>
+          <tr>
+            <td class='DataTD' colspan="2"><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:14.0pt;
+  font-family:Tahoma'>EXPENSES</span></b></p></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=225><b><span style="font-size:10.0pt;font-family:Tahoma">Expense</span></b></td>
+            <td class='DataTD' width=127><b><span style="font-size:10.0pt;font-family:Tahoma">Amount</span></b></td>
+          </tr>
+          ##{foreach from=$expense key=k item=i}#
+  <tr>
+    <td class='DataTD' width=225><p align=center style='text-align:center;'>
+      <label> ##{$i.expense}# </label>
+    </p></td>
+    <td class='DataTD' width=127><div align="right"> ##{$i.amount}# </div></td>
+  </tr>
+          ##{/foreach}#
+        </table></td>
+      </tr>
+      <tr><td class='DataTD' valign="top">&nbsp;</td><td class='DataTD' valign="top">&nbsp;</td><td class='DataTD' valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="3" valign="top" class='DataTD'><table width=359 height="78" border=1 cellpadding=0 cellspacing=0>
+          <tr>
+            <td class='DataTD' colspan="5"><p><b><span lang=EN-US style='font-size:11.0pt;font-family:Tahoma'>TRANSFERS</span></b></p></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=104><span style="text-align:center;"><b><span style="font-size:10.0pt;
+  font-family:Tahoma">FROM</span></b></span></td>
+            <td class='DataTD' width=104><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:10.0pt;
+  font-family:Tahoma'>TO</span></b></p></td>
+            <td class='DataTD' width=108><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:8.0pt;
+  font-family:Tahoma'>C/V</span></b></p></td>
+            <td class='DataTD' width=163><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:8.0pt;
+  font-family:Tahoma'>Amount In</span></b></p></td>
+            <td class='DataTD' width=185><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:7.0pt;
+  font-family:Tahoma'>Amount Out</span></b></p></td>
+          </tr>
+          ##{foreach from=$transfer key=k item=i}#
+  <tr>
+    <td class='DataTD' width=104><div align="right">
+          ##{foreach from=$department key=k item=j}# 
+          ##{if $i.transferfrom eq  $j.depid}# 
+		##{$j.department}#
+          ##{/if}# 
+          ##{/foreach}#
+    </div></td>
+    <td class='DataTD' width=104><div align="right">
+          ##{foreach from=$department key=k item=j}# 
+          ##{if $i.transferto eq  $j.depid}# 
+		##{$j.department}#
+        ##{/if}# 
+          ##{/foreach}#
+    </div></td>
+    <td class='DataTD' width=108><div align="right">
+      ##{$i.cv}#
+    </div></td>
+    <td class='DataTD' width=163><div align="right">
+      ##{$i.amountin}#
+    </div></td>
+    <td class='DataTD' width=185><div align="right">
+      ##{$i.amount.out}#
+    </div></td>
+  </tr>
+          ##{/foreach}#
+        </table></td>
+      </tr>
+      <tr>
+        <td class='DataTD' valign="top">&nbsp;</td>
+        <td class='DataTD' valign="top">&nbsp;</td>
+        <td class='DataTD' valign="top">&nbsp;</td>
+      </tr>
+      <tr><td class='DataTD' valign="top">&nbsp;</td><td class='DataTD' valign="top">&nbsp;</td><td class='DataTD' valign="top">&nbsp;</td>
+      </tr>
+    </table>
+ 
+<p align="center">&nbsp;</p>
+  <div class=Section4>
+    <div align="center">
+      <table border=1 cellspacing=0 cellpadding=0 width=720>
+        <tr><td class='DataTD' width=720><p style='text-align:center'><b><span lang=EN-US style='font-size:22.0pt;
+  font-family:Tahoma'>REPORT SHEET</span></b></p></td>
+        </tr>
+        <tr><td class='DataTD' width=720><p><b><span lang=EN-US style='font-size:10.0pt;font-family:Tahoma'> Note clearly any unusual activity about
+            today’s transactions here:</span></b></p></td>
+        </tr>
+        <tr><td class='DataTD' width=720><label>
+      ##{$report[0].reporttext}#
+            </label>          </td>
+        </tr>
+        <tr><td class='DataTD' width=720><p><b><span lang=EN-US style='font-size:10.0pt;font-family:Tahoma'>NAME</span></b></p>
+            <p><b><span lang=EN-US style='font-size:10.0pt;font-family:Tahoma'>
+          ##{foreach from=$user key=k item=i}# 
+          ##{if $user_report eq $i.userid}# 
+          ##{$i.username}# 
+          ##{/if}# 
+          ##{/foreach}#
+              </span></b></p></td>
+        </tr>
+        <tr><td class='DataTD' width=720><p><b><span lang=EN-US
+  style='font-size:10.0pt;font-family:Tahoma'>If you need help completing this form call:                              020
+            7229 4546</span></b></p></td>
+        </tr>
+        <tr><td class='DataTD' width=720><p><b><span lang=EN-US
+  style='font-size:10.0pt;font-family:Tahoma'>Other enquiries call:                                                                 020 7727 2040</span></b></p></td>
+        </tr>
+      </table>
+      <p></p>
+    </div>
+  </div>
+
+<div class=Section4></div>
+</body>
+</html>

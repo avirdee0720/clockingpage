@@ -1,0 +1,37 @@
+/* HappyPumpkin CCSTheme */
+BODY, TABLE, TH, TR, TD, UL, OL, LI, P, FONT, A, BLOCKQUOTE, LABEL { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.HappyPumpkinPageBODY{ font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.HappyPumpkinFormHeaderFont{ color: #000000; font-size: 18px; font-weight: bold; }
+.HappyPumpkinFormTABLE{ border: 1px outset #E5E5E5; background-color: #F7F1E8; }
+.HappyPumpkinColumnTD { border: 1px outset #E5E5E5; background-color: #FFCC99; color: #000000; font-size: 13px; font-weight: bold; }
+.HappyPumpkinFieldCaptionTD { border: 1px outset #E5E5E5; background-color: #FFCC99; color: #000000; font-size: 13px; font-weight: bold; }
+.HappyPumpkinDataTD{ border: 1px inset #E5E5E5; background-color: #FFFFFF; color: #000000; font-size: 13px; }
+.HappyPumpkinErrorDataTD{ border: 1px inset #E5E5E5; background-color: #FFFFFF; color: #FF0000; font-size: 13px; }
+.HappyPumpkinAltDataTD{ border: 1px inset #E5E5E5; background-color: #FFF5EC; color: #000000; font-size: 13px; }
+.HappyPumpkinSeparatorTD{ height: 1px; background-color: #808080; }
+.HappyPumpkinFooterTD { border: 1px outset #E5E5E5; background-color: #FFCC99; color: #000000; font-size: 13px; font-weight: bold; }
+a.HappyPumpkinSorterLink:link,a.HappyPumpkinSorterLink:visited{ color: #000000; font-weight: bold; text-decoration: underline; }
+a.HappyPumpkinSorterLink:hover,a.HappyPumpkinSorterLink:active{ color: #FF0000; font-weight: bold; text-decoration: none; }
+a.HappyPumpkinDataLink:link,a.HappyPumpkinDataLink:visited{ color: #000000; text-decoration: underline; }
+a.HappyPumpkinDataLink:hover,a.HappyPumpkinDataLink:active{ color: #FF0000; text-decoration: none; }
+a.HappyPumpkinNavigatorLink:link,a.HappyPumpkinNavigatorLink:visited{ color: #000000; font-weight: bold; text-decoration: underline; }
+a.HappyPumpkinNavigatorLink:hover,a.HappyPumpkinNavigatorLink:active{ color: #FF0000; font-weight: bold; text-decoration: none; }
+.HappyPumpkinButton { border-bottom: 1px outset #000000; border-left: 1px outset #000000; border-right: 1px outset #000000; border-top: 1px outset #000000; background-color: #FFF5EC; font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; font-weight: bold; }
+.HappyPumpkinInput { border-bottom: 1px outset #000000; border-left: 1px outset #000000; border-right: 1px outset #000000; border-top: 1px outset #000000; font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.HappyPumpkinTextarea { border-bottom: 1px outset #000000; border-left: 1px outset #000000; border-right: 1px outset #000000; border-top: 1px outset #000000; font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.HappyPumpkinSelect { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+/* Calendar */
+a.today:link,a.today:visited{ color: #FF0000; font-weight: bold; text-decoration: none; }
+a.today:hover,a.today:active{ color: #000000; font-weight: bold; text-decoration: none; }
+a.selectedDay:link,a.selectedDay:visited{ color: #000000; font-weight: bold; text-decoration: none; }
+a.selectedDay:hover,a.selectedDay:active{ color: #FF0000; font-weight: bold; text-decoration: none; }
+a.weekDay:link,a.weekDay:visited{ color: #000000; text-decoration: none; }
+a.weekDay:hover,a.weekDay:active{ color: #FF0000; text-decoration: none; }
+TD.selectedDay { margin: 1px; border: 1px outset #E5E5E5; background-color: #FFCC99; color: #000000; font-size: 13px; font-weight: bold; }
+TD.today { border-top: 1px solid #FF0000; border-left: 1px solid #FF0000; border-bottom: 1px solid #FF0000; border-right: 1px solid #FF0000; background-color: #FFFFFF; color: #000000; font-size: 13px; }
+TD.workday { border: 1px inset #E5E5E5; background-color: #FFFFFF; color: #000000; font-size: 13px; }
+TD.weekend { border: 1px inset #E5E5E5; background-color: #FFE9D2; color: #000000; font-size: 13px; }
+TH.calendar { margin: 1px; border: 1px outset #E5E5E5; background-color: #FFCC99; color: #000000; font-size: 13px; font-weight: bold; }
+.CalendarButtons { margin: 1px; border-bottom: 1px outset #000000; border-left: 1px outset #000000; border-right: 1px outset #000000; border-top: 1px outset #000000; background-color: #FFF5EC; font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; font-weight: bold; }
+.CalendarControls { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.Table { border: 1px outset #E5E5E5; background-color: #F7F1E8; }

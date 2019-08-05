@@ -1,0 +1,37 @@
+/* Knockout CCSTheme */
+BODY, TABLE, TH, TR, TD, UL, OL, LI, P, FONT, A, BLOCKQUOTE, LABEL { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.KnockoutPageBODY{ font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.KnockoutFormHeaderFont{ color: #003399; font-weight: bold; font-size: 18px; }
+.KnockoutFormTABLE{ border: 1px solid #000080; background-color: #C0C0C0; }
+.KnockoutColumnTD{ color: #000000; font-weight: bold; font-size: 13px; }
+.KnockoutFieldCaptionTD{ background-color: #003399; color: #FFFFFF; font-size: 13px; font-weight: bold; }
+.KnockoutDataTD{ border-left: 1px solid #808080; border-right: 1px solid #FFFFFF; border-top: 1px solid #808080; border-bottom: 1px solid #FFFFFF; background-color: #F0F0F0; font-size: 13px; }
+.KnockoutErrorDataTD{ border-left: 1px solid #808080; border-right: 1px solid #FFFFFF; border-top: 1px solid #808080; border-bottom: 1px solid #FFFFFF; background-color: #F0F0F0; color: #FF0000; font-size: 13px; }
+.KnockoutSeparatorTD{ height: 0px; }
+.KnockoutAltDataTD{ border-left: 1px solid #808080; border-right: 1px solid #FFFFFF; border-top: 1px solid #808080; border-bottom: 1px solid #FFFFFF; background-color: #FFFFFF; font-size: 13px; }
+.KnockoutFooterTD { color: #000000; font-weight: bold; font-size: 13px; }
+a.KnockoutSorterLink:link,a.KnockoutSorterLink:visited{ color: #000000; text-decoration: underline; }
+a.KnockoutSorterLink:hover,a.KnockoutSorterLink:active{ color: #F5F5F5; text-decoration: none; }
+a.KnockoutDataLink:link,a.KnockoutDataLink:visited{ color: #00008B; text-decoration: underline; }
+a.KnockoutDataLink:hover,a.KnockoutDataLink:active{ color: #DC143C; text-decoration: none; }
+a.KnockoutNavigatorLink:link,a.KnockoutNavigatorLink:visited{ color: #000000; text-decoration: underline; }
+a.KnockoutNavigatorLink:hover,a.KnockoutNavigatorLink:active{ color: #F5F5F5; text-decoration: none; }
+.KnockoutButton { background-color: #003399; color: #FFFFFF; font-family: Tahoma, Arial, Verdana, Helvetica; font-size: 13px; font-weight: bold; }
+.KnockoutInput { font-family: Tahoma, Arial, Verdana, Helvetica; font-size: 13px; }
+.KnockoutTextarea { font-family: Tahoma, Arial, Verdana, Helvetica; font-size: 13px; }
+.KnockoutSelect { font-family: Tahoma, Arial, Verdana, Helvetica; font-size: 13px; }
+/* Calendar */
+a.today:link,a.today:visited{ color: #FF0000; font-weight: bold; text-decoration: none; }
+a.today:hover,a.today:active{ color: #000000; font-weight: bold; text-decoration: none; }
+a.selectedDay:link,a.selectedDay:visited{ color: #FFFFFF; font-weight: bold; text-decoration: none; }
+a.selectedDay:hover,a.selectedDay:active{ color: #FF0000; font-weight: bold; text-decoration: none; }
+a.weekDay:link,a.weekDay:visited{ color: #000000; text-decoration: none; }
+a.weekDay:hover,a.weekDay:active{ color: #FF0000; text-decoration: none; }
+TD.selectedDay { margin: 1px; background-color: #003399; color: #FFFFFF; font-size: 13px; font-weight: bold; }
+TD.today { border-top: 1px solid #FF0000; border-left: 1px solid #FF0000; border-bottom: 1px solid #FF0000; border-right: 1px solid #FF0000; background-color: #F0F0F0; font-size: 13px; }
+TD.workday { border-left: 1px solid #808080; border-right: 1px solid #FFFFFF; border-top: 1px solid #808080; border-bottom: 1px solid #FFFFFF; background-color: #F0F0F0; font-size: 13px; }
+TD.weekend { color: #000000; font-size: 13px; }
+TH.calendar { margin: 1px; background-color: #003399; color: #FFFFFF; font-size: 13px; font-weight: bold; }
+.CalendarButtons { margin: 1px; background-color: #003399; color: #FFFFFF; font-family: Tahoma, Arial, Verdana, Helvetica; font-size: 13px; font-weight: bold; }
+.CalendarControls { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.Table { border: 1px solid #000080; background-color: #C0C0C0; }

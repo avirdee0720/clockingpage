@@ -1,0 +1,37 @@
+/*  CCSTheme */
+BODY, TABLE, TH, TR, TD, UL, OL, LI, P, FONT, A, BLOCKQUOTE, LABEL { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.PageBODY { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.FormHeaderFont{ color: #000000; font-size: 16px; font-weight: bold; }
+.FormTABLE{ border: solid 1px #000000; }
+.FieldCaptionTD { background-color: #EBE9E5; color: #330000; font-size: 13px; }
+.DataTD { background-color: #EFEFEF; color: #000000; font-size: 13px; }
+.ErrorDataTD { background-color: #EFEFEF; color: #FF0000; font-size: 13px; }
+.ColumnTD { color: #330000; background-color: #E5E1D7; font-size: 13px; font-weight: bold; }
+.AltDataTD { background-color: #F6F6F6; color: #000000; font-size: 13px; }
+.SeparatorTD { height: 1px; background-color: #C2BEB4; }
+.FooterTD{ background-color: #EBE9E5; color: #000000; font-size: 13px; }
+a.SorterLink:link,a.SorterLink:visited{ color: #330000; font-size: 13px; font-weight: bold; text-decoration: underline; }
+a.SorterLink:hover,a.SorterLink:active{ color: #000000; font-size: 13px; text-decoration: none; }
+a.DataLink:link,a.DataLink:visited{ color: #330000; font-size: 13px; text-decoration: underline; }
+a.DataLink:hover,a.DataLink:active{ color: #000000; font-size: 13px; text-decoration: none; }
+a.NavigatorLink:link,a.NavigatorLink:visited{ color: #330000; text-decoration: underline; }
+a.NavigatorLink:hover,a.NavigatorLink:active{ color: #000000; text-decoration: none; }
+.Button { border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; border-bottom: 1px solid #000000; background-color: #EFEFEF; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+.Input { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; background-color: #FFFFFF; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+.Textarea { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; background-color: #FFFFFF; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+.Select { font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+/* Calendar */
+a.today:link,a.today:visited{ color: #FF0000; font-weight: bold; text-decoration: none; }
+a.today:hover,a.today:active{ color: #330000; font-weight: bold; text-decoration: none; }
+a.selectedDay:link,a.selectedDay:visited{ color: #330000; font-weight: bold; text-decoration: none; }
+a.selectedDay:hover,a.selectedDay:active{ color: #FF0000; font-weight: bold; text-decoration: none; }
+a.weekDay:link,a.weekDay:visited{ color: #330000; text-decoration: none; }
+a.weekDay:hover,a.weekDay:active{ color: #FF0000; text-decoration: none; }
+TD.selectedDay { margin: 1px; color: #330000; background-color: #E5E1D7; font-size: 13px; }
+TD.today { border-top: 1px solid #FF0000; border-left: 1px solid #FF0000; border-bottom: 1px solid #FF0000; border-right: 1px solid #FF0000; background-color: #F6F6F6; color: #000000; font-size: 13px; }
+TD.workday { background-color: #F6F6F6; color: #000000; font-size: 13px; }
+TD.weekend { background-color: #DEDEDE; color: #000000; font-size: 13px; }
+TH.calendar { margin: 1px; color: #330000; background-color: #E5E1D7; font-size: 13px; }
+.CalendarButtons { border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; border-bottom: 1px solid #000000; background-color: #EFEFEF; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+.CalendarControls { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.Table { border: solid 1px #000000; }

@@ -1,0 +1,65 @@
+<?php
+include("./config.php");
+include_once("./header.php");
+$PHP_SELF = $_SERVER['PHP_SELF'];
+$db = new CMySQL;
+$tytul='Leavers - chose tax year';
+
+uprstr($PU,90);
+
+echo "  <TD ALIGN=JUSTIFY VALIGN=TOP border=0>
+
+<center>
+
+$ileich
+<font CLASS='FormHeaderFont'>$tytul&nbsp;&nbsp;   &nbsp;&nbsp;</font><BR><BR>
+<table border='0' cellpadding='3' cellspacing='1' CLASS='FormTABLE'>
+  <tr>
+    <td CLASS='DataLink' nowrap>
+&nbsp;
+
+        </td>
+    <td CLASS='DataLink' nowrap>
+&nbsp;
+
+        </td>
+    <td CLASS='DataLink' nowrap>
+&nbsp;
+
+        </td>
+</tr>
+<tr>
+    <td CLASS='DataLink' nowrap>
+                <A HREF='t_leavers2.php?when=1'>&nbsp;&nbsp;&nbsp; 2005 - 2006</a>
+
+        </td>
+    <td CLASS='DataLink' nowrap>
+                <A HREF='t_leavers2.php?when=2'>&nbsp;&nbsp;&nbsp; 2006 - 2007</a>
+
+        </td>
+    <td CLASS='DataLink' nowrap>
+                <A HREF='t_leavers2.php?when=3'>&nbsp;&nbsp;&nbsp; 2007 - 2008 &nbsp;&nbsp;&nbsp;</a>
+
+        </td>
+</tr>
+  <tr>
+    <td CLASS='DataLink' nowrap>
+&nbsp;
+
+        </td>
+    <td CLASS='DataLink' nowrap>
+&nbsp;
+
+        </td>
+    <td CLASS='DataLink' nowrap>
+&nbsp;
+
+        </td>
+</tr>
+</center>
+<BR>
+</td></tr>
+</table>
+";
+include_once("./footer.php");
+?>

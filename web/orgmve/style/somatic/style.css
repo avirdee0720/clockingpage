@@ -1,0 +1,37 @@
+/* Somatic CCSTheme */
+BODY, TABLE, TH, TR, TD, UL, OL, LI, P, FONT, A, BLOCKQUOTE, LABEL { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.SomaticPageBODY{ font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.SomaticFormTABLE{ border: solid 1px #7B6D6B; background-color: #C2B8B5; }
+.SomaticFormHeaderFont{ color: #000000; font-size: 16px; font-weight: bold; }
+.SomaticFieldCaptionTD{ border: 1px solid #FFFFFF; background-color: #E7D7D6; color: #523C39; font-size: 13px; font-weight: bold; }
+.SomaticAltDataTD{ border-top: 1px solid #FFFFFF; background-color: #F8F1EE; color: #000000; font-size: 13px; }
+.SomaticColumnTD{ border: 1px solid #FFFFFF; background-color: #E7D7D6; color: #523C39; font-size: 13px; font-weight: bold; }
+.SomaticDataTD{ border-top: 1px solid #FFFFFF; background-color: #F7EBE7; color: #000000; font-size: 13px; }
+.SomaticErrorDataTD{ border-top: 1px solid #FFFFFF; background-color: #F7EBE7; color: #FF0000; font-size: 13px; }
+.SomaticSeparatorTD{ height: 1px; background-color: #FFFFFF; }
+.SomaticFooterTD{ border: 1px solid #FFFFFF; background-color: #D6CBC6; color: #000000; font-size: 13px; }
+a.SomaticSorterLink:link,a.SomaticSorterLink:visited{ color: #523C39; font-size: 13px; text-decoration: underline; }
+a.SomaticSorterLink:hover,a.SomaticSorterLink:active{ color: #000000; font-size: 13px; text-decoration: none; }
+a.SomaticDataLink:link,a.SomaticDataLink:visited{ color: #523C39; font-size: 13px; text-decoration: underline; }
+a.SomaticDataLink:hover,a.SomaticDataLink:active{ color: #523C39; font-size: 13px; text-decoration: none; }
+a.SomaticNavigatorLink:link,a.SomaticNavigatorLink:visited{ color: #523C39; font-size: 13px; font-weight: bold; text-decoration: underline; }
+a.SomaticNavigatorLink:hover,a.SomaticNavigatorLink:active{ color: #000000; font-size: 13px; font-weight: bold; text-decoration: none; }
+.SomaticButton { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; background-color: #F7EBE7; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; font-weight: bold; }
+.SomaticInput { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+.SomaticTextarea { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+.SomaticSelect { font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+/* Calendar */
+a.today:link,a.today:visited{ color: #FF0000; font-weight: bold; text-decoration: none; }
+a.today:hover,a.today:active{ color: #000000; font-weight: bold; text-decoration: none; }
+a.selectedDay:link,a.selectedDay:visited{ color: #000000; font-weight: bold; text-decoration: none; }
+a.selectedDay:hover,a.selectedDay:active{ color: #FF0000; font-weight: bold; text-decoration: none; }
+a.weekDay:link,a.weekDay:visited{ color: #523C39; text-decoration: none; }
+a.weekDay:hover,a.weekDay:active{ color: #FF0000; text-decoration: none; }
+TD.selectedDay { margin: 1px; border: 1px solid #FFFFFF; background-color: #D6CBC6; color: #523C39; font-size: 13px; font-weight: bold; }
+TD.today { border-top: 1px solid #FF0000; border-left: 1px solid #FF0000; border-bottom: 1px solid #FF0000; border-right: 1px solid #FF0000; background-color: #F8F1EE; color: #000000; font-size: 13px; }
+TD.workday { border-top: 1px solid #FFFFFF; background-color: #F8F1EE; color: #000000; font-size: 13px; }
+TD.weekend { border-top: 1px solid #FFFFFF; background-color: #E7D7D6; color: #000000; font-size: 13px; }
+TH.calendar { margin: 1px; border: 1px solid #FFFFFF; background-color: #D6CBC6; color: #523C39; font-size: 13px; font-weight: bold; }
+.CalendarButtons { margin: 1px; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; background-color: #F7EBE7; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; font-weight: bold; }
+.CalendarControls { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.Table { border: solid 1px #7B6D6B; background-color: #C2B8B5; }

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function zapis(){
+
+if(document.form_test.test_zapisu.value==0){
+document.form_test.test_zapisu.value=1
+return true
+}else{
+
+alert("polecenie zapisu zostalo wykonane")
+return false
+}
+}
+
+//-->
+</SCRIPT>
+<BODY>
+<form name="form_test" action="Noname2.html" method=POST>
+
+<input type=hidden name=test_zapisu value=0>
+
+poletko:<input name=jakies_pole value="">
+
+<input type="submit" onclick='return zapis()' value="zapisz">
+</form>
+
+</BODY>
+</HTML>

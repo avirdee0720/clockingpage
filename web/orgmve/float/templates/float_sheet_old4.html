@@ -1,0 +1,902 @@
+<html xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1250">
+<title>AFFIX Z REPORT HERE</title>
+<LINK REL='stylesheet' HREF='../style/multipads/style.css' TYPE='text/css'>
+
+<style type="text/css">
+<!--
+.style1 {
+	font-family: Tahoma;
+	font-size: 8.0pt;
+}
+.style2 {
+	font-family: Tahoma;
+	font-size: 7.0pt;
+}
+-->
+</style></head>
+<body bgcolor="#FFFFFF" lang=HU>
+<form action="##{$PHP_SELF}#" method="post" target="_parent">
+  <div class=Section1>
+    <table width="865" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td rowspan="5" class='ColumnTD'><b><span style="font-size:24.0pt;font-family:Tahoma">FLOAT SHEET</span></b></td>
+        <td colspan="4" class='ColumnTD'><b><span style="font-size:9.0pt;font-family:Tahoma">##{$message}#</span></b></td>
+      </tr>
+      <tr>
+        <td class='ColumnTD'><b><span style="font-size:10.0pt;font-family:Tahoma">SHOP </span></b></td>
+        <td class='ColumnTD'><b><span style="font-size:10.0pt;font-family:Tahoma">
+          <select name="shopid" id="shopid">
+          ##{foreach from=$shop key=k item=i}# 
+          ##{if $shopid eq $i.shopid}# 
+		    <option value="##{$i.shopid}#" selected>##{$i.shopname}#</option>
+          ##{else}# 
+            <option value="##{$i.shopid}#">##{$i.shopname}#</option>
+          ##{/if}# 
+          ##{/foreach}#
+          </select>
+        </span></b></td>
+        <td class='ColumnTD'><b><span style="font-size:10.0pt;font-family:Tahoma">DEPT</span></b></td>
+        <td class='ColumnTD'>
+        <select name="departmentid" id="departmentid">
+          ##{foreach from=$department key=k item=i}# 
+          ##{if $departmentid eq  $i.depid}# 
+		  <option value="##{$i.depid}#" selected>##{$i.department}#</option>
+          ##{else}# 
+          <option value="##{$i.depid}#">##{$i.department}#</option>
+          ##{/if}# 
+          ##{/foreach}#
+        </select>        </td>
+      </tr>
+      <tr>
+        <td class='ColumnTD'><b><span style="font-size:9.0pt;font-family:Tahoma">DAY </span></b></td>
+        <td class='ColumnTD'><b><span style="font-size:9.0pt;font-family:Tahoma">##{$fsdateofweektxt}#</span></b></td>
+        <td class='ColumnTD'><b><span style="font-size:9.0pt;font-family:Tahoma">DATE </span></b></td>
+        <td class='ColumnTD'><input name="fsdate" type="text" id="eveingcount_voucher5" value="##{$fsdate}#" size="10" maxlength="14"></td>
+      </tr>
+      <tr>
+        <td colspan="2" class='ColumnTD'><b><span style="font-size:9.0pt;font-family:Tahoma">Float Sheet Completed by</span></b></td>
+        <td colspan="2" class='ColumnTD'><select name="user_morning" id="user_morning">
+          ##{foreach from=$user key=k item=i}# 
+          ##{if $user_floatsheet eq $i.userid}# 
+          <option value="##{$i.userid}#" selected>##{$i.username}#</option>
+          ##{else}# 
+                  <option value="##{$i.userid}#">##{$i.username}#</option>
+          ##{/if}# 
+          ##{/foreach}#
+                </select></td>
+      </tr>
+      <tr>
+        <td colspan="2" class='ColumnTD'><b><span style="font-size:9.0pt;font-family:Tahoma">State</span></b></td>
+        <td colspan="2" class='ColumnTD'>
+        <select name="state" id="state">
+          ##{foreach from=$state key=k item=i}# 
+          ##{if $valid eq $i.valid}# 
+          <option value="##{$i.valid}#" selected>##{$i.statetxt}#</option>
+          ##{else}# 
+          <option value="##{$i.valid}#">##{$i.statetxt}#</option>
+          ##{/if}# 
+          ##{/foreach}#
+                
+        </select>        </td>
+      </tr>
+    </table>
+    <p>
+      <input type="reset" name="reset" id="reset" value="Reset">
+      <input type="submit" name="count" id="count" value="Count">
+      <input type="submit" name="floatsheetadd1" id="floatsheetadd1" value="Save">
+    </p>
+    <label></label>
+    <input name="floatsheedid" type="hidden" id="floatsheetid" value="##{$floatsheetid}#">
+    <input name="edit" type="hidden" id="edit" value="##{$edit}#">
+</div>
+  <div align="center">
+    <table width="865" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr><td class='DataTD' width="34%" valign="top">&nbsp;</td><td class='DataTD' width="2%" valign="top">&nbsp;</td><td class='DataTD' width="64%" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class='DataTD' valign="top"><table border=1 cellspacing=0 cellpadding=0 width=264>
+          <tr>
+            <td class='DataTD' colspan=3><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:18.0pt;font-family:Tahoma'>MORNING FLOAT</span></b></p></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=66>&nbsp;</td>
+            <td class='DataTD'><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>CASH MONEY</span></b></p></td>
+            <td class='DataTD'><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>MVE VOUCHERS</span></b></p></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>&pound;50</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f1" type="text" id="eveingcount_voucher7" value="##{$floatsvalue.1}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f2" type="text" id="fid1" value="##{$floatsvalue.2}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>&pound;20</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f3" type="text" id="fid1" value="##{$floatsvalue.3}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f4" type="text" id="fid1" value="##{$floatsvalue.4}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>&pound;10</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f5" type="text" id="fid1" value="##{$floatsvalue.5}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f6" type="text" id="fid1" value="##{$floatsvalue.6}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>&pound;5</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f7" type="text" id="fid1" value="##{$floatsvalue.7}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f8" type="text" id="fid1" value="##{$floatsvalue.8}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>&pound;2 / &pound;1</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f9" type="text" id="fid1" value="##{$floatsvalue.9}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f10" type="text" id="fid1" value="##{$floatsvalue.10}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>50P</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f11" type="text" id="fid1" value="##{$floatsvalue.11}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f12" type="text" id="fid1" value="##{$floatsvalue.12}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>Small Change</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f13" type="text" id="fid1" value="##{$floatsvalue.13}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f14" type="text" id="fid1" value="##{$floatsvalue.14}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>Till Total</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f15" type="text" id="fid1" value="##{$floatsvalue.15}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f16" type="text" id="fid1" value="##{$floatsvalue.16}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>Buying Reserve</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f17" type="text" id="fid1" value="##{$floatsvalue.17}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f18" type="text" id="fid1" value="##{$floatsvalue.18}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>Change Reserve</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f19" type="text" id="fid1" value="##{$floatsvalue.19}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f20" type="text" id="fid1" value="##{$floatsvalue.20}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=66><p><b><span lang=EN-US style='font-size:11.0pt;
+  font-family:Tahoma'>TOTAL</span></b></p></td>
+            <td class='DataTD'><div align="right">
+                <input name="f21" type="text" id="fid1" value="##{$floatsvalue.21}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD'><div align="right">
+                <input name="f22" type="text" id="fid1" value="##{$floatsvalue.22}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' colspan=3 valign=top><p><b><span lang=EN-US style='font-size:7.0pt;
+  font-family:Tahoma'>COMPLETED BY </span></b></p>
+                <label>
+                <select name="user_morning2" id="user_morning2">
+                  
+          ##{foreach from=$user key=k item=i}# 
+          ##{if $user_morning eq $i.userid}# 
+          
+                  <option value="##{$i.userid}#" selected>##{$i.username}#</option>
+                  
+          ##{else}# 
+                  
+                  <option value="##{$i.userid}#">##{$i.username}#</option>
+                  
+          ##{/if}# 
+          ##{/foreach}#
+                
+                </select>
+                </label>            </td>
+          </tr>
+        </table></td>
+        <td class='DataTD' valign="top">&nbsp;</td>
+        <td class='DataTD' valign="top"><table border=1 cellspacing=0 cellpadding=0 width=267>
+          <tr>
+            <td class='DataTD' colspan=3><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:18.0pt;font-family:Tahoma'>EVENING FLOAT</span></b></p></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=69>&nbsp;</td>
+            <td class='DataTD'><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>Cash Money</span></b></p></td>
+            <td class='DataTD'><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>MVE Vouchers</span></b></p></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>&pound;50</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f23" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.23}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f24" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.24}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>&pound;20</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f25" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.25}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f26" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.26}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>&pound;10</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f27" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.27}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f28" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.28}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>&pound;5</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f29" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.29}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f30" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.30}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>&pound;2 / &pound;1</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f31" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.31}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f32" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.32}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>50P</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f33" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.33}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f34" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.34}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt; font-family:Tahoma'>Small Change</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f35" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.35}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f36" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.36}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>Till  Total</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f37" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.37}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f38" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.38}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>Buying Reserve</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="39" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.39}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f40" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.40}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt; font-family:Tahoma'>Change Reserve</span></b></p></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f41" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.41}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f42" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.42}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD'><b><span style="font-size:9.0pt;
+  font-family:Tahoma">Total</span></b></td>
+            <td class='DataTD'><div align="right">
+                <input name="f43" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.43}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="f44" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.44}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD'><b><span style="font-size:9.0pt; font-family:Tahoma">Voucher Slips</span></b></td>
+            <td class='DataTD'><div align="right">
+                <input name="f45" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.45}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD'><div align="right">
+                <input name="f46" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.46}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD'><b><span style="font-size:9.0pt; font-family:Tahoma">Credit Cards</span></b></td>
+            <td class='DataTD'><div align="right">
+                <input name="f47" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.47}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD'><div align="right">
+                <input name="f48" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.48}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD'><b><span style="font-size:9.0pt; font-family:Tahoma">Cheques</span></b></td>
+            <td class='DataTD'><div align="right">
+                <input name="f49" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.49}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD'><div align="right">
+                <input name="f50" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.50}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=69><p><b><span lang=EN-US style='font-size:11.0pt;
+  font-family:Tahoma'>Grand Total</span></b></p></td>
+            <td class='DataTD'><div align="right">
+                <input name="f51" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.51}#" size="10" maxlength="20">
+            </div></td>
+            <td class='DataTD'><div align="right">
+                <input name="f52" type="text" id="eveingcount_voucher9" value="##{$floatsvalue.52}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr>
+            <td class='DataTD' colspan=3 valign=top><p><b><span lang=EN-US style='font-size:7.0pt;
+  font-family:Tahoma'>COMPLETED BY</span></b></p>
+                <p>
+                  <select name="user_evening" id="user_evening">
+                    
+          ##{foreach from=$user key=k item=i}# 
+          ##{if $user_evening eq $i.userid}# 
+          
+                    <option value="##{$i.userid}#" selected>##{$i.username}#</option>
+                    
+          ##{else}# 
+                  
+                    <option value="##{$i.userid}#">##{$i.username}#</option>
+                    
+          ##{/if}# 
+          ##{/foreach}#
+                
+                  </select>
+              </p></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr><td class='DataTD' valign="top">&nbsp;</td><td class='DataTD' valign="top">&nbsp;</td><td class='DataTD' valign="top">&nbsp;</td>
+      </tr>
+      
+      <tr><td class='DataTD' valign="top"><table border=1 cellspacing=0 cellpadding=0 width=389>
+          <tr><td class='DataTD' colspan="4"><p style='text-align:justify'><b><span style="font-size:18.0pt;font-family:Tahoma">BANKING &amp; FLOAT</span></b></p></td>
+          </tr>
+          <tr><td class='DataTD' width=98>&nbsp;</td><td class='DataTD' width=95><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>Cash Money</span></b></p></td><td class='DataTD' width=91><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:8.0pt;
+  font-family:Tahoma'>MEV Vouchers</span></b></p></td><td class='DataTD' width=95><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:8.0pt;
+  font-family:Tahoma'>TOTAL</span></b></p></td>
+          </tr>
+          <tr><td class='DataTD' width=98><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>Evening count</span></b></p></td><td class='DataTD' width=95><div align="right">
+                <input name="f53" type="text" id="f80" value="##{$floatsvalue.53}#" size="10" maxlength="20">
+              </div>
+                <div align="right"></div></td><td class='DataTD' width=91><div align="right">
+                <input name="f54" type="text" id="eveingcount_voucher" value="##{$floatsvalue.54}#" size="10" maxlength="20">
+            </div></td><td class='DataTD' width=95><div align="right">
+              <input name="f55" type="text" id="eveingcount_voucher13" value="##{$floatsvalue.55}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr><td class='DataTD' width=98><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>Banking</span></b></p></td><td class='DataTD' width=95><div align="right">
+                <input name="f56" type="text" id="eveingcount_voucher" value="##{$floatsvalue.56}#" size="10" maxlength="20">
+            </div></td><td class='DataTD' width=91><div align="right">
+                <input name="f57" type="text" id="f40" value="##{$floatsvalue.57}#" size="10" maxlength="20">
+            </div></td><td class='DataTD' width=95><div align="right">
+              <input name="f58" type="text" id="eveingcount_voucher14" value="##{$floatsvalue.58}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr><td class='DataTD' width=98 rowspan=2><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:7.0pt;
+  font-family:Tahoma'>Credit Card/voucher Slips</span></b></p></td><td class='DataTD' width=95><p><b><span lang=EN-US style='font-size:5.0pt;font-family:Tahoma'>Credit
+              cards</span></b></p></td><td class='DataTD' width=91><p><b><span lang=EN-US style='font-size:5.0pt;font-family:Tahoma'>Voucher
+              slips</span></b></p></td><td class='DataTD' width=95 rowspan=2><div align="right">
+              <input name="f59" type="text" id="eveingcount_voucher15" value="##{$floatsvalue.59}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr><td class='DataTD' width=95><div align="right">
+                <input name="f60" type="text" id="eveingcount_voucher" value="##{$floatsvalue.60}#" size="10" maxlength="20">
+            </div></td><td class='DataTD' width=91><div align="right">
+                <input name="f61" type="text" id="eveingcount_voucher" value="##{$floatsvalue.61}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          <tr><td class='DataTD' width=98><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>TOMORROW’S FLOAT</span></b></p></td><td class='DataTD' width=95><div align="right">
+              <input name="f62" type="text" id="eveingcount_voucher16" value="##{$floatsvalue.62}#" size="10" maxlength="20">
+            </div></td><td class='DataTD' width=91><div align="right">
+              <input name="f63" type="text" id="eveingcount_voucher17" value="##{$floatsvalue.63}#" size="10" maxlength="20">
+            </div></td><td class='DataTD' width=95><div align="right">
+              <input name="f64" type="text" id="eveingcount_voucher18" value="##{$floatsvalue.64}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+        </table></td><td class='DataTD' valign="top">&nbsp;</td><td class='DataTD' valign="top"><table border=1 cellspacing=0 cellpadding=0 width=368>
+          <tr><td class='DataTD' colspan=3><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:14.0pt;
+  font-family:Tahoma'>OVERRINGs RECORD</span></b></p></td>
+          </tr>
+          <tr><td class='DataTD' colspan=3><p style='text-align:justify;'><span
+  lang=EN-US style='font-size:7.0pt;font-family:Tahoma'>Enter your over-rings
+              here during the day.  Enter the dept no
+              in the dept column and C or V on the C/V column to show what type of
+              transaction it was and whether it was for cash or vouchers.  </span></p></td>
+          </tr>
+          <tr><td class='DataTD' width=86><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:10.0pt;
+  font-family:Tahoma'>Dept</span></b></p></td><td class='DataTD' width=83><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:10.0pt;
+  font-family:Tahoma'>C/V</span></b></p></td><td class='DataTD'><p align=center style='text-align:center;'><b><span lang=EN-US style='font-family:Tahoma'>Amount</span></b></p></td>
+          </tr>
+          ##{foreach from=$overring key=k item=i}#
+          <tr>
+          <td class='DataTD' width=95><div align="right">
+                <select name="overringdepartmentid" id="overringdepartmentid">
+          ##{foreach from=$department key=k item=j}# 
+          ##{if $i.departmentid eq  $j.depid}# 
+		  <option value="##{$j.depid}#" selected>##{$j.department}#</option>
+          ##{else}# 
+          <option value="##{$j.depid}#">##{$j.department}#</option>
+          ##{/if}# 
+          ##{/foreach}#
+        </select>   
+            </div></td><td class='DataTD' width=83><input name="fdcv1" type="text" id="eveingcount_voucher3" value="##{$i.cv}#" size="10" maxlength="20"></td>
+            <td class='DataTD' width=95><div align="right">
+                <input name="fdin1" type="text" id="eveingcount_voucher10" value="##{$i.amount}#" size="10" maxlength="20">
+            </div></td>
+          </tr> 
+          ##{/foreach}#
+        </table></td>
+      </tr>
+      
+      
+      <tr>
+        <td class='DataTD' valign="top">&nbsp;</td>
+        <td class='DataTD' valign="top">&nbsp;</td>
+        <td class='DataTD' valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class='DataTD' valign="top"><table border=1 cellspacing=0 cellpadding=0 width=388>
+          <tr><td class='DataTD' colspan="4"><p style='text-align:justify'><b><span style="font-size:18.0pt;font-family:Tahoma">DEPARTMENT REPORT</span></b></p></td>
+            </tr>
+          <tr><td class='DataTD' width=141 valign=top><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-family:Tahoma'>SHOP RESULTS</span></b></p></td><td class='DataTD' width=95><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:7.0pt;font-family:Tahoma'>GROSS Total</span></b></p></td><td class='DataTD' width=95><p align=center style='text-align:center;
+  '><strong><span class="style2">Overrings</span></strong></p></td><td class='DataTD' width=47><p align=center style='text-align:center;
+  '><b><span style="font-size:7.0pt;font-family:Tahoma">Net Total</span></b></p></td>
+            </tr>
+          <tr><td class='DataTD'><div align="center"><b><span style="font-size:8.0pt; font-family:Tahoma">01SALE</span></b></div></td><td class='DataTD' width=95><div align="right">
+            <input name="f80" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.80}#" size="10" maxlength="20">
+            </div></td><td class='DataTD' width=95><div align="right">
+              <input name="f81" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.81}#" size="10" maxlength="20">
+              </div></td><td class='DataTD'>
+                <div align="right">
+                  <input name="82" type="text" id="f11" value="##{$floatsvalue.82}#" size="10" maxlength="20">
+                </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <b><span lang=EN-US style='font-size:8.0pt; font-family:Tahoma'>02SALE</span></b></p></td><td class='DataTD' width=95><div align="right">
+              <input name="f83" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.83}#" size="10" maxlength="20">
+              </div></td><td class='DataTD' width=95><div align="right">
+                <input name="f84" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.84}#" size="10" maxlength="20">
+                </div></td><td class='DataTD' width=47>
+                  <div align="right">
+                    <input name="f85" type="text" id="f18" value="##{$floatsvalue.85}#" size="10" maxlength="20">
+                  </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <b><span lang=EN-US style='font-size:8.0pt; font-family:Tahoma'>03SALE</span></b></p></td><td class='DataTD' width=95><div align="right">
+              <input name="f86" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.86}#" size="10" maxlength="20">
+              </div></td><td class='DataTD' width=95><div align="right">
+                <input name="f87" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.87}#" size="10" maxlength="20">
+                </div></td><td class='DataTD' width=47>
+                  <div align="right">
+                    <input name="f88" type="text" id="f19" value="##{$floatsvalue.88}#" size="10" maxlength="20">
+                  </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '><strong><span class="style1">07STFF</span></strong></p></td><td class='DataTD' width=95><div align="right">
+            <input name="f89" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.89}#" size="10" maxlength="20">
+            </div></td><td class='DataTD' width=95><div align="right">
+              <input name="f90" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.90}#" size="10" maxlength="20">
+              </div></td><td class='DataTD' width=47>
+                <div align="right">
+                  <input name="f91" type="text" id="f400" value="##{$floatsvalue.91}#" size="10" maxlength="20">
+                </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:8.0pt;font-family:Tahoma'>08DEP</span></b></p></td><td class='DataTD' width=95><div align="right">
+            <input name="f92" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.92}#" size="10" maxlength="20">
+            </div></td><td class='DataTD' width=95><div align="right">
+              <input name="f93" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.93}#" size="10" maxlength="20">
+              </div></td><td class='DataTD' width=47>
+                <div align="right">
+                  <input name="f94" type="text" id="f401" value="##{$floatsvalue.94}#" size="10" maxlength="20">
+                </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '><strong><span class="style1">Payouts</span></strong></p></td><td class='DataTD' width=95><div align="center"><b><span style="font-size:7.0pt;font-family:Tahoma">GROSS Total</span></b></div></td><td class='DataTD' width=95><div align="center"><strong><span class="style2">Overrings</span></strong></div></td><td class='DataTD' width=47><div align="center"><b><span style="font-size:7.0pt;font-family:Tahoma">Net Total</span></b></div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <b><span lang=EN-US style='font-size:8.0pt; font-family:Tahoma'>04PAY (Cash)</span></b></p></td><td class='DataTD' width=95><div align="right">
+              <input name="f95" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.95}#" size="10" maxlength="20">
+              </div></td><td class='DataTD' width=95><div align="right">
+                <input name="f96" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.96}#" size="10" maxlength="20">
+                </div></td><td class='DataTD' width=47>
+                  <div align="right">
+                    <input name="f97" type="text" id="f402" value="##{$floatsvalue.97}#" size="10" maxlength="20">
+                  </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <b><span lang=EN-US style='font-size:8.0pt; font-family:Tahoma'>05PAY</span></b><b><span style="font-size:8.0pt; font-family:Tahoma"> (Cash)</span></b></p></td><td class='DataTD' width=95><div align="right">
+              <input name="f98" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.98}#" size="10" maxlength="20">
+              </div></td><td class='DataTD' width=95><div align="right">
+                <input name="f99" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.99}#" size="10" maxlength="20">
+                </div></td><td class='DataTD' width=47>
+                  <div align="right">
+                    <input name="f100" type="text" id="f403" value="##{$floatsvalue.100}#" size="10" maxlength="20">
+                  </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <b><span lang=EN-US style='font-size:8.0pt; font-family:Tahoma'>06PAY</span></b><b><span style="font-size:8.0pt; font-family:Tahoma"> (Cash)</span></b></p></td><td class='DataTD' width=95><div align="right">
+              <input name="f101" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.101}#" size="10" maxlength="20">
+              </div></td><td class='DataTD' width=95><div align="right">
+                <input name="f102" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.102}#" size="10" maxlength="20">
+                </div></td><td class='DataTD' width=47>
+                  <div align="right">
+                    <input name="f103" type="text" id="f404" value="##{$floatsvalue.103}#" size="10" maxlength="20">
+                  </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:8.0pt;font-family:Tahoma'>14PAY</span><span style="font-size:8.0pt; font-family:Tahoma"> (Voucher)</span></b></p></td><td class='DataTD' width=95><div align="right">
+            <input name="f104" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.104}#" size="10" maxlength="20">
+            </div></td><td class='DataTD' width=95><div align="right">
+              <input name="f105" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.105}#" size="10" maxlength="20">
+              </div></td><td class='DataTD' width=47>
+                <div align="right">
+                  <input name="f106" type="text" id="f405" value="##{$floatsvalue.106}#" size="10" maxlength="20">
+                </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:8.0pt;font-family:Tahoma'>15PAY</span><span style="font-size:8.0pt; font-family:Tahoma"> (Voucher)</span></b></p></td><td class='DataTD' width=95><div align="right">
+            <input name="f107" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.107}#" size="10" maxlength="20">
+            </div></td><td class='DataTD' width=95><div align="right">
+              <input name="f108" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.108}#" size="10" maxlength="20">
+              </div></td><td class='DataTD' width=47>
+                <div align="right">
+                  <input name="f109" type="text" id="f406" value="##{$floatsvalue.109}#" size="10" maxlength="20">
+                </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:8.0pt;font-family:Tahoma'>16PAY</span><span style="font-size:8.0pt; font-family:Tahoma"> (Voucher)</span></b></p></td><td class='DataTD' width=95><div align="right">
+            <input name="f109" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.109}#" size="10" maxlength="20">
+            </div></td><td class='DataTD' width=95><div align="right">
+              <input name="f110" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.110}#" size="10" maxlength="20">
+              </div></td><td class='DataTD' width=47>
+                <div align="right">
+                  <input name="f111" type="text" id="f407" value="##{$floatsvalue.111}#" size="10" maxlength="20">
+                </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:8.0pt;font-family:Tahoma'>Total Payputs</span></b></p></td><td class='DataTD' width=95><div align="right">
+            <input name="f112" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.112}#" size="10" maxlength="20">
+            </div></td><td class='DataTD' width=95><div align="right">
+              <input name="f113" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.113}#" size="10" maxlength="20">
+              </div></td><td class='DataTD' width=47>
+                <div align="right">
+                  <input name="f114" type="text" id="f408" value="##{$floatsvalue.114}#" size="10" maxlength="20">
+                </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:8.0pt;font-family:Tahoma'>Refunds</span></b></p></td><td class='DataTD' width=95><div align="center"><b><span style="font-size:7.0pt;font-family:Tahoma">RETN Total</span></b></div></td><td class='DataTD' width=95><div align="center"><strong><span class="style2">Overring</span></strong></div></td><td class='DataTD' width=47><div align="right"><b><span style="font-size:7.0pt;font-family:Tahoma">Net Total</span></b></div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <b><span lang=EN-US style='font-size:8.0pt; font-family:Tahoma'>01SALE</span></b></p></td><td class='DataTD' width=95><div align="right">
+              <input name="f115" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.115}#" size="10" maxlength="20">
+              </div></td><td class='DataTD' width=95><div align="right">
+                <input name="f116" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.116}#" size="10" maxlength="20">
+                </div></td><td class='DataTD'>
+                  <div align="right">
+                    <input name="f117" type="text" id="f409" value="##{$floatsvalue.117}#" size="10" maxlength="20">
+                  </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <b><span lang=EN-US style='font-size:8.0pt; font-family:Tahoma'>02SALE</span></b></p></td><td class='DataTD' width=95><div align="right">
+              <input name="f118" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.118}#" size="10" maxlength="20">
+              </div></td><td class='DataTD' width=95><div align="right">
+                <input name="f119" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.119}#" size="10" maxlength="20">
+                </div></td><td class='DataTD'>
+                  <div align="right">
+                    <input name="f120" type="text" id="eveingcount_voucher40" value="##{$floatsvalue.120}#" size="10" maxlength="20">
+                  </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <b><span lang=EN-US style='font-size:8.0pt; font-family:Tahoma'>03SALE</span></b></p></td><td class='DataTD' width=95><div align="right">
+              <input name="f121" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.121}#" size="10" maxlength="20">
+              </div></td><td class='DataTD' width=95><div align="right">
+                <input name="f122" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.122}#" size="10" maxlength="20">
+                </div></td><td class='DataTD'>
+                  <div align="right">
+                    <input name="f123" type="text" id="eveingcount_voucher41" value="##{$floatsvalue.123}#" size="10" maxlength="20">
+                  </div></td>
+            </tr>
+          <tr><td class='DataTD' width=141><p align=center style='text-align:center;
+  '><strong><span class="style1">07STFF</span></strong></p></td><td class='DataTD' width=95><div align="right">
+            <input name="f124" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.124}#" size="10" maxlength="20">
+            </div></td><td class='DataTD' width=95><div align="right">
+              <input name="f125" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.125}#" size="10" maxlength="20">
+              </div></td><td class='DataTD'>
+                <div align="right">
+                  <input name="f126" type="text" id="eveingcount_voucher42" value="##{$floatsvalue.126}#" size="10" maxlength="20">
+                </div></td>
+            </tr>
+          <tr><td class='DataTD'><div align="center"><b><span style="font-size:8.0pt;font-family:Tahoma">08DEP</span></b></div></td><td class='DataTD' width=95><div align="right">
+            <input name="f127" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.127}#" size="10" maxlength="20">
+            </div></td><td class='DataTD' width=95><div align="right">
+              <input name="f128" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.128}#" size="10" maxlength="20">
+              </div></td><td class='DataTD'>
+                <div align="right">
+                  <input name="f129" type="text" id="eveingcount_voucher43" value="##{$floatsvalue.129}#" size="10" maxlength="20">
+                </div></td>
+            </tr>
+          <tr><td class='DataTD'>&nbsp;</td><td class='DataTD'><div align="center"><b><span style="font-size:7.0pt;font-family:Tahoma">Total</span></b></div></td><td class='DataTD'><div align="center"><strong><span class="style2">Overring</span></strong></div></td><td class='DataTD'><div align="center"><b><span style="font-size:7.0pt;font-family:Tahoma">Net Tota</span></b>l</div></td>
+            </tr>
+          <tr><td class='DataTD' width=141 height="24"><div align="center"><strong><span class="style1">Expenses Paid Out</span></strong></div></td><td class='DataTD' width=95><div align="right">
+            <input name="f130" type="text" id="eveingcount_voucher44" value="##{$floatsvalue.130}#" size="10" maxlength="20">
+            </div></td><td class='DataTD' width=95><div align="right">
+              <input name="f131" type="text" id="eveingcount_voucher45" value="##{$floatsvalue.131}#" size="10" maxlength="20">
+              </div></td><td class='DataTD' width=47>
+                <div align="right">
+                  <input name="f132" type="text" id="eveingcount_voucher46" value="##{$floatsvalue.132}#" size="10" maxlength="20">
+                </div></td>
+            </tr>
+        </table></td>
+        <td class='DataTD' valign="top">&nbsp;</td>
+        <td class='DataTD' valign="top"><table border=1 cellspacing=0 cellpadding=0 width=358>
+          <tr><td class='DataTD' colspan="2"><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:14.0pt;
+  font-family:Tahoma'>EXPENSES</span></b></p></td>
+          </tr>
+          <tr><td class='DataTD' width=225><b><span style="font-size:10.0pt;font-family:Tahoma">Expense</span></b></td><td class='DataTD' width=127><b><span style="font-size:10.0pt;font-family:Tahoma">Amount</span></b></td>
+          </tr>
+                 ##{foreach from=$expense key=k item=i}#
+          <tr><td class='DataTD' width=225><p align=center style='text-align:center;'>
+            <label>
+            <input name="expense1" type="text" id="expense1" size="30" maxlength="200" value="##{$i.expense}#">
+            </label>
+          </p></td><td class='DataTD' width=127><div align="right">
+                <input name="expenseamount" type="text" id="f1" value="##{$i.amount}#" size="10" maxlength="20">
+            </div></td>
+          </tr>
+          ##{/foreach}#
+        </table></td>
+      </tr>
+      <tr><td class='DataTD' valign="top">&nbsp;</td><td class='DataTD' valign="top">&nbsp;</td><td class='DataTD' valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="3" valign="top" class='DataTD'><table width=359 height="78" border=1 cellpadding=0 cellspacing=0>
+          <tr>
+            <td class='DataTD' colspan="5"><p><b><span lang=EN-US style='font-size:11.0pt;font-family:Tahoma'>TRANSFERS</span></b></p></td>
+          </tr>
+          <tr>
+            <td class='DataTD' width=104><span style="text-align:center;"><b><span style="font-size:10.0pt;
+  font-family:Tahoma">FROM</span></b></span></td>
+            <td class='DataTD' width=104><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:10.0pt;
+  font-family:Tahoma'>TO</span></b></p></td>
+            <td class='DataTD' width=108><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:8.0pt;
+  font-family:Tahoma'>C/V</span></b></p></td>
+            <td class='DataTD' width=163><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:8.0pt;
+  font-family:Tahoma'>Amount In</span></b></p></td>
+            <td class='DataTD' width=185><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:7.0pt;
+  font-family:Tahoma'>Amount Out</span></b></p></td>
+          </tr>
+          ##{foreach from=$transfer key=k item=i}#
+  <tr>
+    <td class='DataTD' width=104><div align="right">
+      <select name="tansferto" id="tansferto">
+        
+          ##{foreach from=$department key=k item=j}# 
+          ##{if $i.transferfrom eq  $j.depid}# 
+		  
+        <option value="##{$j.depid}#" selected>##{$j.department}#</option>
+        
+          ##{else}# 
+          
+        <option value="##{$j.depid}#">##{$j.department}#</option>
+        
+          ##{/if}# 
+          ##{/foreach}#
+        
+      </select>
+    </div></td>
+    <td class='DataTD' width=104><div align="right">
+      <select name="transferfrom" id="tansferto">
+        
+          ##{foreach from=$department key=k item=j}# 
+          ##{if $i.transferto eq  $j.depid}# 
+		  
+        <option value="##{$j.depid}#" selected>##{$j.department}#</option>
+        
+          ##{else}# 
+          
+        <option value="##{$j.depid}#">##{$j.department}#</option>
+        
+          ##{/if}# 
+          ##{/foreach}#
+        
+      </select>
+    </div></td>
+    <td class='DataTD' width=108><div align="right">
+      <input name="transfercv" type="text" id="eveingcount_voucher12" value="##{$i.cv}#" size="10" maxlength="20">
+    </div></td>
+    <td class='DataTD' width=163><div align="right">
+      <input name="transferamountin" type="text" id="eveingcount_voucher12" value="##{$i.amountin}#" size="10" maxlength="20">
+    </div></td>
+    <td class='DataTD' width=185><div align="right">
+      <input name="transferamountout" type="text" id="eveingcount_voucher12" value="##{$i.amount.out}#" size="10" maxlength="20">
+    </div></td>
+  </tr>
+          ##{/foreach}#
+        </table></td>
+      </tr>
+      <tr>
+        <td class='DataTD' valign="top">&nbsp;</td>
+        <td class='DataTD' valign="top">&nbsp;</td>
+        <td class='DataTD' valign="top">&nbsp;</td>
+      </tr>
+      <tr><td class='DataTD' valign="top">&nbsp;</td><td class='DataTD' valign="top">&nbsp;</td><td class='DataTD' valign="top">&nbsp;</td>
+      </tr>
+    </table>
+  </div>
+  <p align="center">&nbsp;</p>
+  <div class=Section4>
+    <div align="center">
+      <table border=1 cellspacing=0 cellpadding=0 width=720>
+        <tr><td class='DataTD' width=720><p style='text-align:center'><b><span lang=EN-US style='font-size:22.0pt;
+  font-family:Tahoma'>REPORT SHEET</span></b></p></td>
+        </tr>
+        <tr><td class='DataTD' width=720><p><b><span lang=EN-US style='font-size:10.0pt;font-family:Tahoma'> Note clearly any unusual activity about
+            today’s transactions here:</span></b></p></td>
+        </tr>
+        <tr><td class='DataTD' width=720><label>
+            <textarea name="reporttext" id="reporttext" cols="60" rows="5">##{$report[0].reporttext}#</textarea>
+            </label>          </td>
+        </tr>
+        <tr><td class='DataTD' width=720><p><b><span lang=EN-US style='font-size:10.0pt;font-family:Tahoma'>NAME</span></b></p>
+            <p><b><span lang=EN-US style='font-size:10.0pt;font-family:Tahoma'>
+            <select name="user_report" id="user_report">
+          ##{foreach from=$user key=k item=i}# 
+          ##{if $user_report eq $i.userid}# 
+          <option value="##{$i.userid}#" selected>##{$i.username}#</option>
+          ##{else}# 
+                  <option value="##{$i.userid}#">##{$i.username}#</option>
+          ##{/if}# 
+          ##{/foreach}#
+                </select>
+              </span></b></p></td>
+        </tr>
+        <tr><td class='DataTD' width=720><p><b><span lang=EN-US
+  style='font-size:10.0pt;font-family:Tahoma'>If you need help completing this form call:                              020
+            7229 4546</span></b></p></td>
+        </tr>
+        <tr><td class='DataTD' width=720><p><b><span lang=EN-US
+  style='font-size:10.0pt;font-family:Tahoma'>Other enquiries call:                                                                                      020 7727 2040</span></b></p></td>
+        </tr>
+      </table>
+      <p><span class="Section1">
+        <input type="reset" name="reset2" id="reset2" value="Reset">
+        <input type="submit" name="count2" id="count2" value="Count">
+        <input type="submit" name="floatsheetadd2" id="floatsheetadd2" value="Save">
+      </span></p>
+    </div>
+  </div>
+</form>
+<div class=Section4></div>
+</body>
+</html>

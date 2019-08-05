@@ -1,0 +1,94 @@
+Payroll no,Known as,Surname,month,Categ,Unit,E. in weeks,E. in days,Taken,Left,BonusType,wends TD,AV TD,NO need,AV need,From,To,Vouchers
+5,Brian,Abrams,Dec-15,director,days,,,0,0,NONE,,,,0,Jan,Jan,
+29,Tony,Hylton,Dec-15,Buyer,days,,28,1,27,W/end,83,8.3,0,0,Mar,Feb,167
+50,Nick,Abnett,Dec-15,Buyer,days,,28,7,21,W/end,14,7,31,3.1,Nov,Oct,165
+146,Jai,Rathbone,Dec-15,Buyer,days,,22.4,2,20.4,W/end,26,4.33,19,3.17,Jul,Jun,124
+195,Jamie,Upton,Dec-15,Buyer,days,,28,6,22,W/end,31,4.43,14,2.8,Jun,May,215
+215,Dylan,Wass,Dec-15,Buyer,days,,22.4,7,15.4,W/end,33,4.71,12,2.4,Jun,May,123
+277,Kirk,Lake,Dec-15,Buyer,days,,22.4,1,21.4,W/end,35,4.38,10,2.5,May,Apr,94
+279,Rob,Morgan,Dec-15,Buyer,days,,22.4,0,22.4,W/end,31,4.43,14,2.8,Jun,May,
+325,Sean,Pennycook,Dec-15,Buyer,days,,22.4,1,21.4,W/end,44,8.8,1,0.14,Aug,Jul,128
+387,Tim,Watkinson,Dec-15,Buyer,days,,28,0,28,W/end,10,2.5,35,4.38,Sep,Aug,
+498,Andy,Orr,Dec-15,Buyer,days,,28,4,24,W/end,28,5.6,17,2.43,Aug,Jul,147
+555,Ruth,Abrams,Dec-15,director,days,,,0,0,NONE,,,,0,Jan,Jan,
+570,Rich,Little,Dec-15,Buyer,days,,16.8,4,12.8,W/end,52,4.73,0,0,Feb,Jan,61
+769,Richard,Sen,Dec-15,Buyer,days,,16.8,0,16.8,W/end,24,4,21,3.5,Jul,Jun,86
+835,Alan,Hake,Dec-15,Buyer,days,,28,0,28,W/end,53,4.42,0,0,Jan,Dec,90
+862,Rino,Pagnozzi,Dec-15,Buyer,days,,22.4,2,20.4,W/end,23,5.75,22,2.75,Sep,Aug,61
+1091,Dan,Pangu,Dec-15,Buyer,days,,22.4,0,22.4,W/end,34,3.78,11,3.67,Apr,Mar,23
+1106,Jonny,Winstanley,Dec-15,Buyer,days,,22.4,4,18.4,W/end,19,2.71,26,5.2,Jun,May,WHOLD 42.00
+1282,Tom,Spencer,Dec-15,Buyer,days,,16.8,3,13.8,,,,,0,Feb,Jan,53
+1437,Matt,Jones,Dec-15,Buyer,days,,28,7,21,W/end,14,4.67,31,3.44,Oct,Sep,22
+1596,Chris,Renison,Dec-15,GMA,days,,28,8,20,NONE,,,,0,Nov,Oct,65
+1708,Peter,Collins,Dec-15,Buyer,days,,16.8,0,16.8,NONE,,,,0,Jul,Jun,
+1750,Radek,Marszalkowski,Dec-15,Maintenance,days,,28,0,28,NONE,,,,0,Sep,Aug,
+1760,Kier,Wiater-Carnihan,Dec-15,Buyer,days,,5.6,0,5.6,NONE,,,,0,Jul,Jun,WHOLD 5.00
+1785,Richard,Brown,Dec-15,Accounts,days,,28,0,28,NONE,,,,0,Nov,Oct,106
+1839,Mat,Colegate,Dec-15,Buyer,days,,16.8,0,16.8,NONE,,,,0,Jul,Jun,WHOLD 6.00
+1948,Magdalena,Lukasik,Dec-15,Buyer,days,,28,0,28,W/end,30,4.29,15,3,Jun,May,57
+1974,Keira,Fox,Dec-15,Buyer,days,,22.4,10,12.4,NONE,,,,0,Jul,Jun,WHOLD 16.00
+2006,Raf,Jaworski,Dec-15,Buyer,days,,28,3,25,NONE,,,,0,Jul,Jun,30
+2008,Neil,Williams,Dec-15,Buyer,days,,28,0,28,NONE,,,,0,Jul,Jun,
+2029,Charlie,Mahony,Dec-15,Buyer,days,,22.4,2,20.4,NONE,,,,0,Jul,Jun,WHOLD 25.00
+2040,Margarida,Teixeira,Dec-15,Buyer,days,,0,0,0,NONE,,,,0,May,Apr,
+2085,Luke,Skinner,Dec-15,Buyer,days,,28,0,28,NONE,,,,0,Jul,Jun,WHOLD 43.00
+2201,Giorgio,Draisci,Dec-15,Casual,weeks,0,,0,0,NONE,,,,0,Feb,Jan,
+2243,Zenab,Jamil,Dec-15,General Assistant,days,,5.6,0,5.6,NONE,,,,0,Jul,Jun,WHOLD 6.00
+2307,Charlotte,Northall,Dec-15,Casual,weeks,0.24,,0,0.24,NONE,,,,0,Oct,Sep,
+2326,Lorna,Kelly,Dec-15,GMA,days,,28,5,23,NONE,,,,0,Nov,Oct,62
+2336,Mariann,Metsis,Dec-15,Buyer,days,,16.8,4,12.8,NONE,,,,0,Jul,Jun,4
+2401,Ruby,Mariani,Dec-15,Buyer,days,,22.4,2,20.4,NONE,,,,0,Jul,Jun,WHOLD 30.00
+2564,Malin,Sixtensson,Dec-15,Buyer,days,,28,7,21,NONE,,,,0,Jul,Jun,WHOLD 21.00
+2573,Marty,Rocca,Dec-15,Buyer,days,,16.8,4,12.8,NONE,,,,0,Jul,Jun,WHOLD 32.00
+2583,Elena,Colombi,Dec-15,Buyer,days,,16.8,0,16.8,NONE,,,,0,Jul,Jun,43
+2593,Frankie,Kane,Dec-15,Buyer,days,,28,0,28,W/end,27,3.86,18,3.6,Jun,May,62
+2704,Ben,Phillipson,Dec-15,Buyer,days,,28,0,28,NONE,,,,0,Jul,Jun,191
+2718,Muhammad,Iqbal,Dec-15,Accounts,days,,28,0,28,NONE,,,,0,Sep,Aug,
+2719,Dave,Gear,Dec-15,Maintenance,days,,28,1,27,NONE,,,,0,Sep,Aug,
+2725,Ed,Jalil,Dec-15,GMA,days,,28,2,26,NONE,,,,0,Oct,Sep,47
+2743,Luke,Stuart,Dec-15,Buyer,days,,22.4,2,20.4,NONE,,,,0,Nov,Oct,WHOLD 34.00
+2752,Igor,Virant,Dec-15,Casual,weeks,0.5,,0,0.5,NONE,,,,0,Jan,Dec,
+2756,Matt,Gordon,Dec-15,Casual,weeks,0.5,,0,0.5,NONE,,,,0,Feb,Jan,
+2759,Oli,Haylett,Dec-15,Casual,weeks,0.5,,0,0.5,NONE,,,,0,Feb,Jan,
+2809,Chloe,Dunlop,Dec-15,GMA,days,,28,5,23,NONE,,,,0,Aug,Jul,
+2811,Jack,Doherty,Dec-15,General Assistant,days,,28,4,24,NONE,,,,0,Aug,Jul,
+2815,Gareth,Ashworth,Dec-15,Casual,weeks,0.36,,0,0.36,NONE,,,,0,Sep,Aug,
+2833,Georgia,Main,Dec-15,Buyer,days,,22.4,0,22.4,NONE,,,,0,Oct,Sep,
+2836,Lloyd,Powell,Dec-15,Buyer,days,,28,8,20,NONE,,,,0,Oct,Sep,
+2850,Cass,Obrenovic,Dec-15,GMA,days,,28,1,27,NONE,,,,0,Nov,Oct,
+2854,Sean,Bean,Dec-15,Maintenance,days,,28,8,20,NONE,,,,0,Dec,Nov,
+2857,Chris,Kwasniewski,Dec-15,IT,days,,28,0,28,NONE,,,,0,Dec,Nov,
+2858,Phil,Asher,Dec-15,Buyer,days,,28,3,25,NONE,,,,0,Jan,Dec,
+2859,Kash,Williams,Dec-15,Casual,weeks,0.24,,0,0.24,NONE,,,,0,Jan,Dec,
+2860,Aidan,Culley,Dec-15,GMA,days,,28,7,21,NONE,,,,0,Feb,Jan,
+2861,Lynda,Hayden,Dec-15,GMA,days,,28,10,18,NONE,,,,0,Feb,Jan,
+2868,Laurie,Osborne,Dec-15,Buyer,days,,16.8,6,10.8,NONE,,,,0,Feb,Jan
+2869,Eliza,Henderson,Dec-15,Casual,weeks,0.13,,0,0.13,NONE,,,,0,Feb,Jan
+2870,Liam,Healy,Dec-15,GMA,days,,28,10,18,NONE,,,,0,Feb,Jan
+2877,Andrew,Bugelli,Dec-15,General Assistant,days,,2.3,1,1.3,NONE,,,,0,May,Apr
+2878,Ben,Reed,Dec-15,Buyer,days,,1.4,0,1.4,NONE,,,,0,May,Apr
+2885,Pete,Stonor,Dec-15,Casual,weeks,0.5,,0,0.5,NONE,,,,0,Jun,May
+2888,Claudia,Biani,Dec-15,GMA,days,,2.3,2,0.3,NONE,,,,0,Jun,May
+2890,Leon,Rosten,Dec-15,Casual,weeks,0.13,,0,0.13,NONE,,,,0,Jun,May
+2892,Eva,Junga,Dec-15,Casual,weeks,0,,0,0,NONE,,,,0,Jul,Jun
+2896,Katie,Wilkes,Dec-15,Casual,weeks,0,,0,0,NONE,,,,0,Aug,Jul
+2902,Marley,Lohr,Dec-15,Casual,weeks,0.5,,0,0.5,NONE,,,,0,Sep,Aug
+2905,Dave,Handley,Dec-15,Casual,weeks,0.36,,0,0.36,NONE,,,,0,Sep,Aug
+2907,Will,McGuire,Dec-15,Buyer,days,,1.4,1.4,0,NONE,,,,0,Oct,Sep
+2908,Jake,Elliott,Dec-15,Casual,weeks,0.36,,0,0.36,NONE,,,,0,Oct,Sep
+2909,Asta,Dembele,Dec-15,Casual,weeks,0.36,,0,0.36,NONE,,,,0,Oct,Sep
+2910,Maeva,Chiariglione,Dec-15,General Assistant,days,,2.3,1,1.3,NONE,,,,0,Nov,Oct
+2912,Petter,Grevelius,Dec-15,Maintenance,days,,0.9,0,0.9,NONE,,,,0,Nov,Oct
+2913,Lucy,Stannard,Dec-15,Casual,weeks,0.13,,0,0.13,NONE,,,,0,Dec,Nov
+2914,Solomon,Chamchoun,Dec-15,Casual,weeks,0.13,,0,0.13,NONE,,,,0,Dec,Nov
+2915,Alex,DAngelo,Dec-15,Casual,weeks,0.36,,0,0.36,NONE,,,,0,Dec,Nov
+2916,Lawrence,Northall,Dec-15,Casual,weeks,0.13,,0,0.13,NONE,,,,0,Dec,Nov
+2917,Peter,Bray,Dec-15,Casual,weeks,0,,0,0,NONE,,,,0,Dec,Nov
+2919,Dave,Perry,Dec-15,Buyer,days,,2.3,2,0.3,NONE,,,,0,Jan,Dec
+2920,Heloise,Geslain,Dec-15,Casual,weeks,0.36,,0,0.36,NONE,,,,0,Jan,Dec
+2921,Maya,Laskowska,Dec-15,Casual,weeks,0.13,,0,0.13,NONE,,,,0,Jan,Dec
+2922,Sophia,Satchell-Baeza,Dec-15,Casual,weeks,0.13,,0,0.13,NONE,,,,0,Jan,Dec
+2923,Kris,Strak,Dec-15,Casual,weeks,0.13,,0,0.13,NONE,,,,0,Jan,Dec
+2924,Baby,N`Sola,Dec-15,Casual,weeks,0.5,,0,0.5,NONE,,,,0,Jan,Dec
+2925,Max,Yelland,Dec-15,Casual,weeks,0.13,,0,0.13,NONE,,,,0,Jan,Dec
+2926,Vanessa,Joseph,Dec-15,Casual,weeks,0.24,,0,0.24,NONE,,,,0,Jan,Dec

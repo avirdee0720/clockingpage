@@ -1,0 +1,108 @@
+<?php
+include("./config.php");
+include_once("./header.php");
+$PHP_SELF = $_SERVER['PHP_SELF'];
+$db = new CMySQL;
+$db1 = new CMySQL;
+$RegDayDB = new CMySQL;
+
+
+//uprstr($PU,90);
+$cln=$_GET['cln'];
+$tytul='Regular Days Details';
+
+if (!$db1->Open()) $db1->Kill();
+$prac1 =("SELECT `ID`, `pno`, `firstname`, `surname`, `knownas`, `status` FROM `nombers` WHERE `pno`='$cln' LIMIT 1;");
+if (!$db1->Query($prac1)) $db1->Kill();
+   while ($row1=$db1->Row())
+    {
+    echo "
+	<font class='FormHeaderFont'>$tytul</font> 
+<TABLE><TR><TD>
+<div id='name'>
+
+<table>
+    <tr>
+      <td class='FieldCaptionTD'>Clocking in number</td><td class='DataTD'><FONT COLOR='#000099'><B>$row1->pno</B></FONT></td>
+	  <td class='FieldCaptionTD'>Known as</td><td class='DataTD'>$row1->knownas</td>
+    </tr>
+    <tr>
+      <td class='FieldCaptionTD'>First name</td><td class='DataTD'>$row1->firstname</td>
+      <td class='FieldCaptionTD'>Surname</td><td class='DataTD'>$row1->surname</td>
+    </tr>   
+</table>";
+$no=$row1->pno;
+$firstname=$row1->firstname;
+$surname=$row1->surname;
+	}
+
+echo "	<TD ALIGN=JUSTIFY VALIGN=TOP border=0>
+<center>
+&nbsp;
+
+</TR><TR></TD><TD>
+<div id='list'>
+
+<BR><table border='0' cellpadding='3' cellspacing='1' class='FormTABLE'>	<tr>
+<tr>
+	
+
+      <td class='FieldCaptionTD' colspan='9'>REGULAR DAYS</td>
+	</tr>
+
+	<TR>
+
+	  <td class='FieldCaptionTD'>Mon</td>
+	  <td class='FieldCaptionTD'>Tue</td>
+	  <td class='FieldCaptionTD'>Wed</td>
+	  <td class='FieldCaptionTD'>Thu</td>
+	  <td class='FieldCaptionTD'>Fri</td>
+	  <td class='FieldCaptionTD'>Sat</td>
+	  <td class='FieldCaptionTD'>Sun</td>
+      <td class='FieldCaptionTD'>Active</td>
+      <td class='FieldCaptionTD'>Date from</td>
+
+</TR>";
+
+//$expected=$row->regdays * 4;
+
+		$sql3 = "SELECT * FROM `regdays` WHERE no = '$cln' ORDER BY `cur_timestamp` DESC";
+		if (!$RegDayDB->Open()) $RegDayDB->Kill();
+		if (!$RegDayDB->Query($sql3)) $RegDayDB->Kill();
+		while ($row4=$RegDayDB->Row())
+		{		
+			if( $row4->mon == 1 ) { $mon="<IMG SRC='./images/tickgreen.jpg'  BORDER='0' ALT=''>"; } else {  $mon="&nbsp;"; }
+			if( $row4->tue == 1 ) { $tue="<IMG SRC='./images/tickgreen.jpg'  BORDER='0' ALT=''>"; } else {  $tue="&nbsp;"; }
+			if( $row4->wed == 1 ) { $wed="<IMG SRC='./images/tickgreen.jpg'  BORDER='0' ALT=''>"; } else {  $wed="&nbsp;"; }
+			if( $row4->thu == 1 ) { $thu="<IMG SRC='./images/tickgreen.jpg'  BORDER='0' ALT=''>"; } else {  $thu="&nbsp;"; }
+			if( $row4->fri == 1 ) { $fri="<IMG SRC='./images/tickgreen.jpg'  BORDER='0' ALT=''>"; } else {  $fri="&nbsp;"; }
+			if( $row4->sat == 1 ) { $sat="<IMG SRC='./images/tickgreen.jpg'  BORDER='0' ALT=''>"; } else {  $sat="&nbsp;"; }
+			if( $row4->sun == 1 ) { $sun="<IMG SRC='./images/tickgreen.jpg'  BORDER='0' ALT=''>"; } else {  $sun="&nbsp;"; }
+			echo "
+				<TR>
+					<td class='DataTD'>$mon</td>
+					<td class='DataTD'>$tue</td>
+					<td class='DataTD'>$wed</td>
+					<td class='DataTD'>$thu</td>
+					<td class='DataTD'>$fri</td>
+					<td class='DataTD'>$sat</td>
+					<td class='DataTD'>$sun</td>
+					<td class='DataTD'>$row4->active</td>
+					<td class='DataTD'>$row4->datechange</td>
+				</TR>";
+		}
+		 
+echo "
+<TR>
+	<td class='DataTD' colspan='7'><CENTER><A HREF='hrregday.php?cln=$cln'>UPDATE</A></CENTER></td>
+
+</TR>
+	
+	</TABLE>
+	</TD>	
+<TR>
+</TD></TR></TABLE>
+
+</center><BR></td></tr></table>";
+include_once("./footer.php");
+?>

@@ -1,0 +1,120 @@
+<?php
+include("./config.php");
+include_once("./header.php");
+$PHP_SELF = $_SERVER['PHP_SELF'];
+
+
+if(!isset($state))
+{
+$db = new CMySQL;
+
+$YearAct = $_GET['yearAct'];
+$candelete=$_GET['candelete'];
+$idr=$_GET['lp'];
+$datad=$_GET['datad'];
+//echo $id;
+$d1 = strtotime("$datad");
+$d2 = strtotime("$FirstOfTheMonth");
+//$lp=$_GET['lp'];
+echo "	<TD ALIGN=JUSTIFY VALIGN=TOP border=0>
+	<table width='100%' border=0><tr><td>
+
+<center>
+<!-- BEGIN Record members -->
+<form action='$PHP_SELF' method='post' name='ed_czl'>
+  <font class='FormHeaderFont'>$tytul</font>
+  <table border='0' cellpadding='3' cellspacing='1' class='FormTABLE'>
+";
+
+ if (!$db->Open()) $db->Kill();
+ if(isset($lp)){
+  $q = "SELECT `holidays`.`id`, `holidays`.`no`, DATE_FORMAT(`holidays`.`date1`, \"%d/%m/%Y\") as d1,`holidays`.`sortof`, `holidays`.`hourgiven`, `holidays`.`imp`, `nombers`.`firstname`, `nombers`.`surname`, `nombers`.`knownas` FROM `holidays` JOIN `nombers` ON `holidays`.`no` = `nombers`.`pno` WHERE `holidays`.`id`='$idr' LIMIT 1";
+  } else { 
+  echo "<BR><BR><CENTER><H1>Error in $PHP_SELF</H1></CENTER><BR><BR>";
+  exit;
+ }
+  if (!$db->Query($q)) $db->Kill();
+  
+    while ($row=$db->Row())
+    {
+  echo "
+ 
+  <tr>
+      <td class='FieldCaptionTD'>Clocking in number</td>
+      <td class='DataTD'><B>$row->no</B></td>
+    </tr>
+    <tr>
+      <td class='FieldCaptionTD'>First name</td>
+      <td class='DataTD'>$row->firstname    </td>
+    </tr>
+    <tr>  
+      <td class='FieldCaptionTD'>Surname</td>
+      <td class='DataTD'>$row->surname</td>
+    </tr>
+
+    <tr>
+      <td class='FieldCaptionTD'>Known as</td>
+      <td class='DataTD'>$row->knownas</td>
+    </tr>
+    <tr>
+      <td class='FieldCaptionTD'>Hours Given</td>
+      <td class='DataTD'><input class='Input' maxlength='5' name='_hourgiven' size='5' value='$row->hourgiven'></td>
+    </tr>
+   
+    <tr>
+      <td align='right' colspan='2'>
+		<input name='recid' type='hidden' value='$row->ID'>
+		<input name='state' type='hidden' value='1'>
+
+<input name='YearAct' type='hidden' value='$YearAct'>
+<input name='candelete' type='hidden' value='$candelete'>
+<input name='idr' type='hidden' value='$idr'>
+<input name='datad' type='hidden' value='$datad'>
+<input name='skrypt' type='hidden' value='$skrypt'>
+";			
+
+
+} 
+echo "
+			<input class='Button' name='Update' type='submit' value='$SAVEBTN'>
+			<input class='Button'  type='Button' onclick='window.location=\"t_lista.php\"' value='$LISTBTN'></td>
+	</td>
+    </tr>
+  </table>
+</form>
+</center>
+<BR>
+</td></tr>
+</table>";
+include_once("./footer.php");
+}
+elseif($state==1)
+{
+if(isset($_POST['_hourgiven']))$_hourgiven = $_POST['_hourgiven'];
+if(isset($_POST['yearAct']))$yearAct = $_POST['yearAct'];
+if(isset($_POST['candelete']))$candelete = $_POST['candelete'];
+if(isset($_POST['idr']))$idr = $_POST['idr'];
+if(isset($_POST['datad']))$datad = $_POST['datad'];
+if(isset($_POST['skrypt']))$skrypt = $_POST['skrypt'];
+
+$d1 = strtotime("$datad");
+$d2 = strtotime("$FirstOfTheMonth");
+
+$db = new CMySQL;
+
+//if(isset($datad)) 
+//{
+	if($candelete=="YES") 
+	{
+		if (!$db->Open()) $db->Kill();
+		$dh =("UPDATE `holidays` SET `hourgiven` = '$_hourgiven' WHERE `id`='$idr' LIMIT 1");
+		if (!$db->Query($dh)) $db->Kill();
+	} else {
+	echo "<BR>You can not EDIT this record !"; exit;}
+//} else {
+//echo "<BR>You can not edit ! DATAD NOT SET ??"; exit;
+//}
+echo "<script language='javascript'>window.location=\"$skrypt&yearAct=$YearAct&startd=$startd&endd=$endd\"</script>";
+
+} //end of the sec ond loop
+?>

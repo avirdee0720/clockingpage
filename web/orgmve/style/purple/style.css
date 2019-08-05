@@ -1,0 +1,37 @@
+/* Purple CCSTheme */
+BODY, TABLE, TH, TR, TD, UL, OL, LI, P, FONT, A, BLOCKQUOTE, LABEL { font-family: Verdana, Helvetica, Arial, Tahoma; font-size: 13px; }
+.PurplePageBODY { font-family: Verdana, Helvetica, Arial, Tahoma; font-size: 13px; }
+.PurpleFormHeaderFont { color: #000000; font-size: 16px; font-weight: bold; }
+.PurpleFormTABLE { border: 1px solid #7C79B2; }
+.PurpleColumnTD { border: 1px solid #7C79B2; color: #FFFFFF; background-color: #7C79B2; font-size: 13px; font-weight: bold; }
+.PurpleFieldCaptionTD { border: 1px solid #7C79B2; background-color: #EEEAF4; font-size: 13px; }
+.PurpleDataTD { border: 1px solid #7C79B2; background-color: #E2E0FE; font-size: 13px; }
+.PurpleErrorDataTD { border: 1px solid #7C79B2; background-color: #E2E0FE; color: #FF0000; font-size: 13px; }
+.PurpleSeparatorTD { }
+.PurpleAltDataTD{ border: 1px solid #7C79B2; background-color: #FFFFFF; font-size: 13px; }
+.PurpleFooterTD { border: 1px solid #7C79B2; color: #EEEEFF; background-color: #7C79B2; font-size: 13px; }
+a.PurpleSorterLink:link,a.PurpleSorterLink:visited{ color: #FFFFFF; font-weight: bold; text-decoration: underline; }
+a.PurpleSorterLink:hover,a.PurpleSorterLink:active{ color: #FFD700; font-weight: bold; text-decoration: none; }
+a.PurpleDataLink:link,a.PurpleDataLink:visited{ color: #000000; text-decoration: underline; }
+a.PurpleDataLink:hover,a.PurpleDataLink:active{ color: #FF0000; text-decoration: none; }
+a.PurpleNavigatorLink:link,a.PurpleNavigatorLink:visited{ color: #FFFFFF; font-weight: bold; text-decoration: underline; }
+a.PurpleNavigatorLink:hover,a.PurpleNavigatorLink:active{ color: #FFD700; font-weight: bold; text-decoration: none; }
+.PurpleButton { border-bottom: 1px solid #000000; border-left: 1px solid #FFFFFF; border-right: 1px solid #000000; border-top: 1px solid #FFFFFF; background-color: #E2E0FE; font-family: Verdana, Helvetica, Arial, Tahoma; font-size: 11px; font-weight: bold; }
+.PurpleInput { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; font-family: Verdana, Helvetica, Arial, Tahoma; font-size: 13px; }
+.PurpleTextarea { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; font-family: Verdana, Helvetica, Arial, Tahoma; font-size: 13px; }
+.PurpleSelect { font-family: Verdana, Helvetica, Arial, Tahoma; font-size: 13px; }
+/* Calendar */
+a.today:link,a.today:visited{ color: #FF0000; font-weight: bold; text-decoration: none; }
+a.today:hover,a.today:active{ color: #000000; font-weight: bold; text-decoration: none; }
+a.selectedDay:link,a.selectedDay:visited{ color: #FFFFFF; font-weight: bold; text-decoration: none; }
+a.selectedDay:hover,a.selectedDay:active{ color: #FF0000; font-weight: bold; text-decoration: none; }
+a.weekDay:link,a.weekDay:visited{ color: #000000; text-decoration: none; }
+a.weekDay:hover,a.weekDay:active{ color: #FF0000; text-decoration: none; }
+TD.selectedDay { margin: 1px; border: 1px solid #7C79B2; color: #FFFFFF; background-color: #7C79B2; font-size: 13px; font-weight: bold; }
+TD.today { border-top: 1px solid #FF0000; border-left: 1px solid #FF0000; border-bottom: 1px solid #FF0000; border-right: 1px solid #FF0000; background-color: #FFFFFF; font-size: 13px; }
+TD.workday { border: 1px solid #7C79B2; background-color: #FFFFFF; font-size: 13px; }
+TD.weekend { border: 1px solid #7C79B2; background-color: #E2E0FE; font-size: 13px; }
+TH.calendar { margin: 1px; border: 1px solid #7C79B2; color: #FFFFFF; background-color: #7C79B2; font-size: 13px; font-weight: bold; }
+.CalendarButtons { margin: 1px; border-bottom: 1px solid #000000; border-left: 1px solid #FFFFFF; border-right: 1px solid #000000; border-top: 1px solid #FFFFFF; background-color: #E2E0FE; font-family: Verdana, Helvetica, Arial, Tahoma; font-size: 11px; font-weight: bold; }
+.CalendarControls { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.Table { border: 1px solid #7C79B2; }

@@ -1,0 +1,37 @@
+/*  CCSTheme */
+BODY, TABLE, TH, TR, TD, UL, OL, LI, P, FONT, A, BLOCKQUOTE, LABEL { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.PageBODY{ font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; scrollbar-face-color: #EDE2CD; scrollbar-highlight-color: #F9F4EC; scrollbar-3dlight-color: #EDE2CD; scrollbar-shadow-color: #663300; scrollbar-darkshadow-color: #DDE4F0; scrollbar-arrow-color: #000000; scrollbar-track-color: #F9F6EC; }
+.FormTABLE{ border-top: 1px solid #EDE2CD; border-left: 1px solid #EDE2CD; background-color: #F9F6EC; }
+.FormHeaderFont{ color: #000000; font-size: 16px; font-weight: bold; }
+.FieldCaptionTD { border-left: 1px solid #F9F4EC; border-right: 1px solid #663300; border-top: 1px solid #F9F4EC; border-bottom: 1px solid #663300; padding: 5px; background-color: #EDE2CD; font-size: 13px; font-weight: bold; }
+.ColumnTD { border-left: 1px solid #F9F6EC; border-right: 1px solid #663300; border-top: 1px solid #F9F4EC; border-bottom: 1px solid #663300; padding: 5px; background-color: #EDE2CD; font-size: 13px; font-weight: bold; }
+.DataTD{ border-right: 1px solid #E8D9BD; color: #000000; font-size: 13px; }
+.AltDataTD{ border-right: 1px solid #E8D9BD; color: #000000; background-color: #F4F0E3; font-size: 13px; }
+.ErrorDataTD{ border-right: 1px solid #E8D9BD; color: #FF0000; font-size: 13px; font-weight: bold; }
+.FooterTD { border-left: 1px solid #F9F4EC; border-right: 1px solid #663300; border-top: 1px solid #F9F6EC; border-bottom: 1px solid #663300; padding: 5px; background-color: #EDE2CD; font-size: 13px; font-weight: bold; }
+.SeparatorTD{ height: 1px; background-color: #E8D9BD; }
+a.SorterLink:link,a.SorterLink:visited{ color: #000000; font-weight: bold; text-decoration: underline; }
+a.SorterLink:hover,a.SorterLink:active{ color: #663300; font-weight: bold; text-decoration: none; }
+a.DataLink:link,a.DataLink:visited{ color: #000000; text-decoration: underline; }
+a.DataLink:hover,a.DataLink:active{ color: #663300; text-decoration: none; }
+a.NavigatorLink:link,a.NavigatorLink:visited{ color: #000000; font-weight: bold; text-decoration: underline; }
+a.NavigatorLink:hover,a.NavigatorLink:active{ color: #663300; font-weight: bold; text-decoration: none; }
+.Button { border-right: 1px solid #663300; border-top: 1px solid #F9F4EC; border-bottom: 1px solid #663300; border-left: 1px solid #F9F4EC; background-color: #F4F0E3; font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.Input { border-left: 2px solid #F9F4EC; border-right: 1px solid #663300; border-top: 2px solid #F9F4EC; border-bottom: 1px solid #663300; font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.Textarea { border-left: 2px solid #F9F4EC; border-right: 1px solid #663300; border-top: 2px solid #F9F4EC; border-bottom: 1px solid #663300; font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.Select { border-left: 2px solid #F9F4EC; border-right: 1px solid #663300; border-top: 2px solid #F9F4EC; border-bottom: 1px solid #663300; font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+/* Calendar */
+a.today:link,a.today:visited{ color: #FF0000; font-weight: bold; text-decoration: none; }
+a.today:hover,a.today:active{ color: #663300; font-weight: bold; text-decoration: none; }
+a.selectedDay:link,a.selectedDay:visited{ color: #000000; font-weight: bold; text-decoration: none; }
+a.selectedDay:hover,a.selectedDay:active{ color: #663300; font-weight: bold; text-decoration: none; }
+a.weekDay:link,a.weekDay:visited{ color: #000000; text-decoration: none; }
+a.weekDay:hover,a.weekDay:active{ color: #FF0000; text-decoration: none; }
+TD.selectedDay { margin: 1px; border-left: 1px solid #F9F4EC; border-right: 1px solid #663300; border-top: 1px solid #F9F6EC; border-bottom: 1px solid #663300; padding: 2px; background-color: #EDE2CD; font-size: 13px; font-weight: bold; }
+TD.today { border-top: 1px solid #FF0000; border-left: 1px solid #FF0000; border-bottom: 1px solid #FF0000; border-right: 1px solid #FF0000; color: #000000; font-size: 13px; }
+TD.workday { border-right: 1px solid #E8D9BD; color: #000000; font-size: 13px; }
+TD.weekend { border-right: 1px solid #E8D9BD; color: #000000; background-color: #E4DDCD; font-size: 13px; }
+TH.calendar { margin: 1px; border-left: 1px solid #F9F4EC; border-right: 1px solid #663300; border-top: 1px solid #F9F6EC; border-bottom: 1px solid #663300; padding: 2px; background-color: #EDE2CD; font-size: 13px; font-weight: bold; }
+.CalendarButtons { border-right: 1px solid #663300; border-top: 1px solid #F9F4EC; border-bottom: 1px solid #663300; border-left: 1px solid #F9F4EC; background-color: #F4F0E3; font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.CalendarControls { font-family: Arial, Tahoma, Verdana, Helvetica; font-size: 13px; }
+.Table { border-top: 1px solid #EDE2CD; border-left: 1px solid #EDE2CD; background-color: #F9F6EC; }

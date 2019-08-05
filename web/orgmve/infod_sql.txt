@@ -1,0 +1,76 @@
+5proc_bonus.php:			$delsql="DELETE FROM `paybonuses` WHERE `no`='$emp->pno' AND `date1`='$ddo' AND `sageno`='12'";
+7proc_bonus.php:			$delsql="DELETE FROM `paybonuses` WHERE `no`='$emp->pno' AND `date1`='$ddo' AND `sageno`='15'";
+a-5proc_bonus.php:			$delsql="DELETE FROM `paybonuses` WHERE `no`='$emp->pno' AND `date1`='$ddo' AND `sageno`='12'";
+addhday2.php.bak:				$sqlDelIn = "DELETE FROM `inout` WHERE inout.id='$RowTime->id' LIMIT 1";
+addhday2.php.bak:					$sqlDelMsg = "DELETE FROM `inoutmsg` WHERE inoutmsg.id='$RowMsg->id' LIMIT 1";
+a-gross_pay.php:	$delsql="DELETE FROM `paybasic` WHERE `no`='$emp->pno' AND `date1`='$ddo' AND `sageno`='2'";
+a-gross_pay.php:		$delsql="DELETE FROM `payholidays` WHERE `no`='$emp->pno' AND `date1`='$ddo' AND `sageno`='4'";
+a-gross_pay.php:	$delsql="DELETE FROM `paybasicgross` WHERE `no`='$emp->pno' AND `date1`='$ddo' AND `sageno`='0'";
+bhm_bonus.php:			$delsql="DELETE FROM `paybonuses` WHERE `no`='$emp->pno' AND `date1`='$ddo' AND `sageno`='20'";
+del1.php:    $query =("DELETE FROM IndividualOrdersTbl WHERE OrderID=$order AND IndividualOrderID=$iid LIMIT 1");
+deletemonth.php:$q1 = "DELETE FROM `sumofweek` WHERE `year` = '$year'";
+ed_czl.php:	$query = ("DELETE FROM hd_users WHERE lp=$lp") ;
+ed_dost.php:	$query = ("DELETE FROM hd_dostawcy WHERE ID=$lp") ;
+ed_dz.php:	$query = ("DELETE FROM hd_wydzial WHERE lp=$lp") ;
+ed_mnugl.php:	$query = ("DELETE FROM user WHERE lp=$lp") ;
+ed_order0.php:    $delitems =("DELETE FROM IndividualOrdersTbl WHERE OrderID='$order'");
+ed_podmnu.php:	$query = ("DELETE FROM hd_menu1 WHERE lp=$lp") ;
+ed_pw.php:	$query = ("DELETE FROM hd_wydzial WHERE lp=$lp") ;
+ehours.php:				$sqlDelIn = "DELETE FROM `inout` WHERE inout.id='$RowTime->id' LIMIT 1";
+ehours.php:					$sqlDelMsg = "DELETE FROM `inoutmsg` WHERE inoutmsg.id='$RowMsg->id' LIMIT 1";
+gross_pay-all.php:		$delsql="DELETE FROM `paygross` WHERE `no`='$emp->pno' AND `date1`='$ddo'";
+gross_pay.php:	$delsql="DELETE FROM `paybasic` WHERE `no`='$emp->pno' AND `date1`='$ddo' AND `sageno`='2'";
+gross_pay.php:		$delsql="DELETE FROM `payholidays` WHERE `no`='$emp->pno' AND `date1`='$ddo' AND `sageno`='4'";
+gross_pay.php:	$delsql="DELETE FROM `paybasicgross` WHERE `no`='$emp->pno' AND `date1`='$ddo' AND `sageno`='0'";
+holid_count_ver2.php:$sql0 ="DELETE FROM `sumofweek` WHERE `sumofweek`.`no`='$nr' AND `sumofweek`.`year` = '$rok' ";
+holid_count_ver2.php.bak:$sql0 ="DELETE FROM `sumofweek` WHERE `sumofweek`.`no`='$nr' AND `sumofweek`.`year` = '$rok' ";
+holiddel.php:		$dh =("DELETE FROM `holidays` WHERE `id`='$idr' LIMIT 1");
+holi-e-del.php:	$step2 =("DELETE FROM `holidays` WHERE `date1`='$day'");
+hv2_countweek.php:$sql0 ="DELETE FROM `sumofweek` WHERE `sumofweek`.`no`='$nr' AND `sumofweek`.`year` = '$rok' ";
+hv2_prepweek.php:$sql0 ="DELETE FROM `sumofweek` WHERE `sumofweek`.`no`='$nr' AND `sumofweek`.`year` = '$rok' ";
+notatki.php: { $query = ("DELETE FROM hd_notatki WHERE not_id=$notenr") ;
+paydelete.php:		$paysql3 = "DELETE FROM `paybasic` WHERE `date1`='$ddo'";
+paydelete.php:		$paysql2 = "DELETE FROM `paybasicgross` WHERE `date1`='$ddo'";
+paydelete.php:		$paysql = "DELETE FROM `paybonuses` WHERE `date1`='$ddo'";
+paydelete.php:		$paysql4 = "DELETE FROM `payholidays` WHERE `date1`='$ddo'";
+paydelete.php:		$paysql5 = "DELETE FROM `paypunctuality` WHERE `date1`='$ddo'";
+paydelete.php:		$paysql6 = "DELETE FROM `paywendbonus` WHERE `date1`='$ddo'";
+paydelete.php:		$paysql7 = "DELETE FROM `paywendlumpsum` WHERE `date1`='$ddo'";
+paydelete.php:		$paysql8 = "DELETE FROM `paygross` WHERE `date1`='$ddo'";
+paytablesstru.sql:DELETE FROM `paybasic` 
+paytablesstru.sql:DELETE FROM `paybasicgross`  
+paytablesstru.sql:DELETE FROM `paybonuses` 
+paytablesstru.sql:DELETE FROM `payholidays` 
+paytablesstru.sql:DELETE FROM `paypunctuality` 
+paytablesstru.sql:DELETE FROM `paywendbonus` 
+paytablesstru.sql:DELETE FROM `paywendlumpsum` 
+prep_week.php:$sql0 ="DELETE FROM `sumofweek` WHERE `sumofweek`.`no`='$nr' AND `sumofweek`.`year` = '$rok' ";
+programy.php: { $query = ("DELETE FROM hd_program WHERE id_prog=$lp") ;
+punc_bonus.php:	$delsql="DELETE FROM `paypunctuality` WHERE `no`='$emp->pno' AND `date1`='$ddo'";
+punc_penalty.php:	$delsql="DELETE FROM `paypunctuality` WHERE `no`='$emp->pno' AND `date1`='$ddo' AND `sageno`='14'";
+ss_ebank.php:$DeleteInDay = "DELETE FROM `ssbankingday` WHERE `date1`= '$date1'";
+ss_ebank.php.bak:$DeleteInDay = "DELETE FROM `ssbankingday` WHERE `date1`= '$date1'";
+timedel.php:				$sqlDelIn = "DELETE FROM `inout` WHERE inout.id='$RowTime->id' LIMIT 1";
+timedel.php:					$sqlDelMsg = "DELETE FROM `inoutmsg` WHERE inoutmsg.id='$RowMsg->id' LIMIT 1";
+tmptprep.php:$sql0 ="DELETE FROM `totals` WHERE `totals`.`no`='$nr' AND `totals`.`date1` >= '$dod' AND `a1030`<>'1'";
+totalh2e.php:				$sqlDelIn = "DELETE FROM `inout` WHERE inout.id='$RowTime->id' LIMIT 1";
+totalh2e.php:					$sqlDelMsg = "DELETE FROM `inoutmsg` WHERE inoutmsg.id='$RowMsg->id' LIMIT 1";
+voucherpay.php:	$delsql="DELETE FROM `payvoucher` WHERE `no`='$emp->pno' AND `date1`='$ddo'";
+voucherpay.php:	$delsql="DELETE FROM `payvoucher` WHERE `no`='$emp->pno' AND `date1`='$ddo'";
+voucherpay.php.bak:	$delsql="DELETE FROM `payvoucher` WHERE `no`='$emp->pno' AND `date1`='$ddo'";
+voucherpay.php.bak:	$delsql="DELETE FROM `payvoucher` WHERE `no`='$emp->pno' AND `date1`='$ddo'";
+wend_bonus.php:		$delsql="DELETE FROM `paywendbonus` WHERE `no`='$emp->pno' AND `date1`='$ddo' AND `sageno`='10'";
+wend_bonus.php.bak:		$delsql="DELETE FROM `paywendbonus` WHERE `no`='$emp->pno' AND `date1`='$ddo' AND `sageno`='10'";
+wend_ls_all.php:			$delsql="DELETE FROM `wendlumpsum` WHERE `no`='$emp->pno' AND `date1`='$ddo' AND `sageno`='0'";
+wend_ls_all.php.bak:			$delsql="DELETE FROM `wendlumpsum` WHERE `no`='$emp->pno' AND `date1`='$ddo' AND `sageno`='0'";
+wend_lumpsum.php:		$delsql="DELETE FROM `paywendlumpsum` WHERE `no`='$emp->pno' AND `date1`='$ddo' AND `sageno`='11'";
+wend_lumpsum.php.bak:		$delsql="DELETE FROM `paywendlumpsum` WHERE `no`='$emp->pno' AND `date1`='$ddo' AND `sageno`='11'";
+zl_del_zl.php:	$dzbyt="DELETE FROM zl_zbyt WHERE id_zlec = $idzl";
+zl_del_zl.php:	$dzzaop="DELETE FROM zl_zaop WHERE id_zlec = $idzl";
+zl_del_zl.php:	$dtech="DELETE FROM zl_tech WHERE id_zlec = $idzl";
+zl_del_zl.php:	$dzlec="DELETE FROM zl_zlec WHERE lp = $idzl";
+zl_dkoop.php:	$dtech="DELETE FROM zl_koop WHERE lp = $lp";
+zl_drys.php:	$dzzaop="DELETE FROM zl_zaop WHERE lp = $lp";
+zl_dtech.php:	$dtech="DELETE FROM zl_tech WHERE lp = $lp";
+zl_dzao.php:	$dzzaop="DELETE FROM zl_zaop WHERE lp = $lp";
+zl_dzbyt.php:		$dzbyt="DELETE FROM zl_zbyt WHERE lp = $lp";

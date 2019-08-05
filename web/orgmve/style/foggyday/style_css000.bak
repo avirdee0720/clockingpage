@@ -1,0 +1,37 @@
+/* FoggyDay CCSTheme */
+BODY, TABLE, TH, TR, TD, UL, OL, LI, P, FONT, A, BLOCKQUOTE, LABEL { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.FoggyDayPageBODY{ font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.FoggyDayFormHeaderFont{ color: #000000; font-size: 18px; font-weight: bold; }
+.FoggyDayFormTABLE{ border: 1px ridge #000000; background-color: #E5E5E5; }
+.FoggyDayColumnTD { color: #FFFFFF; background-color: #666699; font-size: 13px; font-weight: bold; }
+.FoggyDayFieldCaptionTD { border: 1px ridge #000000; color: #000000; background-color: #CCCCFF; font-size: 13px; }
+.FoggyDayDataTD{ border: 1px ridge #000000; color: #000000; background-color: #FFFFFF; font-size: 13px; }
+.FoggyDayErrorDataTD{ border: 1px ridge #000000; color: #FF0000; background-color: #FFFFFF; font-size: 13px; }
+.FoggyDaySeparatorTD{ height: 1px; background-color: #000000; }
+.FoggyDayAltDataTD{ border: 1px ridge #000000; color: #000000; font-size: 13px; }
+.FoggyDayFooterTD { border: 1px ridge #000000; color: #FFFFFF; background-color: #666699; font-size: 13px; }
+a.FoggyDaySorterLink:link,a.FoggyDaySorterLink:visited{ color: #FFFFFF; font-weight: bold; text-decoration: underline; }
+a.FoggyDaySorterLink:hover,a.FoggyDaySorterLink:active{ color: #B3B4D3; font-weight: bold; text-decoration: none; }
+a.FoggyDayDataLink:link,a.FoggyDayDataLink:visited{ color: #000000; text-decoration: underline; }
+a.FoggyDayDataLink:hover,a.FoggyDayDataLink:active{ color: #FF0000; text-decoration: none; }
+a.FoggyDayNavigatorLink:link,a.FoggyDayNavigatorLink:visited{ color: #FFFFFF; font-weight: bold; text-decoration: underline; }
+a.FoggyDayNavigatorLink:hover,a.FoggyDayNavigatorLink:active{ color: #B3B4D3; font-weight: bold; text-decoration: none; }
+.FoggyDayButton { border-bottom: 1px ridge #000000; border-left: 1px ridge #FFFFFF; border-right: 1px ridge #000000; border-top: 1px ridge #FFFFFF; background-color: #E5E5E5; font-family: Verdana, Helvetica, Arial, Tahoma; font-size: 13px; font-weight: bold; }
+.FoggyDayInput { border-bottom: 1px ridge #000000; border-left: 1px ridge #000000; border-right: 1px ridge #000000; border-top: 1px ridge #000000; font-family: Verdana, Helvetica, Arial, Tahoma; font-size: 13px; }
+.FoggyDayTextarea { border-bottom: 1px ridge #000000; border-left: 1px ridge #000000; border-right: 1px ridge #000000; border-top: 1px ridge #000000; font-family: Verdana, Helvetica, Arial, Tahoma; font-size: 13px; }
+.FoggyDaySelect { border-bottom: 1px ridge #000000; border-left: 1px ridge #000000; border-right: 1px ridge #000000; border-top: 1px ridge #000000; font-family: Verdana, Helvetica, Arial, Tahoma; font-size: 13px; }
+/* Calendar */
+a.today:link,a.today:visited{ color: #FF0000; font-weight: bold; text-decoration: none; }
+a.today:hover,a.today:active{ color: #000000; font-weight: bold; text-decoration: none; }
+a.selectedDay:link,a.selectedDay:visited{ color: #000000; font-weight: bold; text-decoration: none; }
+a.selectedDay:hover,a.selectedDay:active{ color: #FF0000; font-weight: bold; text-decoration: none; }
+a.weekDay:link,a.weekDay:visited{ color: #000000; text-decoration: none; }
+a.weekDay:hover,a.weekDay:active{ color: #FF0000; text-decoration: none; }
+TD.selectedDay { border: 1px ridge #000000; color: #000000; background-color: #CCCCFF; font-size: 13px; }
+TD.today { border-top: 1px solid #FF0000; border-left: 1px solid #FF0000; border-bottom: 1px solid #FF0000; border-right: 1px solid #FF0000; color: #000000; background-color: #FFFFFF; font-size: 13px; }
+TD.workday { border: 1px ridge #000000; color: #000000; background-color: #FFFFFF; font-size: 13px; }
+TD.weekend { border: 1px ridge #000000; color: #000000; font-size: 13px; }
+TH.calendar { margin: 1px; color: #FFFFFF; background-color: #666699; font-size: 13px; font-weight: bold; }
+.CalendarButtons { border-bottom: 1px ridge #000000; border-left: 1px ridge #FFFFFF; border-right: 1px ridge #000000; border-top: 1px ridge #FFFFFF; background-color: #E5E5E5; font-family: Verdana, Helvetica, Arial, Tahoma; font-size: 13px; font-weight: bold; }
+.CalendarControls { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.Table { border: 1px ridge #000000; background-color: #E5E5E5; }

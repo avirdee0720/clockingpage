@@ -1,0 +1,326 @@
+---------------- addhday1.php - addhday1.phpW ------------------
+---------------- addhday2.php - addhday2.phpW ------------------
+---------------- admin.php - admin.phpW ------------------
+---------------- check_pr.php - check_pr.phpW ------------------
+2,4c2,5
+< include("./config.php");
+< include_once("./header.php");
+< $PHP_SELF = $_SERVER['PHP_SELF'];
+---
+> //if(!isset($id) && !isset($pw))
+> //{header("Location: index.html"); exit;}
+> 
+> include("./inc/mysql.inc.php");
+12c13,14
+<     <td colspan='2' >Clocking NO</td>
+---
+>     <td >&nbsp;&nbsp;&nbsp;</td>
+>     <td >Clocking NO</td>
+24c26
+< $edit="<tr><td ><A HREF='staff/nombers_edit.php?editid1=$row->ID'> Edit </A>&nbsp;&nbsp;</td>";
+---
+> $edit="<tr><td ><A HREF='staff/nombers_edit.php?editid1=$row->ID'> Edit </A></td>";
+26,32c28,34
+< if($row->knownas == "" )  echo "$edit<td ><B>$row->pno</B>&nbsp;&nbsp;</td><td >knownas Missing!</td></tr>";
+< if($row->firstname == "" )  echo "$edit<td ><B>$row->pno</B>&nbsp;&nbsp;</td><td >firstname Missing!</td></tr>";
+< if($row->surname == "" )  echo "$edit<td ><B>$row->pno</B>&nbsp;&nbsp;</td><td >surname Missing!</td></tr>";
+< if($row->status == "" )  echo "$edit<td ><B>$row->pno</B>&nbsp;&nbsp;</td><td >status Missing!</td></tr>";
+< if($row->regdays == "" )  echo "$edit<td ><B>$row->pno</B>&nbsp;&nbsp;</td><td >regdays Missing!</td></tr>";
+< if($row->started == "" && $row->status == "OK" )  echo "$edit<td ><B>$row->pno</B>&nbsp;&nbsp;</td><td >started date is empty but status = OK</td></tr>";
+< if($row->left1 == "" && $row->left1 <> "0000-00-00" && $row->status == "LEAVER")  echo "$edit<td ><B>$row->pno</B>&nbsp;&nbsp;</td><td >left date is empty but status = LEAVER </td></tr>";
+---
+> if($row->knownas == "" )  echo "$edit<td ><B>$row->pno</B></td><td >knownas Missing!</td></tr>";
+> if($row->firstname == "" )  echo "$edit<td ><B>$row->pno</B></td><td >firstname Missing!</td></tr>";
+> if($row->surname == "" )  echo "$edit<td ><B>$row->pno</B></td><td >surname Missing!</td></tr>";
+> if($row->status == "" )  echo "$edit<td ><B>$row->pno</B></td><td >status Missing!</td></tr>";
+> if($row->regdays == "" )  echo "$edit<td ><B>$row->pno</B></td><td >regdays Missing!</td></tr>";
+> if($row->started == "" && $row->status == "OK" )  echo "$edit<td ><B>$row->pno</B></td><td >started date is empty but status = OK</td></tr>";
+> if($row->left1 == "" && $row->left1 <> "0000-00-00" && $row->status == "LEAVER")  echo "$edit<td ><B>$row->pno</B></td><td >left date is empty but status = LEAVER </td></tr>";
+---------------- english.php - english.phpW ------------------
+---------------- entitl1exel.php - entitl1exel.phpW ------------------
+---------------- entitleft2.php - entitleft2.phpW ------------------
+---------------- entitleft.php - entitleft.phpW ------------------
+---------------- entitl-left.php - entitl-left.phpW ------------------
+---------------- entitlnexel2.php - entitlnexel2.phpW ------------------
+---------------- entitlnexel.php - entitlnexel.phpW ------------------
+---------------- holi11del.php - holi11del.phpW ------------------
+---------------- holidcount1.php - holidcount1.phpW ------------------
+---------------- holidcount2.php - holidcount2.phpW ------------------
+---------------- holi-e-del.php - holi-e-del.phpW ------------------
+---------------- hollid1.php - hollid1.phpW ------------------
+3a4
+> include("./inc/mysql.inc.php");
+5,7c6
+< include_once("./header.php");
+< $PHP_SELF = $_SERVER['PHP_SELF'];
+< $db = new CMySQL;
+---
+> include("./languages/$LANGUAGE.php");
+8a8,9
+> $dataakt2=date("d/m/Y");
+> 
+9a11,19
+> 
+> function dateDiff($dformat, $endDate, $beginDate)
+> {
+> $date_parts1=explode($dformat, $beginDate);
+> $date_parts2=explode($dformat, $endDate);
+> $start_date=gregoriantojd($date_parts1[1], $date_parts1[0], $date_parts1[2]);
+> $end_date=gregoriantojd($date_parts2[1], $date_parts2[0],  $date_parts2[2]);
+> return $end_date - $start_date;
+> }
+19a30
+> // to change table with choice
+22c33,34
+< $rokmniej=date("Y")- 1;
+---
+> $rokmniej=date("Y");
+> $rokwiecej=date("Y")+1;
+24c36
+< $endd="30/11/".date("Y");
+---
+> $endd="30/11/".$rokwiecej;
+33c45
+< <font class='FormHeaderFont'>Employee's payrol/ClockingIN-OUT NO: $nr</font>
+---
+> <font class='FormHeaderFont'>Employee's payrol/ClockingIN-OUT NO: $nr<BR>Pay Holiday year - 2007</font>
+45a58,93
+> $dba1 = new CMySQL;
+> if (!$dba1->Open()) $dba1->Kill();
+> $qa = "SELECT  `nombers`.`knownas`, `nombers`.`firstname`, DATE_FORMAT(`nombers`.`started`, \"%d/%m/%Y\") AS datestarted, `nombers`.`left1`,
+> `nombers`.`surname`, `nombers`.`status`, `nombers`.`cat`, `nombers`.`regdays`, `emplcat`.`catname` 
+> FROM `nombers` LEFT JOIN `emplcat` ON `emplcat`.`catozn` = `nombers`.`cat` WHERE `pno` = '$nr' LIMIT 1";
+> $dba1->Query($qa);
+> $rowfIRST=$dba1->Row();
+> $regday=$rowfIRST->regdays;
+> $started=$rowfIRST->datestarted;
+> 
+> 		if($rowfIRST->catname <> "casual" ) { 
+> 		$kategoria =  "<FONT COLOR='#0000FF'><H3>$rowfIRST->catname</H3></FONT>" ; 
+> 		$casual="y";
+> 		} else { 
+> 		$kategoria =  "<FONT COLOR='#FF0000'><H2>$rowfIRST->catname</H2></FONT>" ; 
+> 		$casual="n";
+> 		}
+> 
+> 	$iledni =  dateDiff("/", date("d/m/Y", time()), $started);
+> 	if($iledni<365) {
+> 		$procent = ($iledni / 365) * 100;
+> 		$procent = round($procent);
+> 		$prc = "0.".$procent;
+> 		$urlop = (4 * $regday) * $prc;
+> 		$urlop = round($urlop);
+> 			echo " $procent% of the year";
+> 		} else { 
+> 			if($casual=="n") { $urlop= 4 * $regday; 
+> 			} else { $urlop = 4 ; }
+> 		}
+> 
+>     print ", days ". $iledni . ".";
+> 
+>    // print "If we minus " . $dataakt2 . " from " . $started . " we get " . dateDiff("/", $started, $dataakt2) . ".";
+> 
+> 
+50d97
+< 
+56,61c103
+< 			if($row->catname <> "casual" ) { 
+< 		$kategoria =  "<FONT COLOR='#0000FF'><H3>$row->catname</H3></FONT>" ; 
+< 		} else { 
+< 		$kategoria =  "<FONT COLOR='#FF0000'><H2>$row->catname</H2></FONT>" ; 
+< 		}
+< $regday=$row->regdays;
+---
+> 
+81c123
+< $urlop= 4 * $regday;
+---
+> 
+---------------- opcje.php - opcje.phpW ------------------
+1,9c1,6
+< <?php
+< include("./config.php");
+< //include_once("./header.php");
+< $PHP_SELF = $_SERVER['PHP_SELF'];
+< $db = new CMySQL;
+< 
+< //include_once("./config.php");
+< //$name = $_GET['name'];
+< //$db = new CMySQL();
+---
+> <?
+> include("inc/mysql.inc.php");
+> $db = new CMySQL();
+> //$db->PHPSESSID_tmp=$PHPSESSID;
+> include_once("./config.php");
+> include("./languages/$LANGUAGE.php");
+35,36c32
+< 	   
+< 	$tloTB="#99FFFF";
+---
+> $tloTB="#99FFFF";
+39c35
+< if(!isset($_GET['menu'])){
+---
+> if(!isset($menu)){
+42c38
+<     $q="SELECT * FROM hd_menu1 WHERE mnu_nr='0' GROUP BY kol";
+---
+>     $q="SELECT * FROM hd_menu1 WHERE mnu_nr='0' ORDER BY kol";
+67,68d62
+< $menu = $_GET['menu'];
+< 
+72c66,70
+<     $q="SELECT * FROM hd_menu1 WHERE mnu_nr='$menu'";
+---
+> 
+> 
+>     $q="SELECT * FROM hd_menu1 WHERE mnu_nr='$menu' ORDER BY `hd_menu1`.`kol`";
+> 
+>    
+97c95
+< <SMALL><FONT COLOR='#000000'>$RPNUSER:<B>$nazwa</B>
+---
+> <SMALL><FONT COLOR='#000000'>$RPNUSER:<B>$name</B>
+---------------- prep_week.php - prep_week.phpW ------------------
+34d33
+< //echo "Deleting data from totals: ".$sql0."<BR>";
+40d38
+< //echo $sql1;
+44,45d41
+< //	$dataOd=$rowDates->dataod;
+< //	$dataDo=$rowDates->datado;
+49d44
+< //from totals
+52d46
+< //	echo $sql4;
+56,58c50
+< 		
+< //	echo "	<TR><TD>$no</TD><TD>$weekNomber</TD><TD>$row4->ile</TD><TD>$row4->wd</TD></TR>";
+< 
+---
+> 		//	echo "	<TR><TD>$no</TD><TD>$weekNomber</TD><TD>$row4->ile</TD><TD>$row4->wd</TD></TR>";
+64d55
+< // from hollidays date1   	 sortof   	 hourgiven   	 
+67d57
+< //	echo $sql4;
+71,73c61
+< 		
+< //	echo "	<TR><TD>$no</TD><TD>$weekNomber</TD><TD>$row6->ile</TD><TD>$row6->wd</TD></TR>";
+< 
+---
+> 		//	echo "	<TR><TD>$no</TD><TD>$weekNomber</TD><TD>$row6->ile</TD><TD>$row6->wd</TD></TR>";
+90,91d77
+< //echo date("w", $dod);
+< //   echo "<script language='javascript'>window.location=\"end.php\"</script>";
+---------------- supps.php - supps.phpW ------------------
+2c2
+< include("./config.php");
+---
+> include_once("./config.php");
+3a4,5
+> //include("./languages/$LANGUAGE.php");
+> //include_once("./inc/mlfn.inc.php");
+5a8
+> $numrows=15;
+6a10,17
+> if(!isset($kier))$kier=0;
+> if($kier==0){
+> 	$kier_sql="";
+> 	$kier=1;
+> }else{
+> 	$kier_sql="DESC";
+> 	$kier=0;
+> }
+---------------- t_end_m.php - t_end_m.phpW ------------------
+2,6d1
+< include("./config.php");
+< include_once("./header.php");
+< $PHP_SELF = $_SERVER['PHP_SELF'];
+< $db = new CMySQL;
+< uprstr($PU,90);
+7a3
+> include_once("./header.php");
+20c16
+< 	 <td class='DataTD'>DO it now</td>
+---
+> 	 <td class='DataTD'>$ZLRP21</td>
+22c18
+<     <td class='DataTD'>Check logical mistakes in personel table </td>
+---
+>     <td class='DataTD'>$ZLRP21o</td>
+36c32
+<     <td class='DataTD'><A HREF='test1.php'>$OKBTN</A></td>
+---
+>     <td class='DataTD'><A HREF='holidcount1.php'>$OKBTN</A></td>
+49a46,61
+> 	 <td class='DataTD'>$ZLRP17</td>
+>     <td class='DataTD'><A HREF='addhday1.php'>$OKBTN</A></td>
+>     <td class='DataTD'>$ZLRP17o</td>
+> </tr>
+> <tr>
+> 	 <td class='DataTD'>$ZLRP18</td>
+>     <td class='DataTD'><A HREF='holi-e-del.php'>$OKBTN</A></td>
+>     <td class='DataTD'>$ZLRP18o</td>
+> </tr>
+> <tr>
+> 	 <td class='DataTD'>$ZLRP20</td>
+>     <td class='DataTD'><A HREF='entitlnexel.php'>$OKBTN</A></td>
+>     <td class='DataTD'>$ZLRP20o</td>
+> </tr>
+> 
+> <tr>
+---------------- test2.php - test2.phpW ------------------
+3d2
+< 
+21,23c20
+< <table WIDTH=500 bordercolorlight='black' border='border' style='border-collapse: collapse; background-color: white' >
+<  
+< ";
+---
+> <table WIDTH=500 bordercolorlight='black' border='border' style='border-collapse: collapse; background-color: white' >";
+72c69,70
+< //MAIN PART averages
+---
+> 				
+> 				//MAIN PART counting averages 
+86c84
+< 			else { $HourGiv = "DUPA!"; }
+---
+> 			else { $HourGiv = "none"; }
+99c97
+< //	RecountEveryOne ($year, $month);
+---
+> //RecountEveryOne ($year, $month);
+---------------- timedel.php - timedel.phpW ------------------
+---------------- t_lista.php - t_lista.phpW ------------------
+2c2,5
+< include("./config.php");
+---
+> //if(!isset($id) && !isset($pw))
+> //{header("Location: index.html"); exit;}
+> 
+> //include("./inc/uprawnienia.php");
+4,5d6
+< $PHP_SELF = $_SERVER['PHP_SELF'];
+< $db = new CMySQL;
+8c9
+< uprstr($PU,50);
+---
+> //uprstr($PU,50);
+---------------- t_rp.php - t_rp.phpW ------------------
+2c2
+< include("./config.php");
+---
+> 
+65a66,70
+> 	 <td class='DataTD'>$ZLRP19</td>
+>     <td class='DataTD'><A HREF='entitleft.php'>$VIEWBTN</A></td>
+>     <td class='DataTD'>$ZLRP19o</td>
+> </tr>
+> <tr>
+74c79,80
+< </table>";
+---
+> </table>
+> ";

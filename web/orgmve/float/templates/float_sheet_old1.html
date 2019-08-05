@@ -1,0 +1,920 @@
+<html xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1250">
+<title>AFFIX Z REPORT HERE</title><style type="text/css">
+<!--
+.style1 {
+	font-family: Tahoma;
+	font-size: 8.0pt;
+}
+.style2 {
+	font-family: Tahoma;
+	font-size: 7.0pt;
+}
+-->
+</style></head>
+<body bgcolor="#FFFFFF" lang=HU>
+##{foreach from=$floats key=k item=i}#
+   <li>##{$k}#: ##{$i.floatsheetid}# ##{$i.tabledescid}# ##{$i.floatfieldid}# ##{$i.tableid}# ##{$i.floatfieldid}# ##{$i.fieldname}# ##{$i.fieldname}# ##{$i.fs_value.value}# </li>
+##{/foreach}#
+
+<form action="" method="post" target="_parent">
+  <div class=Section1>
+    <table width=865 border=1 cellpadding=0 cellspacing=0>
+      <tr>
+        <td width=225 rowspan=2><p><b><span lang=EN-US
+  style='font-size:24.0pt;font-family:Tahoma'>FLOAT SHEET</span></b></p></td>
+        <td width=569 valign=bottom><p><b><span lang=EN-US
+  style='font-size:10.0pt;font-family:Tahoma'>SHOP      
+          <select name="shopid" id="shopid">
+          ##{foreach from=$shop key=k item=i}# 
+                      <option value="##{$i.shopid}#">##{$i.shopname}#</option>
+                      ##{/foreach}#
+                    </select>
+                        
+          DEPT</span></b>
+                <select name="compldeptid" id="compldeptid">
+                ##{foreach from=$department key=k item=i}# 
+                 <option value="##{$i.depid}#">##{$i.depname}#</option>
+                  ##{/foreach}#
+                </select>
+        </p></td>
+      </tr>
+      <tr>
+        <td width=569 valign=bottom><p><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>DAY        ##{$daytext}#              DATE         ##{$dataakt2}#</span></b></p></td>
+      </tr>
+    </table>
+  </div>
+  <br clear=all style='page-break-before:auto;
+'>
+  <div class=Section2>
+    <table border=1 cellspacing=0 cellpadding=0 width=389>
+      <tr>
+        <td colspan="4"><p style='text-align:justify'><b><span style="font-size:18.0pt;font-family:Tahoma">BANKING &amp; FLOAT</span></b></p></td>
+      </tr>
+      <tr>
+        <td width=98>&nbsp;</td>
+        <td width=95><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>Cash Money</span></b></p></td>
+        <td width=91><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:8.0pt;
+  font-family:Tahoma'>MEV Vouchers</span></b></p></td>
+        <td width=95><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:8.0pt;
+  font-family:Tahoma'>TOTAL</span></b></p></td>
+      </tr>
+      <tr>
+        <td width=98><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>Evening count</span></b></p></td>
+        <td width=95>
+          
+          <div align="right">
+            <input name="eveingcount_cash" type="text" id="eveingcount_voucher5" value="##{$floats.evening[0]}#" size="10" maxlength="20">
+          </div>
+          <div align="right"></div>        </td>
+        <td width=91><div align="right">
+          <input name="textfield" type="text" id="eveingcount_voucher" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width=98><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>Banking</span></b></p></td>
+        <td width=95><div align="right">
+          <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=91><div align="right">
+          <input name="banking_vouher" type="text" id="eveingcount_voucher3" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width=98 rowspan=2><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:7.0pt;
+  font-family:Tahoma'>Credit Card/voucher Slips</span></b></p></td>
+        <td width=95><p><b><span lang=EN-US style='font-size:5.0pt;font-family:Tahoma'>Credit
+          cards</span></b></p></td>
+        <td width=91><p><b><span lang=EN-US style='font-size:5.0pt;font-family:Tahoma'>Voucher
+          slips</span></b></p></td>
+        <td width=95 rowspan=2>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=91><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+      </tr>
+      <tr>
+        <td width=98><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>TOMORROW’S FLOAT</span></b></p></td>
+        <td width=95>&nbsp;</td>
+        <td width=91>&nbsp;</td>
+        <td width=95>&nbsp;</td>
+      </tr>
+    </table>
+    <br>
+    <table border=1 cellspacing=0 cellpadding=0 width=383>
+      <tr>
+        <td colspan="4"><p style='text-align:justify'><b><span style="font-size:18.0pt;font-family:Tahoma">END OD DAY REPORT</span></b></p></td>
+      </tr>
+      <tr>
+        <td width=118 valign=top>&nbsp;</td>
+        <td width=77><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>CASH</span></b></p></td>
+        <td width=89 valign=top><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:8.5pt;
+  font-family:Tahoma'>VOUCHERS</span></b></p></td>
+        <td width=65 valign=top><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>TOTAL</span></b></p></td>
+      </tr>
+      <tr>
+        <td width=118><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:8.0pt;
+  font-family:Tahoma'>Morning Float</span></b></p></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=65>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width=118><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:8.0pt;
+  font-family:Tahoma'>Add transfers in</span></b></p></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=65>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width=118><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:8.0pt;
+  font-family:Tahoma'>Less transfers out</span></b></p></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=65>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width=118 rowspan=2><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:8.0pt;font-family:Tahoma'>Cash Cheque Credit Card &amp;<span class=SpellE> Voucher</span> (totals from till Report)</span></b></p></td>
+        <td width=77><p><span lang=EN-US
+  style='font-size:6.5pt;font-family:Tahoma'>CCC</span></p></td>
+        <td width=89><p><span lang=EN-US
+  style='font-size:6.5pt;font-family:Tahoma'>VCHR</span></p></td>
+        <td width=65 rowspan=2>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+      </tr>
+      <tr>
+        <td width=118><p align=center style='text-align:center;'><strong><span class="style1">Positive Overrings To Be Subtracted (Sales etc)</span></strong>.</p></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=65>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width=118><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:8.0pt; font-family:Tahoma'>Negative Overrings To Be Added (Payouts etc)</span></b></p></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=65>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width=118><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:10.0pt;
+  font-family:Tahoma'>CHECK TOTAL</span></b></p></td>
+        <td width=77>&nbsp;</td>
+        <td width=89>&nbsp;</td>
+        <td width=65>&nbsp;</td>
+      </tr>
+    </table>
+    <br>
+    <table border=1 cellspacing=0 cellpadding=0 width=404>
+      <tr>
+        <td colspan="4"><p style='text-align:justify'><b><span style="font-size:18.0pt;font-family:Tahoma">DEPARTMENT REPORT</span></b></p></td>
+      </tr>
+      <tr>
+        <td width=141 valign=top><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-family:Tahoma'>SHOP RESULTS</span></b></p></td>
+        <td width=73><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:7.0pt;font-family:Tahoma'>GROSS Total</span></b></p></td>
+        <td width=73><p align=center style='text-align:center;
+  '><strong><span class="style2">Overrings</span></strong></p></td>
+        <td width=63><p align=center style='text-align:center;
+  '><b><span style="font-size:7.0pt;font-family:Tahoma">Net Total</span></b></p></td>
+      </tr>
+      <tr>
+        <td><div align="center"><b><span style="font-size:8.0pt; font-family:Tahoma">01SALE</span></b></div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width=141><p align=center style='text-align:center;
+  '>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <b><span lang=EN-US style='font-size:8.0pt; font-family:Tahoma'>02SALE</span></b></p></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=63>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width=141><p align=center style='text-align:center;
+  '>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <b><span lang=EN-US style='font-size:8.0pt; font-family:Tahoma'>03SALE</span></b></p></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=63>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width=141><p align=center style='text-align:center;
+  '><strong><span class="style1">07STFF</span></strong></p></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=63>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width=141><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:8.0pt;font-family:Tahoma'>08DEP</span></b></p></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=63>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width=141><p align=center style='text-align:center;
+  '><strong><span class="style1">Payouts</span></strong></p></td>
+        <td width=73><b><span style="font-size:7.0pt;font-family:Tahoma">GROSS Total</span></b></td>
+        <td width=73><strong><span class="style2">Overrings</span></strong></td>
+        <td width=63><b><span style="font-size:7.0pt;font-family:Tahoma">Net Total</span></b></td>
+      </tr>
+      <tr>
+        <td width=141><p align=center style='text-align:center;
+  '>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <b><span lang=EN-US style='font-size:8.0pt; font-family:Tahoma'>04PAY (Cash)</span></b></p></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=63>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width=141><p align=center style='text-align:center;
+  '>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <b><span lang=EN-US style='font-size:8.0pt; font-family:Tahoma'>05PAY</span></b><b><span style="font-size:8.0pt; font-family:Tahoma"> (Cash)</span></b></p></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=63>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width=141><p align=center style='text-align:center;
+  '>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <b><span lang=EN-US style='font-size:8.0pt; font-family:Tahoma'>06PAY</span></b><b><span style="font-size:8.0pt; font-family:Tahoma"> (Cash)</span></b></p></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=63>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width=141><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:8.0pt;font-family:Tahoma'>14PAY</span><span style="font-size:8.0pt; font-family:Tahoma"> (Voucher)</span></b></p></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=63>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width=141><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:8.0pt;font-family:Tahoma'>15PAY</span><span style="font-size:8.0pt; font-family:Tahoma"> (Voucher)</span></b></p></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=63>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width=141><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:8.0pt;font-family:Tahoma'>16PAY</span><span style="font-size:8.0pt; font-family:Tahoma"> (Voucher)</span></b></p></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=63>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width=141><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:8.0pt;font-family:Tahoma'>Total Payputs</span></b></p></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=63>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width=141><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:8.0pt;font-family:Tahoma'>Refunds</span></b></p></td>
+        <td width=73><div align="center"><b><span style="font-size:7.0pt;font-family:Tahoma">RETN Total</span></b></div></td>
+        <td width=73><div align="center"><strong><span class="style2">Overring</span></strong></div></td>
+        <td width=63><div align="center"><b><span style="font-size:7.0pt;font-family:Tahoma">Net Total</span></b></div></td>
+      </tr>
+      <tr>
+        <td width=141><p align=center style='text-align:center;
+  '>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <b><span lang=EN-US style='font-size:8.0pt; font-family:Tahoma'>01SALE</span></b></p></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width=141><p align=center style='text-align:center;
+  '>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <b><span lang=EN-US style='font-size:8.0pt; font-family:Tahoma'>02SALE</span></b></p></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width=141><p align=center style='text-align:center;
+  '>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <b><span lang=EN-US style='font-size:8.0pt; font-family:Tahoma'>03SALE</span></b></p></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width=141><p align=center style='text-align:center;
+  '><strong><span class="style1">07STFF</span></strong></p></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><div align="center"><b><span style="font-size:8.0pt;font-family:Tahoma">08DEP</span></b></div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><div align="center"><b><span style="font-size:7.0pt;font-family:Tahoma">Total</span></b></div></td>
+        <td><div align="center"><strong><span class="style2">Overring</span></strong></div></td>
+        <td><div align="center"><b><span style="font-size:7.0pt;font-family:Tahoma">Net Tota</span></b>l</div></td>
+      </tr>
+      <tr>
+        <td width=141 height="24"><div align="center"><strong><span class="style1">Expenses Paid Out</span></strong></div></td>
+        <td width=73>&nbsp;</td>
+        <td width=73>&nbsp;</td>
+        <td width=63>&nbsp;</td>
+      </tr>
+    </table>
+    <br>
+    <table border=1 cellspacing=0 cellpadding=0 width=368>
+      <tr>
+        <td colspan=4><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:14.0pt;
+  font-family:Tahoma'>OVERRINGs RECORD</span></b></p></td>
+      </tr>
+      <tr>
+        <td colspan=4><p style='text-align:justify;'><span
+  lang=EN-US style='font-size:7.0pt;font-family:Tahoma'>Enter your over-rings
+          here during the day.  Enter the dept no
+          in the dept column and C or V on the C/V column to show what type of
+          transaction it was and whether it was for cash or vouchers.  </span></p></td>
+      </tr>
+      <tr>
+        <td width=86><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:10.0pt;
+  font-family:Tahoma'>Dept</span></b></p></td>
+        <td width=83><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:10.0pt;
+  font-family:Tahoma'>C/V</span></b></p></td>
+        <td colspan=2><p align=center style='text-align:center;'><b><span lang=EN-US style='font-family:Tahoma'>Amount</span></b></p></td>
+      </tr>
+      <tr>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=83>&nbsp;</td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+      </tr>
+    </table>
+    <br>
+    <table border=1 cellspacing=0 cellpadding=0 width=358>
+      <tr>
+        <td colspan="3"><b><span style="font-size:14.0pt;font-family:Tahoma">PAYOUTS</span></b></td>
+      </tr>
+      <tr>
+        <td width=46><span style="text-align:center;
+  "><b><span style="font-size:10.0pt;font-family:Tahoma">CASH</span></b></span></td>
+        <td><p align=center style='text-align:center;
+  '>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <b><span style="font-size:10.0pt;font-family:Tahoma">VOUCHERS</span></b></p></td>
+        <td><p align=center style='text-align:center;
+  '>
+            <st1:address w:st="on">
+            <st1:Street w:st="on">
+            <span
+  lang=EN-US style='font-size:14.0pt;font-family:Tahoma'><b>TOTALS</b></span></p></td>
+      </tr>
+      <tr>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=74>&nbsp;</td>
+      </tr>
+    </table>
+    <br>
+    <table width=358 height="70" border=1 cellpadding=0 cellspacing=0>
+      <tr>
+        <td colspan="4"><p><b><span lang=EN-US style='font-size:11.0pt;font-family:Tahoma'>TRANSFERS</span></b></p></td>
+      </tr>
+      <tr>
+        <td width=104><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:10.0pt;
+  font-family:Tahoma'>FROM/TO</span></b></p></td>
+        <td width=108><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:8.0pt;
+  font-family:Tahoma'>C/V</span></b></p></td>
+        <td width=244><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:8.0pt;
+  font-family:Tahoma'>Amount In</span></b></p></td>
+        <td width=104><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:7.0pt;
+  font-family:Tahoma'>Amount Out</span></b></p></td>
+      </tr>
+      <tr>
+        <td width=104><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=108><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=244><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+        <td width=104><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+      </tr>
+    </table>
+    <br>
+    <table border=1 cellspacing=0 cellpadding=0 width=358>
+      <tr>
+        <td colspan="2"><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:14.0pt;
+  font-family:Tahoma'>EXPENSES</span></b></p></td>
+      </tr>
+      <tr>
+        <td width=184><b><span style="font-size:10.0pt;font-family:Tahoma">Expense</span></b></td>
+        <td width=168><b><span style="font-size:10.0pt;font-family:Tahoma">Amount</span></b></td>
+      </tr>
+      <tr>
+        <td width=184><p align=center style='text-align:center;'>&nbsp;</p></td>
+        <td width=95><div align="right">
+            <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+        </div></td>
+      </tr>
+    </table>
+    <br>
+  </div>
+  <br clear=all>
+  <div class=Section3><br clear=all>
+      <table border=1 cellspacing=0 cellpadding=0 width=264>
+        <tr>
+          <td colspan=3><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:18.0pt;font-family:Tahoma'>MORNING FLOAT</span></b></p></td>
+        </tr>
+        <tr>
+          <td width=66>&nbsp;</td>
+          <td><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>CASH MONEY</span></b></p></td>
+          <td><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>MVE VOUCHERS</span></b></p></td>
+        </tr>
+        <tr>
+          <td width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>&pound;50</span></b></p></td>
+          <td width=95><div align="right">
+            <input name="P50_cash" type="text" id="eveingcount_voucher6" value="##{$floatsvalue.1}#" size="10" maxlength="20">
+          </div></td>
+          <td width=95><div align="right">
+              <input name="P50_vouchers" type="text" id="eveingcount_voucher2" value="##{$floatsvalue.2}#" size="10" maxlength="20">
+          </div></td>
+        </tr>
+        <tr>
+          <td width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>&pound;20</span></b></p></td>
+          <td width=95><div align="right">
+              <input name="P20_cash" type="text" id="eveingcount_voucher2" value="##{$floatsvalue.3}#" size="10" maxlength="20">
+          </div></td>
+          <td width=95><div align="right">
+              <input name="P20_vouchers" type="text" id="eveingcount_voucher2" value="##{$floatsvalue.4}#" size="10" maxlength="20">
+          </div></td>
+        </tr>
+        <tr>
+          <td width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>&pound;10</span></b></p></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$floatsvalue.5}#" size="10" maxlength="20">
+          </div></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$floatsvalue.6}#" size="10" maxlength="20">
+          </div></td>
+        </tr>
+        <tr>
+          <td width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>&pound;5</span></b></p></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$floatsvalue.7}#" size="10" maxlength="20">
+          </div></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$floatsvalue.8}#" size="10" maxlength="20">
+          </div></td>
+        </tr>
+        <tr>
+          <td width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>&pound;2 / &pound;1</span></b></p></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+        </tr>
+        <tr>
+          <td width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>50P</span></b></p></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+        </tr>
+        <tr>
+          <td width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>Small Change</span></b></p></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+        </tr>
+        <tr>
+          <td width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>Till Total</span></b></p></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+        </tr>
+        <tr>
+          <td width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>Buying Reserve</span></b></p></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+        </tr>
+        <tr>
+          <td width=66><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>Change Reserve</span></b></p></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+        </tr>
+        <tr>
+          <td width=66><p><b><span lang=EN-US style='font-size:11.0pt;
+  font-family:Tahoma'>TOTAL</span></b></p></td>
+          <td width=48>&nbsp;</td>
+          <td width=59>&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan=3 valign=top><p><b><span lang=EN-US style='font-size:7.0pt;
+  font-family:Tahoma'>COMPLETED BY </span></b></p>
+              <label>
+              <select name="completedmorning" id="completedmorning">
+                <option value="2">1</option>
+              </select>
+              </label>          </td>
+        </tr>
+      </table>
+      <input name="eveingcount_voucher" type="text" id="eveingcount_voucher4" value="##{$floats[0].tabledescid}#" size="10" maxlength="20">
+  <br clear=all>
+      <table border=1 cellspacing=0 cellpadding=0 width=267>
+        <tr>
+          <td colspan=3><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:18.0pt;font-family:Tahoma'>EVENING FLOAT</span></b></p></td>
+        </tr>
+        <tr>
+          <td width=69>&nbsp;</td>
+          <td><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>Cash Money</span></b></p></td>
+          <td><p align=center style='text-align:center;
+  '><b><span lang=EN-US
+  style='font-size:9.0pt;font-family:Tahoma'>MVE Vouchers</span></b></p></td>
+        </tr>
+        <tr>
+          <td width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>&pound;50</span></b></p></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$floats[0].tabledescid}#" size="10" maxlength="20">
+          </div></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$floats[4].tabledescid}#" size="10" maxlength="20">
+          </div></td>
+        </tr>
+        <tr>
+          <td width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>&pound;20</span></b></p></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$floats[0].tabledescid}#" size="10" maxlength="20">
+          </div></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+        </tr>
+        <tr>
+          <td width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>&pound;10</span></b></p></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+        </tr>
+        <tr>
+          <td width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>&pound;5</span></b></p></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+        </tr>
+        <tr>
+          <td width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>&pound;2 / &pound;1</span></b></p></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+        </tr>
+        <tr>
+          <td width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>50P</span></b></p></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+        </tr>
+        <tr>
+          <td width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt; font-family:Tahoma'>Small Change</span></b></p></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+        </tr>
+        <tr>
+          <td width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>Till  Total</span></b></p></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+        </tr>
+        <tr>
+          <td width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt;
+  font-family:Tahoma'>Buying Reserve</span></b></p></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+        </tr>
+        <tr>
+          <td width=69><p align=center style='text-align:center;'><b><span lang=EN-US style='font-size:9.0pt; font-family:Tahoma'>Change Reserve</span></b></p></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+        </tr>
+        <tr>
+          <td><b><span style="font-size:9.0pt;
+  font-family:Tahoma">Total</span></b></td>
+          <td width=95><div align="right"></div></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><b><span style="font-size:9.0pt; font-family:Tahoma">Voucher Slips</span></b></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><b><span style="font-size:9.0pt; font-family:Tahoma">Credit Cards</span></b></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><b><span style="font-size:9.0pt; font-family:Tahoma">Cheques</span></b></td>
+          <td width=95><div align="right">
+              <input name="banking_cash" type="text" id="eveingcount_voucher2" value="##{$base}#?" size="10" maxlength="20">
+          </div></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td width=69><p><b><span lang=EN-US style='font-size:11.0pt;
+  font-family:Tahoma'>Grand Total</span></b></p></td>
+          <td width=49>&nbsp;</td>
+          <td width=54>&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan=3 valign=top><p><b><span lang=EN-US style='font-size:7.0pt;
+  font-family:Tahoma'>COMPLETED BY</span></b></p>
+              <p>
+                <select name="completedevening" id="completedevening">
+                  <option value="2">1</option>
+                </select>
+            </p></td>
+        </tr>
+      </table>
+  </div>
+  <br clear=all style='page-break-before:auto;
+'>
+  <div class=Section4>
+    <table border=1 cellspacing=0 cellpadding=0 width=720>
+      <tr>
+        <td width=720><p align=center style='text-align:center'><b><span lang=EN-US style='font-size:22.0pt;
+  font-family:Tahoma'>REPORT SHEET</span></b></p></td>
+      </tr>
+      <tr>
+        <td width=720><p><b><span lang=EN-US style='font-size:10.0pt;font-family:Tahoma'> Note clearly any unusual activity about
+          today’s transactions here:</span></b></p></td>
+      </tr>
+      <tr>
+        <td width=720><label>
+          <textarea name="textarea" id="textarea" cols="60" rows="5"></textarea>
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td width=720><p><b><span lang=EN-US style='font-size:10.0pt;font-family:Tahoma'>NAME
+          <select name="completedreport" id="completedreport">
+                      <option value="2">1</option>
+                    </select>
+        </span></b></p></td>
+      </tr>
+      <tr>
+        <td width=720><p><b><span lang=EN-US
+  style='font-size:10.0pt;font-family:Tahoma'>If you need help completing this form call:                              020
+          7229 4546</span></b></p></td>
+      </tr>
+      <tr>
+        <td width=720><p><b><span lang=EN-US
+  style='font-size:10.0pt;font-family:Tahoma'>Other enquiries call:                                                                                      020 7727 2040</span></b></p></td>
+      </tr>
+    </table>
+  </div>
+</form>
+<div class=Section4></div>
+</body>
+</html>

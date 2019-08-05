@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="style/mb/style.css">
+  <script language="JavaScript" src="skrypty/functions.js"></script>
+  <script language="JavaScript">
+  
+
+function page_OnLoad()
+{
+    var result;
+
+    if (document.forms["Login"] && document.Login.login) document.Login.login.focus();
+
+    return result;
+}
+
+function bind_events() {
+    page_OnLoad();
+    forms_onload();
+}
+
+
+window.onload = bind_events; 
+
+</script>
+</head>
+<body class="PageBODY" bgcolor="#FFFFFF" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" text="#000000" link="#0000FF" vlink="#0000FF" alink="#FF0000">
+<CENTER><H2>Music & Goods Exchange Limited - Intra Net help system.</H2></CENTER><br>
+<br>
+<center>
+<form method="post" action="login.php" name="Login">
+  <font class="FormHeaderFont">To log in, enter your username and password. </font><BR><BR>
+  <table border="0" cellspacing="1">
+    <tbody>
+      <tr>
+        <td bgcolor="#cccccc">
+          <table class="FormTABLE" cellspacing="1" cellpadding="5" bgcolor="#ffffff">
+            
+            <tbody>
+              <tr>
+                <td nowrap class="FieldCaptionTD">User</td>
+                <td><input name="login" maxlength="100" value="" class="Input"></td>
+              </tr>
+              <tr>
+                <td nowrap class="FieldCaptionTD">Password</td>
+                <td><input type="password" name="password" maxlength="100" value="" class="Input"></td>
+              </tr>
+			  <tr>
+                <td nowrap class="FieldCaptionTD">Language</td>
+                <td>
+				<select class='Select' name='LANGUAGE'>
+				<option value='english'>English</option>
+		        <option value='niemiecki'>Deutsche</option>
+				<option value='polski'>Polski</option>
+				</select>
+				
+				</td>
+              </tr>
+              <tr>
+                <td colspan="2" align="right">
+                  <input name="DoLogin" type="submit" value="Enter" class="Button">
+				</td>
+              </tr>
+            </form>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+</body>
+</html>

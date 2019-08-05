@@ -1,0 +1,212 @@
+<table align="center" width="100%">
+<tr>
+
+<!-- Start PAID STAFF clocking version == 3 -->    
+<td valign="top" width="49.5%">
+    <table class="clocking" width="100%">  
+   ##{foreach from=$clpaidtableleft key=k item=i}#
+    <tr>
+   ##{if $i.1 eq '0'}#
+    <td class="c0in">##{if $clversion eq '2' and $i.2 ne '0'}#
+                        <A HREF='chknew.php?recID=##{$i.2}#'><IMG SRC='img/sun.gif' width='10' BORDER='0'></A>
+                     ##{/if}#
+                     ##{$i.3}#</td>
+    <td class="c1in">##{$i.4}#</td>
+   ##{else}#
+    <td class="c0out">##{if $clversion eq '2' and $i.2 ne '0'}#
+                        <A HREF='chknew.php?recID=##{$i.2}#'><IMG SRC='img/sun.gif' width='10' BORDER='0'></A>
+                     ##{/if}#
+                     ##{$i.3}#</td>
+    <td class="c1out">##{$i.4}#</td>
+   ##{/if}#
+    <td class="in">##{$i.5.0.0}#</td>
+    <td class="out">##{$i.5.0.1}#</td>
+    <td class="in">##{$i.5.1.0}#</td>
+    <td class="out">##{$i.5.1.1}#</td>
+    <td class="in">##{$i.5.2.0}#</td>
+    <td class="out">##{$i.5.2.1}#</td>
+    <td class="in">##{$i.5.3.0}#</td>
+    <td class="out">##{$i.5.3.1}#</td>
+    <td class="in">##{$i.5.4.0}#</td>
+    <td class="out">##{$i.5.4.1}#</td>
+    </tr>
+    ##{/foreach}#
+    </table>   
+</td>
+<td valign="top" width="1%"></td>
+<td valign="top" width="49.5%">
+    <table class="clocking" width="100%">
+   ##{foreach from=$clpaidtableright key=k item=i}#
+    <tr>
+   ##{if $i.1 eq '0'}#
+    <td class="c0in">##{if $clversion eq '2' and $i.2 ne '0'}#
+                        <A HREF='chknew.php?recID=##{$i.2}#'><IMG SRC='img/sun.gif' width='10' BORDER='0'></A>
+                     ##{/if}#
+                     ##{$i.3}#</td>
+    <td class="c1in">##{$i.4}#</td>
+   ##{else}#
+    <td class="c0out">##{if $clversion eq '2' and $i.2 ne '0'}#
+                        <A HREF='chknew.php?recID=##{$i.2}#'><IMG SRC='img/sun.gif' width='10' BORDER='0'></A>
+                     ##{/if}#
+                     ##{$i.3}#</td>
+    <td class="c1out">##{$i.4}#</td>
+   ##{/if}#
+    <td class="in">##{$i.5.0.0}#</td>
+    <td class="out">##{$i.5.0.1}#</td>
+    <td class="in">##{$i.5.1.0}#</td>
+    <td class="out">##{$i.5.1.1}#</td>
+    <td class="in">##{$i.5.2.0}#</td>
+    <td class="out">##{$i.5.2.1}#</td>
+    <td class="in">##{$i.5.3.0}#</td>
+    <td class="out">##{$i.5.3.1}#</td>
+    <td class="in">##{$i.5.4.0}#</td>
+    <td class="out">##{$i.5.4.1}#</td>
+    </tr>
+    ##{/foreach}#
+    </table> 
+</td>
+</tr>
+
+<!-- Start UNPAID STAFF clocking version == 3 -->
+##{if $clversion eq '2' or $clversion eq '3'}#
+	##{if $cltrialrowsnumber ne '0'}#
+	<tr height="10"></tr>
+	##{/if}#
+<!-- Start TRIAL DAY -->
+<td valign="top">
+    <table class="clocking" width="100%">
+   ##{foreach from=$cltrialtableleft key=k item=i}#
+    <tr>
+   ##{if $i.1 eq '0'}#
+    <td class="c0in">##{if $clversion eq '2' and $i.2 ne '0'}#
+                        <A HREF='chknew.php?recID=##{$i.2}#'><IMG SRC='img/sun.gif' width='10' BORDER='0'></A>
+                     ##{/if}#
+                     ##{$i.3}#</td>
+    <td class="c1in">##{$i.4}#</td>
+   ##{else}#
+    <td class="c0out">##{if $clversion eq '2' and $i.2 ne '0'}#
+                        <A HREF='chknew.php?recID=##{$i.2}#'><IMG SRC='img/sun.gif' width='10' BORDER='0'></A>
+                     ##{/if}#
+                     ##{$i.3}#</td>
+    <td class="c1out">##{$i.4}#</td>
+   ##{/if}#
+    <td class="in">##{$i.5.0.0}#</td>
+    <td class="out">##{$i.5.0.1}#</td>
+    <td class="in">##{$i.5.1.0}#</td>
+    <td class="out">##{$i.5.1.1}#</td>
+    <td class="in">##{$i.5.2.0}#</td>
+    <td class="out">##{$i.5.2.1}#</td>
+    <td class="in">##{$i.5.3.0}#</td>
+    <td class="out">##{$i.5.3.1}#</td>
+    <td class="in">##{$i.5.4.0}#</td>
+    <td class="out">##{$i.5.4.1}#</td>
+    </tr>
+    ##{/foreach}#
+    </table>   
+</td>
+<td valign="top"></td>
+<td valign="top">
+    <table class="clocking" width="100%">
+   ##{foreach from=$cltrialtableright key=k item=i}#
+    <tr>
+   ##{if $i.1 eq '0'}#
+    <td class="c0in">##{if $clversion eq '2' and $i.2 ne '0'}#
+                        <A HREF='chknew.php?recID=##{$i.2}#'><IMG SRC='img/sun.gif' width='10' BORDER='0'></A>
+                     ##{/if}#
+                     ##{$i.3}#</td>
+    <td class="c1in">##{$i.4}#</td>
+   ##{else}#
+    <td class="c0out">##{if $clversion eq '2' and $i.2 ne '0'}#
+                        <A HREF='chknew.php?recID=##{$i.2}#'><IMG SRC='img/sun.gif' width='10' BORDER='0'></A>
+                     ##{/if}#
+                     ##{$i.3}#</td>
+    <td class="c1out">##{$i.4}#</td>
+   ##{/if}#
+    <td class="in">##{$i.5.0.0}#</td>
+    <td class="out">##{$i.5.0.1}#</td>
+    <td class="in">##{$i.5.1.0}#</td>
+    <td class="out">##{$i.5.1.1}#</td>
+    <td class="in">##{$i.5.2.0}#</td>
+    <td class="out">##{$i.5.2.1}#</td>
+    <td class="in">##{$i.5.3.0}#</td>
+    <td class="out">##{$i.5.3.1}#</td>
+    <td class="in">##{$i.5.4.0}#</td>
+    <td class="out">##{$i.5.4.1}#</td>
+    </tr>
+    ##{/foreach}#
+    </table> 
+</td>
+</tr>
+
+	##{if $clinternrowsnumber ne '0'}#
+	<tr height="10"></tr>
+	##{/if}#
+<!-- Start INTERN -->
+<td valign="top">
+    <table class="clocking" width="100%">
+   ##{foreach from=$clinterntableleft key=k item=i}#
+    <tr>
+   ##{if $i.1 eq '0'}#
+    <td class="c0in">##{if $clversion eq '2' and $i.2 ne '0'}#
+                        <A HREF='chknew.php?recID=##{$i.2}#'><IMG SRC='img/sun.gif' width='10' BORDER='0'></A>
+                     ##{/if}#
+                     ##{$i.3}#</td>
+    <td class="c1in">##{$i.4}#</td>
+   ##{else}#
+    <td class="c0out">##{if $clversion eq '2' and $i.2 ne '0'}#
+                        <A HREF='chknew.php?recID=##{$i.2}#'><IMG SRC='img/sun.gif' width='10' BORDER='0'></A>
+                     ##{/if}#
+                     ##{$i.3}#</td>
+    <td class="c1out">##{$i.4}#</td>
+   ##{/if}#
+    <td class="in">##{$i.5.0.0}#</td>
+    <td class="out">##{$i.5.0.1}#</td>
+    <td class="in">##{$i.5.1.0}#</td>
+    <td class="out">##{$i.5.1.1}#</td>
+    <td class="in">##{$i.5.2.0}#</td>
+    <td class="out">##{$i.5.2.1}#</td>
+    <td class="in">##{$i.5.3.0}#</td>
+    <td class="out">##{$i.5.3.1}#</td>
+    <td class="in">##{$i.5.4.0}#</td>
+    <td class="out">##{$i.5.4.1}#</td>
+    </tr>
+    ##{/foreach}#
+    </table>   
+</td>
+<td valign="top"></td>
+<td valign="top">
+    <table class="clocking" width="100%">
+   ##{foreach from=$clinterntableright key=k item=i}#
+    <tr>
+   ##{if $i.1 eq '0'}#
+    <td class="c0in">##{if $clversion eq '2' and $i.2 ne '0'}#
+                        <A HREF='chknew.php?recID=##{$i.2}#'><IMG SRC='img/sun.gif' width='10' BORDER='0'></A>
+                     ##{/if}#
+                     ##{$i.3}#</td>
+    <td class="c1in">##{$i.4}#</td>
+   ##{else}#
+    <td class="c0out">##{if $clversion eq '2' and $i.2 ne '0'}#
+                        <A HREF='chknew.php?recID=##{$i.2}#'><IMG SRC='img/sun.gif' width='10' BORDER='0'></A>
+                     ##{/if}#
+                     ##{$i.3}#</td>
+    <td class="c1out">##{$i.4}#</td>
+   ##{/if}#
+    <td class="in">##{$i.5.0.0}#</td>
+    <td class="out">##{$i.5.0.1}#</td>
+    <td class="in">##{$i.5.1.0}#</td>
+    <td class="out">##{$i.5.1.1}#</td>
+    <td class="in">##{$i.5.2.0}#</td>
+    <td class="out">##{$i.5.2.1}#</td>
+    <td class="in">##{$i.5.3.0}#</td>
+    <td class="out">##{$i.5.3.1}#</td>
+    <td class="in">##{$i.5.4.0}#</td>
+    <td class="out">##{$i.5.4.1}#</td>
+    </tr>
+    ##{/foreach}#
+    </table> 
+</td>
+</tr>
+
+##{/if}# <!-- End UNPAID STAFF clocking version == 3 or clocking version == 2-->
+
+</table>

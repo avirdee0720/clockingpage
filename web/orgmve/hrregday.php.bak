@@ -1,0 +1,113 @@
+<?php
+include("./config.php");
+include_once("./header.php");
+$PHP_SELF = $_SERVER['PHP_SELF'];
+$db = new CMySQL;
+$cln=$_GET['cln'];
+$title="Edit Regular days of NO <B>$cln</B>";
+uprstr($PU,90);
+
+function DisplShop() {
+	$dbShop = new CMySQL;
+	$ShopSQL = "SELECT `IP`,MIN(`namefb`) AS ipname FROM `ipaddress` GROUP BY `namefb` ORDER BY `namefb`";
+	$ShopList = "<option value='0'> NOT SET </option>";
+     if (!$dbShop->Open()) $dbShop->Kill();
+	if ($dbShop->Query($ShopSQL)) 
+	{
+		while ($ShopRecord=$dbShop->Row())
+		{
+
+          $ShopList =  $ShopList."<option value='$ShopRecord->IP'> $ShopRecord->ipname</option>";
+		}
+	} else {
+		echo "error in shops!";  $dbShop->Kill(); 
+	}
+return $ShopList;
+
+}
+
+if(!isset($state))
+{
+echo "<font class='FormHeaderFont'>$title - $DayOfBanking</font><BR>
+	<form action='$PHP_SELF' method='get' name='ed_godz'>
+	<table bordercolorlight='black' border='border' style='border-collapse: collapse; background-color: white' >
+		 <tr>
+		    <td class='FieldCaptionTD'><B>Day</B></td>
+		     <td class='FieldCaptionTD'><B>Shop</B></td>
+		</tr>
+		 <tr>
+		    <td class='DataTD'><INPUT TYPE='checkbox' NAME='mon'>Monday</td>
+		     <td class='DataTD'><select class='Select' name='MondayShop'>".DisplShop()." </select></td>
+		</tr>
+		 <tr>
+		    <td class='DataTD'><INPUT TYPE='checkbox' NAME='tue'>Tuesday</td>
+		     <td class='DataTD'><select class='Select' name='TuesdayShop'>".DisplShop()." </select></td>
+		</tr>
+			 <tr>
+		    <td class='DataTD'><INPUT TYPE='checkbox' NAME='wed'>Wednesday</td>
+		     <td class='DataTD'><select class='Select' name='WednesdayShop'>".DisplShop()." </select></td>
+		</tr>
+		 <tr>
+		    <td class='DataTD'><INPUT TYPE='checkbox' NAME='thu'>Thursday</td>
+		     <td class='DataTD'><select class='Select' name='ThursdayShop'>".DisplShop()." </select></td>
+		</tr>
+
+		 <tr>
+		    <td class='DataTD'><INPUT TYPE='checkbox' NAME='fri'>Friday</td>
+		     <td class='DataTD'><select class='Select' name='FridayShop'>".DisplShop()." </select></td>
+		</tr>
+
+		 <tr>
+		    <td class='DataTD'><INPUT TYPE='checkbox' NAME='sat'>Saturday</td>
+		     <td class='DataTD'><select class='Select' name='SaturdayShop'>".DisplShop()." </select></td>
+		</tr>
+		 <tr>
+		    <td class='DataTD'><INPUT TYPE='checkbox' NAME='sun'>Sunday</td>
+		     <td class='DataTD'><select class='Select' name='SundayShop'>".DisplShop()." </select></td>
+		</tr>
+		 <tr>
+		    <td class='DataTD'>Date from:&nbsp;<INPUT TYPE='text' NAME='date1' VALUE='$dzis'></td>
+		     <td class='DataTD'>&nbsp;</td>
+		</tr>		
+
+		 </table>
+			<input name='cln' type='hidden' value='$cln'>
+			<input name='state' type='hidden' value='1'>
+			<input class='Button' name='Update' type='submit' value='$SAVEBTN'>
+		</td>
+</center>
+</center>
+<BR>
+</FORM>
+</td></tr>
+</table>";
+
+
+include_once("./footer.php");
+}
+elseif($state==1)
+{
+
+$db = new CMySQL;
+
+if($mon=="on") { $mon=1; } else { $mon=0; }
+if($tue=="on") { $tue=1; } else { $tue=0; }
+if($wed=="on") { $wed=1; } else { $wed=0; }
+if($thu=="on") { $thu=1; } else { $thu=0; }
+if($fri=="on") { $fri=1; } else { $fri=0; }
+if($sat=="on") { $sat=1; } else { $sat=0; }
+if($sun=="on") { $sun=1; } else { $sun=0; }
+
+if (!$db->Open()) $db->Kill();
+$DeleteInDay = "UPDATE `regdays` SET `active` = 'n' WHERE `no`= '$cln'";
+if (!$db->Query($DeleteInDay)) $db->Kill();
+
+if (!$db->Open()) $db->Kill();
+$ins = "INSERT INTO `regdays` (`id` , `no` , `mon` , `shopmon` , `tue` , `shoptue` , `wed` , `shopwed` , `thu` , `shopthu` , `fri` , `shopfri` , `sat` , `shopsat` , `sun` , `shopsun`,`datechange` )VALUES (null, '$cln', '$mon', '$MondayShop', '$tue', '$TuesdayShop', '$wed', '$WednesdayShop', '$thu', '$ThursdayShop', '$fri', '$FridayShop', '$sat', '$SaturdayShop', '$sun', '$SundayShop', '$date1' )";
+if (!$db->Query($ins)) $db->Kill();
+
+			//loguj("ssbankingday", "edit bankings - on:$_id[$i] / $date1  ", "ss_ebank");
+
+ echo "<script language='javascript'>window.location=\"hr_data.php?cln=$cln\"</script>";
+}
+?>
